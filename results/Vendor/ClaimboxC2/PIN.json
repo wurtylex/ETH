@@ -1,0 +1,131 @@
+{
+  "repo": "https://github.com/carlostoledo1891/claimbox",
+  "commit": "235fbfa90e7e19827be462431fd822c82ccaf5fc",
+  "path": "lean/eth-bridge",
+  "lean_toolchain": "leanprover/lean4:v4.36.0-rc2",
+  "complexitylib": "7c66eb718fb2c1ea8d5037bc0bbee64912cfc030",
+  "license": "MIT",
+  "main_result": "EthBridge.Anthropic.not_eth_of_ethIsFalse",
+  "files": [
+    {
+      "path": ".gitignore",
+      "bytes": 29,
+      "sha256": "d763da582951e6af731949a7ebefbd66d05cb9ba3c829dca70389ed38f778a4a"
+    },
+    {
+      "path": "EthBridge/Anthropic/Assemble.lean",
+      "bytes": 10164,
+      "sha256": "fe72cfa4590338c032a8113528f9591c0507136853aeb4a3d97a1ac2bd0a33d8"
+    },
+    {
+      "path": "EthBridge/Anthropic/DegreeRun.lean",
+      "bytes": 7384,
+      "sha256": "5a4ab0f1d716f2694dc85b302f50905c65462a18516adc031b3242be7e9aca79"
+    },
+    {
+      "path": "EthBridge/Anthropic/DegreeStep.lean",
+      "bytes": 13665,
+      "sha256": "46fe45ba8bbfc2446468a06010c3ed9ca755124f47ed76b95f449ff3ccffb7fb"
+    },
+    {
+      "path": "EthBridge/Anthropic/MainResults.lean",
+      "bytes": 11542,
+      "sha256": "47f78a9550d95b37d8718dd1ee16ae824da893a5e17c319f737e6d0a5ed24944"
+    },
+    {
+      "path": "EthBridge/Anthropic/Prep.lean",
+      "bytes": 5606,
+      "sha256": "2fb9661afdce2a41e7dc6b4563765ccd4dfb37850c0612cfa2ce414517ba7dc0"
+    },
+    {
+      "path": "EthBridge/Anthropic/Words.lean",
+      "bytes": 7145,
+      "sha256": "76bd279112d1272e2883efc49e157c9c62830b64054c4e227f1da508fbf0b70c"
+    },
+    {
+      "path": "EthBridge/Anthropic.lean",
+      "bytes": 2023,
+      "sha256": "e174d5f78c9e703a5aa80e1423912acf97fb5ad7d2b8c5bd146306506849712c"
+    },
+    {
+      "path": "EthBridge/Basic.lean",
+      "bytes": 318,
+      "sha256": "c77000512b63639cc5e51da684c817509158d5792ae8977f3d60ccf543b9f7e6"
+    },
+    {
+      "path": "EthBridge/WordRAM/Decide.lean",
+      "bytes": 3542,
+      "sha256": "5280890c19b39741dd8b78dce96034d7dc161dd810d9e59fe2b62177e6fd77d7"
+    },
+    {
+      "path": "EthBridge/WordRAM/Decider.lean",
+      "bytes": 4807,
+      "sha256": "db7da845e49d84db11e76204cec7c56e86bba4871ed4a25013fb322593faabee"
+    },
+    {
+      "path": "EthBridge/WordRAM/Sim.lean",
+      "bytes": 4069,
+      "sha256": "d9aab79eadb8228aaeded5b7b5dfdbadb079ab7eb82d70e10ba68b7ad7ebad3d"
+    },
+    {
+      "path": "EthBridge/WordRAM.lean",
+      "bytes": 4060,
+      "sha256": "acb00eb4950363d31ceed4ae7664d13fbab92a8caca8b1017fe3aa1ba2b852fe"
+    },
+    {
+      "path": "EthBridge.lean",
+      "bytes": 75,
+      "sha256": "22226d5673f878bf78c65f43a3721e2bfd9ac273356917e647b4e627f6f08e33"
+    },
+    {
+      "path": "Planted/Axiom.lean",
+      "bytes": 253,
+      "sha256": "a255548482327ebe5bf5c7f3ab2a0386b7f550eba4c994591523ece2a63f1c0e"
+    },
+    {
+      "path": "Planted/C2Axiom.lean",
+      "bytes": 437,
+      "sha256": "820bccd88bb519e74ab9be8c63d9f72050dcf0a277fc3497f8061e1ef965485b"
+    },
+    {
+      "path": "Planted/C2Sorry.lean",
+      "bytes": 318,
+      "sha256": "9eed73aa197915013d19e55b2144446b436c244296ba0023832e9aa3ab7d4f62"
+    },
+    {
+      "path": "Planted/C2Statement.lean",
+      "bytes": 665,
+      "sha256": "014479f929f9dd57400c0e1b7ac97be8f80602322bbb47af5f8fd1e90c99ef8c"
+    },
+    {
+      "path": "Planted/Sorry.lean",
+      "bytes": 195,
+      "sha256": "df7fe7146f7081363fceb80d0b8479288cb57c1ccecebfe76d681c4f487b37f1"
+    },
+    {
+      "path": "Planted/Statement.lean",
+      "bytes": 894,
+      "sha256": "675c4ce643434dc2a79d16876883db7858061275b68c85c008d45b0617ab788f"
+    },
+    {
+      "path": "README.md",
+      "bytes": 4896,
+      "sha256": "33818b507483e8ff6e4558a94e41a54dae15536591cec20b6ad68065279cdb27"
+    },
+    {
+      "path": "lake-manifest.json",
+      "bytes": 3867,
+      "sha256": "50a36e40874937458b64260cb0efdcb2d70dfbac5fd3cf2434af4ef7c86af3b2"
+    },
+    {
+      "path": "lakefile.toml",
+      "bytes": 689,
+      "sha256": "0754c5e52a8dbed5ce33f64c485373cb9c53319a33e7fe287a1404b957ed74e3"
+    },
+    {
+      "path": "lean-toolchain",
+      "bytes": 29,
+      "sha256": "11c697aebe5b539d74f5069e497a588e7dfab1c4eeb74313f28357e351c55ca3"
+    }
+  ]
+}

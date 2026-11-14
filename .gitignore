@@ -1,0 +1,21 @@
+# Project-local tools, agents and temporary workspaces
+.scratch/
+.skill/
+.ultramath/
+.elan/
+
+# Lake/Lean dependencies and build products
+**/.lake/
+**/build/
+**/out/
+lake-packages/
+.cache/
+.DS_Store
+
+# Generated Lean binaries and editor artifacts
+*.olean
+*.ilean
+*.trace
+*.c.tmp
+*.swp
+*~
