@@ -10,16 +10,30 @@
 *{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,input:focus-visible,summary:focus-visible,canvas:focus-visible{outline:2px solid var(--purple);outline-offset:3px}button{color:inherit}header{height:90px;display:flex;align-items:center;justify-content:space-between;padding:17px 28px 17px 30px;border-bottom:1px solid var(--line);gap:20px;background:var(--paper)}.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}h1{font-size:22px;font-weight:550;letter-spacing:-.035em;margin:0;line-height:1.2}.subtitle{font-size:12px;color:var(--muted);margin:5px 0 0}.head-actions{display:flex;gap:8px;flex-shrink:0}.button{border:1px solid var(--line);background:transparent;border-radius:7px;padding:8px 12px;font-size:12px;line-height:1.2;white-space:nowrap}.button:hover{background:#ece8df}.button.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}.button.primary:hover{background:#38352f}.stage{height:calc(100dvh - 90px);min-height:440px;position:relative;overflow:hidden;touch-action:none}.layer{position:absolute;inset:0;width:100%;height:100%;display:block}.layer:not(#interaction){pointer-events:none}#interaction{cursor:grab;touch-action:none}#interaction.dragging{cursor:grabbing}.panel{position:absolute;z-index:2;box-shadow:var(--shadow);background:var(--panel);border:1px solid var(--line);border-radius:10px}.controls{top:20px;left:20px;width:280px;padding:16px;touch-action:auto}.search-wrap{position:relative}.search-label{display:block;font-size:11px;font-weight:550;margin-bottom:7px}.search-row{display:flex;align-items:center;border:1px solid #cfc9bd;border-radius:6px;background:#fffdf9}.search-row svg{width:15px;height:15px;flex-shrink:0;margin-left:10px;stroke:var(--muted)}#search{border:0;padding:9px 7px;background:transparent;min-width:0;width:100%;font-size:12px;color:var(--ink);outline-offset:1px}#clear-search{display:none;border:0;background:transparent;padding:5px 9px;color:var(--muted);font-size:17px}#matches{position:absolute;left:-1px;right:-1px;top:100%;max-height:300px;overflow:auto;background:#fffdf9;border:1px solid var(--line);border-radius:0 0 7px 7px;box-shadow:var(--shadow);z-index:10;display:none}.match{width:100%;padding:10px;text-align:left;border:0;border-bottom:1px solid #eee9df;background:transparent;font-size:11px}.match:last-child{border-bottom:0}.match:hover,.match.active{background:#eee9df}.match-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}.match-group{font-size:10px;color:var(--muted);display:block;margin-top:4px}.match-summary{padding:9px 10px;font-size:10px;color:var(--muted);border-bottom:1px solid var(--line)}.groups{display:grid;gap:11px;margin-top:18px}.group-toggle{display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer;user-select:none}.group-toggle input{width:13px;height:13px;margin:0;accent-color:var(--ink)}.group-toggle[data-group="anthropic"] input{accent-color:var(--orange)}.group-toggle[data-group="shared"] input{accent-color:var(--purple)}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0}.count{margin-left:auto;color:var(--muted);font-variant-numeric:tabular-nums;font-size:11px}.control-rule{height:1px;background:var(--line);margin:16px 0 13px}.range-label{display:flex;justify-content:space-between;font-size:11px;align-items:center}.range-label output{color:var(--muted);font-variant-numeric:tabular-nums}input[type="range"]{width:100%;margin:10px 0 1px;accent-color:#8e8270;height:16px}.hint{font-size:10px;line-height:1.55;color:var(--muted);margin:11px 0 0}.controls details{margin-top:12px;font-size:10px;line-height:1.6;color:var(--muted)}.controls summary{cursor:pointer;color:#48453d;font-size:11px}.controls details p{margin:8px 0}.root-list{overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:9px}.tiny-link{border:0;padding:0;background:transparent;text-decoration:underline;text-underline-offset:2px;font-size:10px;color:inherit}.inspector{right:20px;top:20px;width:330px;padding:17px;max-height:calc(100% - 75px);overflow:auto;display:none;touch-action:auto}.inspector-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.tag{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted)}.icon-button{background:transparent;border:0;font-size:20px;line-height:1;color:var(--muted);padding:0 2px}.declaration{font-size:14px;font-weight:550;line-height:1.5;overflow-wrap:anywhere;margin:12px 0 14px;letter-spacing:-.015em}.field-label{font-size:9px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);margin:12px 0 4px}.field-value{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:10px;line-height:1.6;overflow-wrap:anywhere;margin:0}.degree-row{display:flex;gap:20px;margin-top:16px}.degree-row strong{font-size:19px;font-weight:500;display:block;font-variant-numeric:tabular-nums}.degree-row span{font-size:10px;color:var(--muted)}.inspector .button{margin-top:15px}.neighbor-list{display:none;margin-top:12px;border-top:1px solid var(--line);padding-top:9px}.neighbor-list h3{font-size:10px;color:var(--muted);font-weight:500;margin:4px 0 8px}.neighbor{display:flex;align-items:center;gap:6px;border:0;background:transparent;text-align:left;font-size:10px;padding:5px 0;width:100%}.neighbor span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.neighbor:hover span:last-child{text-decoration:underline}.tooltip{position:absolute;z-index:5;pointer-events:none;background:#fffcf6ed;border:1px solid var(--line);border-radius:5px;padding:7px 9px;max-width:390px;display:none;font-size:10px;line-height:1.45;box-shadow:var(--shadow);overflow-wrap:anywhere}.tooltip b{font-weight:550}.tooltip small{font-size:9px;color:var(--muted);display:block;margin-top:3px}.statusbar{position:absolute;bottom:18px;left:22px;right:22px;z-index:2;display:flex;gap:14px;justify-content:space-between;align-items:end;font-size:10px;color:var(--muted);pointer-events:none}.statusbox{background:#f7f5f0e8;padding:6px 8px;border-radius:4px;max-width:75%;line-height:1.55}.zoom-box{display:flex;gap:5px;align-items:center;pointer-events:auto;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:3px}.zoom-box button{border:0;background:transparent;font-size:18px;padding:1px 7px;color:#514c43}.zoom-box span{font-variant-numeric:tabular-nums;min-width:40px;text-align:center;font-size:10px}#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);background:var(--paper);z-index:7}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:760px){header{height:80px;padding:14px 15px}.stage{height:calc(100dvh - 80px)}h1{font-size:18px}.subtitle{font-size:10px}.eyebrow{font-size:9px}.head-actions{gap:5px}.head-actions .button{font-size:10px;padding:7px 8px}.controls{width:220px;top:12px;left:12px;padding:12px}.groups{gap:8px;margin-top:13px}.controls .hint,.controls details{display:none}.inspector{width:calc(100% - 24px);right:12px;top:auto;bottom:56px;max-height:45%}.statusbar{left:12px;right:12px;bottom:12px}.statusbox{max-width:70%}.control-rule{margin:12px 0 10px}.declaration{margin:8px 0;font-size:12px}.degree-row{margin-top:8px}.field-label{margin-top:8px}}@media(prefers-reduced-motion:no-preference){.button{transition:background .12s}}
 .group-toggle[data-group="elementary"] input{accent-color:#008c95}@media(max-width:760px){header{height:115px;align-items:flex-start}.stage{height:calc(100dvh - 115px)}.head-actions{padding-top:10px}.controls{max-height:57%;overflow:auto}}
 .controls{max-height:calc(100% - 90px);overflow-y:auto}.legend-label{min-width:0;flex:1}.membership-note{font-size:10px;line-height:1.5;color:#716e66;margin:12px 0 0}@media(max-width:760px){.controls{max-height:57%}.group-toggle{gap:6px;font-size:11px}}
-.setup-nav{display:grid;gap:5px}.setup-nav .search-label{margin:0 0 2px}.setup-nav a{display:block;padding:7px 9px;border:1px solid var(--line);border-radius:5px;font-size:11px;color:var(--ink);text-decoration:none}.setup-nav a:hover{background:#ece8df}.setup-nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}.setup-nav a:focus-visible{outline:2px solid var(--purple);outline-offset:2px}.setup-note{font-size:10px;line-height:1.45;color:var(--muted);margin:8px 0 14px}.cluster-names-toggle{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:11px;cursor:pointer}.cluster-names-toggle input{width:13px;height:13px;margin:0;accent-color:var(--ink)}</style>
+.setup-nav{display:grid;gap:5px}.setup-nav .search-label{margin:0 0 2px}.setup-nav a{display:block;padding:7px 9px;border:1px solid var(--line);border-radius:5px;font-size:11px;color:var(--ink);text-decoration:none}.setup-nav a:hover{background:#ece8df}.setup-nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}.setup-nav a:focus-visible{outline:2px solid var(--purple);outline-offset:2px}.setup-note{font-size:10px;line-height:1.45;color:var(--muted);margin:8px 0 14px}.cluster-names-toggle{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:11px;cursor:pointer}.cluster-names-toggle input{width:13px;height:13px;margin:0;accent-color:var(--ink)}
+.eth-endpoints{padding:11px 0 13px;margin:12px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.eth-endpoints .cluster-names-toggle{margin:0}.eth-endpoint-note{font-size:10px;line-height:1.5;margin:8px 0;color:var(--muted)}.eth-endpoint-buttons{display:flex;gap:6px;flex-wrap:wrap}.eth-route-button{display:flex;align-items:center;gap:5px;padding:5px 7px;border:1px solid var(--line);border-radius:5px;background:#fffdf9;font-size:10px}.eth-route-button:hover{background:#ece8df}.eth-goal-details[hidden],#selected-declaration-details[hidden]{display:none}.eth-goal-details p{font-size:11px;line-height:1.6}.eth-goal-details .field-value{font-size:10px}.eth-goal-details .eth-endpoint-buttons{margin-top:12px}.eth-goal-details .eth-route-button{font-size:11px;padding:8px}@media(max-width:760px){.stage.has-inspector .controls{max-height:32%}}@media(max-width:760px){header>div:first-child{min-width:0}.head-actions{max-width:150px;flex-wrap:wrap;justify-content:flex-end}.eth-endpoints{padding:9px 0;margin:10px 0}}
+</style>
+<style>
+.proof-guide{margin:14px 0 17px;padding:13px 0;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}.proof-guide select{width:100%;padding:8px;background:#fffdf9;border:1px solid #cfc9bd;border-radius:6px;color:var(--ink);font:inherit;font-size:11px}.guide-intro,.guide-summary,.guide-comparison{font-size:11px;line-height:1.6;margin:9px 0;color:#514c43}.guide-intro{font-size:10px;color:var(--muted)}.guide-relation{display:inline-block;font-size:9px;letter-spacing:.04em;padding:4px 6px;border:1px solid #d5cebf;border-radius:4px;margin-top:11px;background:#f2eee5;color:#514c43}.guide-anchors{display:grid;gap:9px;margin:12px 0}.guide-anchor{padding:9px;border:1px solid var(--line);border-radius:6px;background:#fffdf9}.guide-anchor button{display:flex;gap:7px;align-items:baseline;width:100%;border:0;background:none;padding:0;text-align:left;font-size:11px;font-weight:550;line-height:1.45}.guide-anchor button:hover .guide-anchor-label{text-decoration:underline;text-underline-offset:3px}.guide-anchor-number{display:inline-flex;align-items:center;justify-content:center;flex-shrink:0;border:1px solid currentColor;border-radius:50%;height:17px;width:17px;font-size:10px;font-weight:600}.guide-anchor-route{display:block;font-size:9px;color:var(--muted);margin:5px 0 0}.guide-anchor-description{font-size:10px;line-height:1.55;margin:6px 0}.guide-source{font-size:10px;color:#514c43;text-underline-offset:2px}.guide-actions{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:9px}.guide-actions .cluster-names-toggle{margin:0}.guide-actions .tiny-link{font-size:10px;flex-shrink:0}.guide-note{font-size:9px;line-height:1.5;color:var(--muted);margin:9px 0 0}.proof-guide [hidden]{display:none!important}@media(max-width:760px){.proof-guide{margin:11px 0;padding:10px 0}.guide-summary,.guide-comparison{font-size:10px}.guide-anchor{padding:7px}.guide-actions{align-items:flex-start;flex-direction:column;gap:8px}}
+</style>
 </head>
 <body>
 <header>
  <div><div class="eyebrow">ETH / proof dependencies</div><h1 id="title">Where the proofs meet</h1><p class="subtitle" id="subtitle">Two proof routes. One connected landscape.</p></div>
- <div class="head-actions"><button class="button" id="fit">Fit graph</button><button class="button primary" id="export" disabled>Save view</button></div>
+ <div class="head-actions"><button class="button" id="find-eth">Find ETH</button><button class="button" id="fit">Fit graph</button><button class="button primary" id="export" disabled>Save view</button></div>
 </header>
 <main class="stage" id="stage">
  <canvas class="layer" id="edges" aria-hidden="true"></canvas><canvas class="layer" id="nodes" aria-hidden="true"></canvas><canvas class="layer" id="interaction" tabindex="0" role="img" aria-label="Interactive proof dependency graph. Drag to pan, scroll to zoom, or search for a declaration."></canvas>
  <section class="panel controls" aria-label="Graph controls"><nav class="setup-nav" aria-label="Clustering setup"><span class="search-label">Clustering setup</span><a href="/">Graphs &amp; slide assets</a><a data-setup="all" href="/all/">All three proofs</a><a data-setup="reduced" href="/without-openai/" aria-current="page">Anthropic + our route</a></nav><p class="setup-note">OpenAI-only nodes removed; sharing colors compare Anthropic and our route.</p>
+  <section class="eth-endpoints" aria-label="Shared ETH conclusion"><label class="cluster-names-toggle"><input id="show-eth-endpoints" type="checkbox" checked><span>Show shared ETH conclusion</span></label><p class="eth-endpoint-note">One conclusion, independently proved by each route. Choose a route to inspect its proof.</p><div class="eth-endpoint-buttons" id="eth-endpoint-buttons"></div></section>
+  <section class="proof-guide" aria-label="Curated proof comparisons">
+   <label class="search-label" for="proof-guide-stage">Compare proof steps</label><select id="proof-guide-stage" aria-describedby="proof-guide-intro"><option value="">Choose a proof step</option></select>
+   <p class="guide-intro" id="proof-guide-intro"></p>
+   <div id="proof-guide-card" hidden><span class="guide-relation" id="proof-guide-relation"></span><p class="guide-summary" id="proof-guide-summary"></p><p class="guide-comparison" id="proof-guide-comparison"></p><div class="guide-anchors" id="proof-guide-anchors"></div>
+    <div class="guide-actions"><label class="cluster-names-toggle"><input id="show-guide-labels" type="checkbox" checked><span>Show guide labels</span></label><button class="tiny-link" id="fit-guide">Frame this comparison</button></div>
+    <p class="guide-note">Curated explanations tied to Lean declarations. Numbered labels mark individual nodes; they do not change clusters or graph connections.</p>
+   </div>
+  </section>
   <div class="search-wrap"><label class="search-label" for="search">Find a declaration</label><div class="search-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="M15 15L21 21"/></svg><input id="search" placeholder="Name or module…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="matches"><button id="clear-search" aria-label="Clear search">×</button></div><div id="matches" role="listbox"></div></div>
   <p class="hint" style="display:block;color:#006d75">Verified ETH endpoint using the new two-piece core and the existing recursion. The exact manuscript algorithm remains separate.</p><label class="search-label" for="route-focus">Show ancestry</label><select id="route-focus" style="width:100%;padding:7px;background:#fffdf9;border:1px solid #cfc9bd;border-radius:6px"><option value="0">Both displayed routes</option><option value="4">Our route and its reuse</option><option value="2">Anthropic endpoint</option></select><label class="search-label" for="community-focus" style="margin-top:12px">Explore a dependency cluster</label><select id="community-focus" style="width:100%;padding:7px;background:#fffdf9;border:1px solid var(--line);border-radius:6px"><option value="-1">All clusters</option></select><p id="community-summary" class="membership-note"></p><label class="cluster-names-toggle"><input id="show-cluster-names" type="checkbox" checked><span>Show cluster names</span></label><div class="groups" aria-label="Sharing between Anthropic and our route"><label class="group-toggle" data-group="anthropic"><input type="checkbox" checked style="accent-color:#e87500"><span class="dot" style="background:#e87500"></span><span class="legend-label">Anthropic only</span><span class="count" id="count-anthropic"></span></label><label class="group-toggle" data-group="elementary"><input type="checkbox" checked style="accent-color:#00852b"><span class="dot" style="background:#00852b"></span><span class="legend-label">Our route only</span><span class="count" id="count-elementary"></span></label><label class="group-toggle" data-group="shared"><input type="checkbox" checked style="accent-color:#a500cf"><span class="dot" style="background:#a500cf"></span><span class="legend-label">Shared by both</span><span class="count" id="count-shared"></span></label></div><p class="membership-note">Purple: shared by Anthropic + our route, including declarations also used by OpenAI.</p><p class="membership-note">Clusters follow dependency connections. Colors show proof reuse. Spacing is for readability.</p>
   <div class="control-rule"></div><label class="range-label" for="line-density"><span>Lines shown</span><output id="line-density-value">10%</output></label><input id="line-density" type="range" min="0" max="100" step="1" value="10" aria-describedby="line-density-note" title="Fixed percentage of all graph connections; current filters apply afterward."><p class="membership-note" id="line-density-note" style="margin:6px 0 12px">Selecting a node shows all its connections within the current filters.</p><label class="range-label" for="opacity"><span>Line opacity</span><output id="opacity-value">3.5%</output></label><input id="opacity" type="range" min="0" max="80" step="0.5" value="3.5">
@@ -29,18 +43,24 @@
  </section>
  <aside class="panel inspector" id="inspector" aria-label="Selected declaration">
   <div class="inspector-top"><span class="tag"><span class="dot" id="selected-dot"></span><span id="selected-group"></span></span><button class="icon-button" id="close-inspector" aria-label="Clear selected declaration">×</button></div>
-  <h2 class="declaration" id="selected-name"></h2><p class="field-label">Module</p><p class="field-value" id="selected-module"></p><p class="field-label" id="selected-id-label">Declaration ID</p><p class="field-value" id="selected-id"></p>
+  <div id="selected-declaration-details"><h2 class="declaration" id="selected-name"></h2><p class="field-label">Module</p><p class="field-value" id="selected-module"></p><p class="field-label" id="selected-id-label">Declaration ID</p><p class="field-value" id="selected-id"></p>
   <p class="field-label">Dependency community</p><p class="field-value" id="selected-community"></p><button class="tiny-link" id="focus-community">Focus this cluster</button><div class="degree-row"><div><strong id="selected-out"></strong><span id="out-label">Uses</span></div><div><strong id="selected-in"></strong><span id="in-label">Used by</span></div></div>
-  <button class="button" id="show-neighbors">Browse connections</button><div class="neighbor-list" id="neighbor-list"></div>
+  <button class="button" id="show-neighbors">Browse connections</button><div class="neighbor-list" id="neighbor-list"></div></div>
+  <div class="eth-goal-details" id="eth-goal-details" hidden><h2 class="declaration">¬ETH</h2><p id="eth-goal-summary"></p><p class="field-value">¬ ComplexityAbstracts.SubexponentialSATAbstract.ETH</p><div class="eth-endpoint-buttons" id="eth-goal-proof-buttons"></div><p class="eth-endpoint-note">Each route proves this conclusion independently. Choose one to trace its own dependencies. The shared marker groups the conclusions; declaration and reuse counts still describe the original Lean proofs.</p></div>
  </aside>
  <div class="tooltip" id="tooltip"></div><div class="statusbar"><div class="statusbox"><span id="counts"></span><br><span id="render-status"></span></div><div class="zoom-box"><button id="zoom-out" aria-label="Zoom out">−</button><span id="zoom-value">100%</span><button id="zoom-in" aria-label="Zoom in">+</button></div></div>
  <div id="loading">Preparing the proof landscape…</div><div id="announcement" class="sr-only" aria-live="polite"></div>
 </main>
 <script id="graph-data" type="application/json">@@GRAPH_DATA@@</script>
+<script id="proof-guide-data" type="application/json">@@PROOF_GUIDE@@</script>
 <script>
 'use strict';
 (()=>{
  const G=JSON.parse(document.getElementById('graph-data').textContent),N=G.nodes,E=G.edges,meta=G.meta||{};
+ const GUIDE=JSON.parse(document.getElementById('proof-guide-data').textContent),nodeByName=new Map(N.map((n,i)=>[n.name,i]));
+ const GUIDE_STAGES=GUIDE.stages.map(item=>({...item,anchors:item.anchors.map(anchor=>({...anchor,index:nodeByName.get(anchor.name)}))}));
+ if(GUIDE_STAGES.some(item=>item.anchors.some(anchor=>anchor.index===undefined)))throw new Error('Proof guide anchor is absent from this graph');
+ let guideStage=null,showGuideLabels=true,guideLabelBoxes=[];
  const COLORS={"openai": "#101010", "anthropic": "#e87500", "elementary": "#00852b", "shared": "#a500cf"},LABELS={"anthropic": "Anthropic only", "elementary": "Our route only", "shared": "Shared by both"},KEYS=["anthropic", "elementary", "shared"],BG='#f7f5f0';
  const membershipLabel=n=>LABELS[n.group];
  let routeFocus=0,communityFocus=-1,communityExport=false,showClusterNames=true;const COMMUNITIES=meta.communities;
@@ -68,7 +88,8 @@
  if(meta.edge_direction==='dependency_to_declaration'){$('out-label').textContent='Used by';$('in-label').textContent='Uses';}
  const announcement=text=>{$('announcement').textContent=text;};
  const active=i=>visible[N[i].group]&&(!routeFocus||(N[i].membership&routeFocus))&&(communityFocus<0||N[i].community===communityFocus);
- const screenX=i=>X[i]*scale+tx,screenY=i=>Y[i]*scale+ty;
+ const displayX=i=>showEthEndpoints&&ETH_ROOT_INDICES.has(i)?ETH_GOAL.x:X[i],displayY=i=>showEthEndpoints&&ETH_ROOT_INDICES.has(i)?ETH_GOAL.y:Y[i];
+ const screenX=i=>displayX(i)*scale+tx,screenY=i=>displayY(i)*scale+ty;
  const onScreen=(x,y,pad=8)=>x>=-pad&&x<=width+pad&&y>=-pad&&y<=height+pad;
  function clear(ctx){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,width,height);}
  function requestDraw(){if(dirty)return;dirty=true;requestAnimationFrame(()=>{dirty=false;draw();});}
@@ -85,7 +106,7 @@
  function zoom(factor,cx=width/2,cy=height/2){const next=Math.max(fitScale*.08,Math.min(fitScale*160,scale*factor)),ratio=next/scale;tx=cx-(cx-tx)*ratio;ty=cy-(cy-ty)*ratio;scale=next;requestDraw();}
  function drawNodes(){clear(nc);const zoomRadius=Math.max(.7,Math.min(2.5,Math.sqrt(scale/fitScale)));let shown=0;
   // Individual point fills avoid the pathological winding cost of one enormous overlapping path.
-  for(let j=0;j<KEYS.length;j++){if(!visible[KEYS[j]])continue;nc.fillStyle=COLORS[KEYS[j]];for(let i=0;i<N.length;i++){if(groupIndex[i]!==j||!active(i))continue;const x=screenX(i),y=screenY(i);if(!onScreen(x,y))continue;shown++;const r=radius[i]*zoomRadius;nc.globalAlpha=selectedSet&&!selectedSet.has(i) ? .15 : .9;nc.fillRect(x-r,y-r,r*2,r*2);}}nc.globalAlpha=1;
+  for(let j=0;j<KEYS.length;j++){if(!visible[KEYS[j]])continue;nc.fillStyle=COLORS[KEYS[j]];for(let i=0;i<N.length;i++){if(groupIndex[i]!==j||!active(i))continue;const x=screenX(i),y=screenY(i);if(!onScreen(x,y))continue;shown++;if(showEthEndpoints&&ETH_ROOT_INDICES.has(i))continue;const r=radius[i]*zoomRadius;nc.globalAlpha=selectedSet&&!selectedSet.has(i) ? .15 : .9;nc.fillRect(x-r,y-r,r*2,r*2);}}nc.globalAlpha=1;
   $('counts').textContent=fmt(shown)+' visible / '+fmt(N.length)+' declarations · '+fmt(E.length)+' connections';$('zoom-value').textContent=Math.round(scale/fitScale*100)+'%';
  }
 // Fixed, nested samples of directed references. Never modifies the proof graph.
@@ -173,19 +194,19 @@ function drawEdges(){
   requestAnimationFrame(chunk);
 }
 
- function drawOverlay(){clear(hc);drawCommunityGuides();if(selected>=0&&active(selected)){
+ function drawOverlay(){clear(hc);drawCommunityGuides();drawEthEndpoints();drawProofGuide();if(selected>=0&&active(selected)&&!(showEthEndpoints&&ETH_ROOT_INDICES.has(selected))){
    const x=screenX(selected),y=screenY(selected);hc.beginPath();hc.arc(x,y,7,0,Math.PI*2);hc.fillStyle=BG;hc.fill();hc.lineWidth=1.6;hc.strokeStyle=COLORS[N[selected].group];hc.stroke();hc.beginPath();hc.arc(x,y,3,0,Math.PI*2);hc.fillStyle=COLORS[N[selected].group];hc.fill();
-  }if(hover>=0&&hover!==selected&&active(hover)){hc.beginPath();hc.arc(screenX(hover),screenY(hover),5,0,Math.PI*2);hc.strokeStyle=COLORS[N[hover].group];hc.lineWidth=1.2;hc.stroke();}
+  }if(hover>=0&&hover!==selected&&active(hover)&&!(showEthEndpoints&&ETH_ROOT_INDICES.has(hover))){hc.beginPath();hc.arc(screenX(hover),screenY(hover),5,0,Math.PI*2);hc.strokeStyle=COLORS[N[hover].group];hc.lineWidth=1.2;hc.stroke();}
  }
  function draw(){drawNodes();drawEdges();drawOverlay();}
  function nearest(sx,sy){const wx=(sx-tx)/scale,wy=(sy-ty)/scale,reach=9/scale;const x0=Math.max(0,Math.floor((wx-reach)*GRID)),x1=Math.min(GRID,Math.floor((wx+reach)*GRID)),y0=Math.max(0,Math.floor((wy-reach)*GRID)),y1=Math.min(GRID,Math.floor((wy+reach)*GRID));let best=-1,distance=81;
-  for(let gy=y0;gy<=y1;gy++)for(let gx=x0;gx<=x1;gx++){const bucket=grid.get(gx+gy*(GRID+1));if(!bucket)continue;for(const i of bucket){if(!active(i))continue;const dx=screenX(i)-sx,dy=screenY(i)-sy,d=dx*dx+dy*dy;if(d<distance){distance=d;best=i;}}}return best;
+  for(let gy=y0;gy<=y1;gy++)for(let gx=x0;gx<=x1;gx++){const bucket=grid.get(gx+gy*(GRID+1));if(!bucket)continue;for(const i of bucket){if(!active(i)||(showEthEndpoints&&ETH_ROOT_INDICES.has(i)))continue;const dx=screenX(i)-sx,dy=screenY(i)-sy,d=dx*dx+dy*dy;if(d<distance){distance=d;best=i;}}}return best;
  }
  function setHover(i,x,y){if(hover!==i){hover=i;drawOverlay();}const tooltip=$('tooltip');if(i<0||dragging){tooltip.style.display='none';return;}tooltip.replaceChildren();const b=document.createElement('b'),s=document.createElement('small');b.textContent=N[i].name;s.textContent=membershipLabel(N[i])+' · '+N[i].module;tooltip.append(b,s);tooltip.style.display='block';tooltip.style.left=Math.max(8,Math.min(x+14,width-tooltip.offsetWidth-12))+'px';tooltip.style.top=Math.max(8,Math.min(y+14,height-tooltip.offsetHeight-10))+'px';}
- function select(i,focus=false){if(i>=0&&communityFocus>=0&&N[i].community!==communityFocus){communityFocus=-1;$('community-focus').value='-1';updateCounts();updateCommunitySummary();}if(i>=0&&routeFocus&&!(N[i].membership&routeFocus)){routeFocus=0;$('route-focus').value='0';updateCounts();}selected=i;selectedSet=null;selectedEdges=[];selectedTargets=[];selectedSources=[];setHover(-1,0,0);if(i<0){$('inspector').style.display='none';requestDraw();return;}visible[N[i].group]=true;document.querySelector('.group-toggle[data-group="'+N[i].group+'"] input').checked=true;selectedSet=new Set([i]);const seenEdges=new Set();
+ function select(i,focus=false){stage.classList.remove('has-inspector');ethGoalSelected=false;$('eth-goal-details').hidden=true;$('selected-declaration-details').hidden=false;if(i>=0&&communityFocus>=0&&N[i].community!==communityFocus){communityFocus=-1;$('community-focus').value='-1';updateCounts();updateCommunitySummary();}if(i>=0&&routeFocus&&!(N[i].membership&routeFocus)){routeFocus=0;$('route-focus').value='0';updateCounts();}selected=i;selectedSet=null;selectedEdges=[];selectedTargets=[];selectedSources=[];setHover(-1,0,0);if(i<0){$('inspector').style.display='none';requestDraw();return;}visible[N[i].group]=true;document.querySelector('.group-toggle[data-group="'+N[i].group+'"] input').checked=true;selectedSet=new Set([i]);const seenEdges=new Set();
   for(let j=offsets[i];j<offsets[i+1];j++){const ei=adjacency[j];if(seenEdges.has(ei))continue;seenEdges.add(ei);selectedEdges.push(ei);const [a,b]=E[ei];selectedSet.add(a);selectedSet.add(b);if(a===i)selectedTargets.push(b);if(b===i)selectedSources.push(a);}
-  const n=N[i];$('selected-name').textContent=n.name;$('selected-community').textContent=COMMUNITIES[n.community].short_label+' · '+fmt(COMMUNITIES[n.community].size)+' declarations';$('selected-module').textContent=n.module||'Not recorded';$('selected-id').textContent=n.id;$('selected-id-label').style.display=n.id===n.name?'none':'block';$('selected-id').style.display=n.id===n.name?'none':'block';$('selected-group').textContent=membershipLabel(n);$('selected-dot').style.background=COLORS[n.group];$('selected-out').textContent=fmt(outCount[i]);$('selected-in').textContent=fmt(inCount[i]);$('inspector').style.display='block';$('neighbor-list').style.display='none';$('show-neighbors').textContent='Browse connections';
-  if(focus){scale=Math.max(scale,fitScale*3);const left=width>800?320:20,right=width>1000?370:20;tx=left+(width-left-right)/2-X[i]*scale;ty=height*.48-Y[i]*scale;}
+  const n=N[i];$('selected-name').textContent=n.name;$('selected-community').textContent=COMMUNITIES[n.community].short_label+' · '+fmt(COMMUNITIES[n.community].size)+' declarations';$('selected-module').textContent=n.module||'Not recorded';$('selected-id').textContent=n.id;$('selected-id-label').style.display=n.id===n.name?'none':'block';$('selected-id').style.display=n.id===n.name?'none':'block';$('selected-group').textContent=membershipLabel(n);$('selected-dot').style.background=COLORS[n.group];$('selected-out').textContent=fmt(outCount[i]);$('selected-in').textContent=fmt(inCount[i]);$('inspector').style.display='block';stage.classList.add('has-inspector');$('neighbor-list').style.display='none';$('show-neighbors').textContent='Browse connections';
+  if(focus){scale=Math.max(scale,fitScale*3);const left=width>800?320:20,right=width>1000?370:20;tx=left+(width-left-right)/2-displayX(i)*scale;ty=height*.48-displayY(i)*scale;}
   announcement(n.name+', '+LABELS[n.group]);requestDraw();
  }
  function browse(){const box=$('neighbor-list');if(box.style.display==='block'){box.style.display='none';$('show-neighbors').textContent='Browse connections';return;}box.replaceChildren();for(const [title,indices] of [[$('out-label').textContent,selectedTargets],[$('in-label').textContent,selectedSources]]){const unique=[...new Set(indices)].sort((a,b)=>(N[b].degree||0)-(N[a].degree||0));const h=document.createElement('h3');h.textContent=title+' · '+fmt(unique.length);box.append(h);for(const i of unique.slice(0,60)){const btn=document.createElement('button');btn.className='neighbor';const dot=document.createElement('span');dot.className='dot';dot.style.background=COLORS[N[i].group];const label=document.createElement('span');label.textContent=N[i].name;btn.title=N[i].name;btn.append(dot,label);btn.addEventListener('click',()=>select(i,true));box.append(btn);}if(unique.length>60){const p=document.createElement('p');p.className='hint';p.textContent='Showing the 60 most connected. All are retained in the graph data.';box.append(p);}}box.style.display='block';$('show-neighbors').textContent='Hide connections';}
@@ -194,8 +215,8 @@ function drawEdges(){
  const pointers=new Map();let startPoint=null,lastPoint=null,moved=false,pinchDistance=0;
  function eventPoint(e){const r=stage.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
  $('interaction').addEventListener('pointerdown',e=>{if(e.button!==0)return;const p=eventPoint(e);pointers.set(e.pointerId,p);$('interaction').setPointerCapture(e.pointerId);startPoint=lastPoint=p;moved=false;dragging=true;$('interaction').classList.add('dragging');setHover(-1,0,0);if(pointers.size===2){const [a,b]=[...pointers.values()];pinchDistance=Math.hypot(a.x-b.x,a.y-b.y);}});
- $('interaction').addEventListener('pointermove',e=>{const p=eventPoint(e);if(pointers.has(e.pointerId)){pointers.set(e.pointerId,p);if(pointers.size===2){const [a,b]=[...pointers.values()],distance=Math.hypot(a.x-b.x,a.y-b.y);if(pinchDistance>0)zoom(distance/pinchDistance,(a.x+b.x)/2,(a.y+b.y)/2);pinchDistance=distance;moved=true;}else{const dx=p.x-lastPoint.x,dy=p.y-lastPoint.y;tx+=dx;ty+=dy;lastPoint=p;if(Math.hypot(p.x-startPoint.x,p.y-startPoint.y)>3)moved=true;requestDraw();}}else setHover(nearest(p.x,p.y),p.x,p.y);});
- function pointerEnd(e){if(!pointers.has(e.pointerId))return;const p=eventPoint(e);pointers.delete(e.pointerId);if(pointers.size){lastPoint=[...pointers.values()][0];startPoint=lastPoint;moved=true;return;}dragging=false;pinchDistance=0;$('interaction').classList.remove('dragging');if(!moved&&e.type==='pointerup')select(nearest(p.x,p.y));requestDraw();}
+ $('interaction').addEventListener('pointermove',e=>{const p=eventPoint(e);if(pointers.has(e.pointerId)){pointers.set(e.pointerId,p);if(pointers.size===2){const [a,b]=[...pointers.values()],distance=Math.hypot(a.x-b.x,a.y-b.y);if(pinchDistance>0)zoom(distance/pinchDistance,(a.x+b.x)/2,(a.y+b.y)/2);pinchDistance=distance;moved=true;}else{const dx=p.x-lastPoint.x,dy=p.y-lastPoint.y;tx+=dx;ty+=dy;lastPoint=p;if(Math.hypot(p.x-startPoint.x,p.y-startPoint.y)>3)moved=true;requestDraw();}}else{if(ethGoalHit(p.x,p.y)){setHover(-1,p.x,p.y);showEthGoalTooltip(p.x,p.y);}else{const hit=annotationHit(p.x,p.y);setHover(hit>=0?hit:nearest(p.x,p.y),p.x,p.y);}}});
+ function pointerEnd(e){if(!pointers.has(e.pointerId))return;const p=eventPoint(e);pointers.delete(e.pointerId);if(pointers.size){lastPoint=[...pointers.values()][0];startPoint=lastPoint;moved=true;return;}dragging=false;pinchDistance=0;$('interaction').classList.remove('dragging');if(!moved&&e.type==='pointerup'){if(ethGoalHit(p.x,p.y))showEthGoal();else{const hit=annotationHit(p.x,p.y);select(hit>=0?hit:nearest(p.x,p.y));}}requestDraw();}
  $('interaction').addEventListener('pointerup',pointerEnd);$('interaction').addEventListener('pointercancel',pointerEnd);$('interaction').addEventListener('pointerleave',()=>{if(!dragging)setHover(-1,0,0);});
  $('interaction').addEventListener('wheel',e=>{e.preventDefault();const p=eventPoint(e);zoom(Math.exp(-Math.max(-200,Math.min(200,e.deltaY))*.003),p.x,p.y);setHover(-1,0,0);},{passive:false});
  $('interaction').addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','+','=','-','f','F'].includes(e.key))e.preventDefault();if(e.key==='ArrowUp')ty+=45;if(e.key==='ArrowDown')ty-=45;if(e.key==='ArrowLeft')tx+=45;if(e.key==='ArrowRight')tx-=45;if(e.key==='+'||e.key==='=')zoom(1.3);if(e.key==='-')zoom(1/1.3);if(e.key.toLowerCase()==='f')fit();requestDraw();});
@@ -211,14 +232,15 @@ function drawEdges(){
   ctx.font='11px system-ui';const entries=[];let x=22,y=46;
   for(const key of KEYS){if(!visible[key])continue;const size=ctx.measureText(LABELS[key]).width+32;
    if(x>22&&x+size>width-18){x=22;y+=20;}entries.push({key,x,y});x+=size;}
-  return {entries,bar:y+44,noteY:y+23};
+  return {entries,bar:y+44+(guideStage?22:0),noteY:y+23,guideY:y+44};
  }
  $('export').addEventListener('click',()=>{
   if(!edgeComplete)return;const c=document.createElement('canvas'),ctx=c.getContext('2d'),legend=exportLegend(ctx),bar=legend.bar;
   c.width=Math.round(width*dpr);c.height=Math.round((height+bar)*dpr);ctx.scale(dpr,dpr);
   ctx.fillStyle=BG;ctx.fillRect(0,0,width,height+bar);ctx.fillStyle=COLORS.openai;ctx.font='500 17px system-ui';ctx.fillText('Anthropic + our route · clusters',22,27);ctx.font='11px system-ui';
   for(const {key,x,y} of legend.entries){ctx.fillStyle=COLORS[key];ctx.beginPath();ctx.arc(x+4,y,3,0,Math.PI*2);ctx.fill();ctx.fillStyle='#716e66';ctx.fillText(LABELS[key],x+13,y+4);}
-  ctx.fillStyle='#716e66';ctx.font='10px system-ui';ctx.fillText('Lean '+meta.lean_version+' · no OpenAI-only · lines '+Math.round(lineFraction*100)+'% · opacity '+$('opacity').value+'%'+' · names '+(showClusterNames?'on':'off')+(selected>=0?' · all selected connections':''),22,legend.noteY);
+  ctx.fillStyle='#716e66';ctx.font='10px system-ui';ctx.fillText('Lean '+meta.lean_version+' · no OpenAI-only · lines '+Math.round(lineFraction*100)+'% · opacity '+$('opacity').value+'%'+' · names '+(showClusterNames?'on':'off')+' · shared ETH conclusion '+(showEthEndpoints?'on':'off')+(selected>=0?' · all selected connections':''),22,legend.noteY);
+  if(guideStage){ctx.fillStyle='#514c43';ctx.font='500 11px system-ui';const text='Guide: '+guideStage.title+' · labels '+(showGuideLabels?'on':'off');ctx.fillText(shortCanvasText(ctx,text,width-44),22,legend.guideY);}
   ctx.drawImage(canvases[0],0,bar,width,height);ctx.drawImage(canvases[1],0,bar,width,height);
   const old=hover;hover=-1;communityExport=true;drawOverlay();ctx.drawImage(canvases[2],0,bar,width,height);communityExport=false;hover=old;drawOverlay();
   c.toBlob(blob=>{if(blob)download(blob,'eth-anthropic-our-clusters.png');},'image/png');
@@ -263,6 +285,228 @@ function drawCommunityGuides(){
   }
   hc.restore();
 }
+// Curated comparisons are annotations of existing declaration nodes. They never
+// alter proof membership, dependencies, communities or saved coordinates.
+function panelBoxes(){
+  if(communityExport)return [];
+  const bounds=stage.getBoundingClientRect(),boxes=[];
+  for(const selector of ['.controls','#inspector','.statusbar']){
+    const el=document.querySelector(selector);if(getComputedStyle(el).display==='none')continue;
+    const b=el.getBoundingClientRect();boxes.push({x:b.left-bounds.left,y:b.top-bounds.top,w:b.width,h:b.height});
+  }
+  return boxes;
+}
+function boxesOverlap(a,b,pad=0){return a.x<b.x+b.w+pad&&a.x+a.w>b.x-pad&&a.y<b.y+b.h+pad&&a.y+a.h>b.y-pad;}
+function guideViewport(){
+  const panels=panelBoxes(),xs=[12,width-12],ys=[12,height-55];
+  for(const b of panels){xs.push(Math.max(12,b.x-12),Math.min(width-12,b.x+b.w+12));ys.push(Math.max(12,b.y-12),Math.min(height-55,b.y+b.h+12));}
+  let best={x:12,y:12,w:Math.max(80,width-24),h:Math.max(80,height-67)},area=0;
+  for(const x0 of xs)for(const x1 of xs)for(const y0 of ys)for(const y1 of ys){
+    const box={x:x0,y:y0,w:x1-x0,h:y1-y0};if(box.w<65||box.h<65||panels.some(b=>boxesOverlap(box,b,3)))continue;
+    // A narrow side strip can have more area than the space below mobile
+    // controls, but cannot accommodate readable comparison labels.
+    const score=box.w*box.h*Math.min(1,box.w/300);
+    if(score>area){best=box;area=score;}
+  }
+  return best;
+}
+function frameGuide(indices){
+  if(!indices.length)return;
+  const box=guideViewport(),xs=indices.map(i=>displayX(i)),ys=indices.map(i=>displayY(i));
+  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  scale=Math.max(fitScale*.15,Math.min(fitScale*60,Math.max(35,box.w-90)/Math.max(x1-x0,.018),Math.max(35,box.h-90)/Math.max(y1-y0,.018)));
+  tx=box.x+box.w/2-(x0+x1)/2*scale;ty=box.y+box.h/2-(y0+y1)/2*scale;requestDraw();
+}
+function showProofGuide(id,updateUrl=true){
+  guideStage=GUIDE_STAGES.find(item=>item.id===id)||null;$('proof-guide-stage').value=guideStage?guideStage.id:'';
+  $('proof-guide-card').hidden=!guideStage;$('proof-guide-intro').hidden=!!guideStage;guideLabelBoxes=[];
+  if(updateUrl){const url=new URL(location.href);if(guideStage){url.searchParams.set('guide',guideStage.id);url.searchParams.delete('eth');}else url.searchParams.delete('guide');history.replaceState(null,'',url);}
+  if(!guideStage){requestDraw();return;}
+  $('proof-guide-relation').textContent=guideStage.relation;$('proof-guide-summary').textContent=guideStage.summary;
+  $('proof-guide-comparison').textContent=guideStage.comparison;$('proof-guide-comparison').hidden=!guideStage.comparison;
+  const anchors=$('proof-guide-anchors');anchors.replaceChildren();
+  guideStage.anchors.forEach((anchor,number)=>{
+    const card=document.createElement('div');card.className='guide-anchor';
+    const button=document.createElement('button'),badge=document.createElement('span'),label=document.createElement('span');
+    button.type='button';button.dataset.guideNode=anchor.name;button.title=anchor.name;
+    badge.className='guide-anchor-number';badge.textContent=String(number+1);badge.style.color=COLORS[N[anchor.index].group];
+    label.className='guide-anchor-label';label.textContent=anchor.label;button.append(badge,label);
+    button.addEventListener('click',()=>{select(anchor.index);frameGuide([anchor.index]);});card.append(button);
+    const route=document.createElement('span');route.className='guide-anchor-route';route.textContent=({ours:'Our route',anthropic:'Anthropic route',shared:'Shared machinery'})[anchor.route]||anchor.route;card.append(route);
+    if(anchor.description){const p=document.createElement('p');p.className='guide-anchor-description';p.textContent=anchor.description;card.append(p);}
+    if(anchor.source){
+      const url=new URL(anchor.source.url);if(url.protocol!=='https:'||url.hostname!=='github.com')throw new Error('Unexpected guide source URL');
+      const link=document.createElement('a');link.className='guide-source';link.href=url.href;link.target='_blank';link.rel='noopener noreferrer';
+      link.textContent='Lean source · line '+anchor.source.line;link.title=anchor.source.path+':'+anchor.source.line;card.append(link);
+    }
+    anchors.append(card);
+  });
+  if(width<=760){const controls=document.querySelector('.controls'),heading=$('proof-guide-stage');controls.scrollTop+=heading.getBoundingClientRect().top-controls.getBoundingClientRect().top-36;}
+  resetGuideFilters();select(-1);frameGuide(guideStage.anchors.map(a=>a.index));
+  announcement(guideStage.title+'. '+guideStage.relation+'. '+guideStage.summary);
+}
+function resetGuideFilters(){
+  routeFocus=0;communityFocus=-1;$('route-focus').value='0';$('community-focus').value='-1';
+  for(const key of KEYS){visible[key]=true;document.querySelector('.group-toggle[data-group="'+key+'"] input').checked=true;}
+  updateCounts();updateCommunitySummary();
+}
+function shortCanvasText(ctx,text,maxWidth){
+  if(ctx.measureText(text).width<=maxWidth)return text;
+  let short=text;while(short.length&&ctx.measureText(short+'…').width>maxWidth)short=short.slice(0,-1);return short+'…';
+}
+function drawProofGuide(){
+  guideLabelBoxes=[];if(!guideStage||!showGuideLabels)return;
+  hc.save();hc.font='550 11px system-ui';hc.textAlign='left';hc.textBaseline='middle';
+  const occupied=[...panelBoxes(),...ethEndpointLabelBoxes],viewport=guideViewport();
+  guideStage.anchors.forEach((anchor,number)=>{
+    const i=anchor.index;if(!active(i)||(showEthEndpoints&&ETH_ROOT_INDICES.has(i)))return;const x=screenX(i),y=screenY(i);if(!onScreen(x,y,0))return;
+    const color=COLORS[N[i].group],text=shortCanvasText(hc,(number+1)+' · '+anchor.label,Math.min(240,Math.max(55,viewport.w-24)));
+    const w=hc.measureText(text).width+16,h=24,candidates=[];
+    for(const distance of [16,44,72,100,132]){
+      candidates.push({x:x+16,y:y-distance-h/2,w,h},{x:x-w-16,y:y-distance-h/2,w,h},
+        {x:x+16,y:y+distance-h/2,w,h},{x:x-w-16,y:y+distance-h/2,w,h},
+        {x:x-w/2,y:y-distance-h,w,h},{x:x-w/2,y:y+distance,w,h});
+    }
+    const box=candidates.find(b=>b.x>=8&&b.y>=8&&b.x+b.w<=width-8&&b.y+b.h<=height-49&&!occupied.some(o=>boxesOverlap(b,o,6)));
+    hc.beginPath();hc.arc(x,y,6,0,Math.PI*2);hc.fillStyle=BG;hc.fill();hc.lineWidth=2;hc.strokeStyle=color;hc.stroke();
+    hc.beginPath();hc.arc(x,y,2.5,0,Math.PI*2);hc.fillStyle=color;hc.fill();
+    if(!box)return;
+    const endX=Math.max(box.x,Math.min(box.x+box.w,x)),endY=Math.max(box.y,Math.min(box.y+box.h,y));
+    hc.beginPath();hc.moveTo(x,y);hc.lineTo(endX,endY);hc.strokeStyle=color;hc.lineWidth=.9;hc.setLineDash([2,3]);hc.stroke();hc.setLineDash([]);
+    hc.fillStyle='#fffcf6f5';hc.fillRect(box.x,box.y,box.w,box.h);hc.lineWidth=.8;hc.strokeStyle=color;hc.strokeRect(box.x,box.y,box.w,box.h);
+    hc.fillStyle='#25221c';hc.fillText(text,box.x+8,box.y+box.h/2);occupied.push(box);guideLabelBoxes.push({...box,index:i,name:anchor.name,label:anchor.label});
+  });
+  hc.restore();
+}
+function proofGuideHit(x,y){return guideLabelBoxes.find(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h)?.index??-1;}
+$('proof-guide-intro').textContent=GUIDE.intro;
+for(const item of GUIDE_STAGES){const option=document.createElement('option');option.value=item.id;option.textContent=item.title;$('proof-guide-stage').append(option);}
+$('proof-guide-stage').addEventListener('change',event=>showProofGuide(event.target.value));
+$('show-guide-labels').addEventListener('change',event=>{showGuideLabels=event.target.checked;drawOverlay();});
+$('fit-guide').addEventListener('click',()=>{if(!guideStage)return;resetGuideFilters();select(-1);frameGuide(guideStage.anchors.map(a=>a.index));});
+// The final theorem declarations share one display goal, independent of
+// automatic cluster names and the optional proof-reading guide.
+let showEthEndpoints=true,ethEndpointLabelBoxes=[],ethGoalSelected=false;
+const ETH_ROOTS=(meta.root_groups||[]).flatMap(group=>group.roots.map((name,j)=>{
+  const index=group.root_indices[j];
+  if(!Number.isInteger(index)||N[index]?.name!==name)throw new Error('ETH root metadata mismatch: '+name);
+  const route=({1:'OpenAI',2:'Anthropic',4:'Our route'})[group.bit]||group.label;
+  return {name,index,route,label:'ETH refuted · '+route};
+}));
+const ETH_ROOT_INDICES=new Set(ETH_ROOTS.map(root=>root.index));
+// A display-only grouping of equal conclusions. The graph's declarations,
+// proof bodies, adjacency lists, source positions and reuse counts stay intact.
+const ETH_GOAL=Object.freeze({id:'eth-shared-conclusion',kind:'shared-conclusion',label:'¬ETH',
+  conclusion:'¬ ComplexityAbstracts.SubexponentialSATAbstract.ETH',color:'#a500cf',
+  rootIndices:ETH_ROOTS.map(root=>root.index),names:ETH_ROOTS.map(root=>root.name),
+  x:ETH_ROOTS.reduce((sum,root)=>sum+X[root.index],0)/ETH_ROOTS.length,
+  y:ETH_ROOTS.reduce((sum,root)=>sum+Y[root.index],0)/ETH_ROOTS.length});
+const ethGoalActive=()=>showEthEndpoints&&ETH_ROOTS.some(root=>active(root.index));
+function ethGoalHit(x,y){
+  if(!ethGoalActive())return false;
+  return Math.hypot(x-(ETH_GOAL.x*scale+tx),y-(ETH_GOAL.y*scale+ty))<=12||ethEndpointLabelBoxes.some(b=>x>=b.x&&x<=b.x+b.w&&y>=b.y&&y<=b.y+b.h);
+}
+function showEthGoalTooltip(x,y){
+  const tooltip=$('tooltip');tooltip.replaceChildren();
+  const title=document.createElement('b'),note=document.createElement('small');
+  title.textContent=ETH_GOAL.label;note.textContent='One conclusion · '+ETH_ROOTS.length+' independent proof routes. Click to inspect.';
+  tooltip.append(title,note);tooltip.style.display='block';
+  tooltip.style.left=Math.max(8,Math.min(x+14,width-tooltip.offsetWidth-12))+'px';tooltip.style.top=Math.max(8,Math.min(y+14,height-tooltip.offsetHeight-10))+'px';
+}
+function showEthGoal(){
+  select(-1);ethGoalSelected=true;$('selected-declaration-details').hidden=true;$('eth-goal-details').hidden=false;
+  $('selected-group').textContent='Shared conclusion';$('selected-dot').style.background=ETH_GOAL.color;
+  $('inspector').style.display='block';stage.classList.add('has-inspector');
+  $('eth-goal-summary').textContent='ETH is false. '+ETH_ROOTS.map(root=>root.route).join(', ')+' each establish exactly this statement.';
+  frameEthIndices(ETH_ROOTS.filter(root=>active(root.index)).map(root=>root.index));
+  announcement(ETH_GOAL.label+'. Choose an independent proof route.');
+}
+function ethPanelBoxes(){
+  if(communityExport)return [];
+  const bounds=stage.getBoundingClientRect(),boxes=[];
+  for(const selector of ['.controls','#inspector','.statusbar']){
+    const el=document.querySelector(selector);if(!el||getComputedStyle(el).display==='none')continue;
+    const b=el.getBoundingClientRect();boxes.push({x:b.left-bounds.left,y:b.top-bounds.top,w:b.width,h:b.height});
+  }
+  return boxes;
+}
+function ethOverlap(a,b,pad=0){return a.x<b.x+b.w+pad&&a.x+a.w>b.x-pad&&a.y<b.y+b.h+pad&&a.y+a.h>b.y-pad;}
+function ethViewport(){
+  const panels=ethPanelBoxes(),xs=[12,width-12],ys=[12,height-55];
+  for(const b of panels){xs.push(Math.max(12,b.x-12),Math.min(width-12,b.x+b.w+12));ys.push(Math.max(12,b.y-12),Math.min(height-55,b.y+b.h+12));}
+  let best={x:12,y:12,w:Math.max(80,width-24),h:Math.max(80,height-67)},score=0;
+  for(const x0 of xs)for(const x1 of xs)for(const y0 of ys)for(const y1 of ys){
+    const box={x:x0,y:y0,w:x1-x0,h:y1-y0};if(box.w<65||box.h<65||panels.some(p=>ethOverlap(box,p,3)))continue;
+    const area=box.w*box.h*Math.min(1,box.w/300);if(area>score){best=box;score=area;}
+  }
+  return best;
+}
+function frameEthIndices(indices){
+  if(!indices.length)return;
+  const box=ethViewport(),xs=indices.map(i=>displayX(i)),ys=indices.map(i=>displayY(i));
+  const x0=Math.min(...xs),x1=Math.max(...xs),y0=Math.min(...ys),y1=Math.max(...ys);
+  scale=Math.max(fitScale*.15,Math.min(fitScale*80,Math.max(35,box.w-100)/Math.max(x1-x0,.006),Math.max(35,box.h-110)/Math.max(y1-y0,.006)));
+  tx=box.x+box.w/2-(x0+x1)/2*scale;ty=box.y+box.h/2-(y0+y1)/2*scale;requestDraw();
+}
+function findEthEndpoints(){
+  if(typeof showProofGuide==='function')showProofGuide('');
+  const url=new URL(location.href);url.searchParams.delete('guide');url.searchParams.set('eth','1');history.replaceState(null,'',url);
+  communityFocus=-1;$('community-focus').value='-1';
+  let roots=ETH_ROOTS.filter(root=>visible[N[root.index].group]&&(!routeFocus||(N[root.index].membership&routeFocus)));
+  if(!roots.length){
+    routeFocus=0;$('route-focus').value='0';
+    for(const root of ETH_ROOTS){visible[N[root.index].group]=true;document.querySelector('.group-toggle[data-group="'+N[root.index].group+'"] input').checked=true;}
+    roots=ETH_ROOTS;
+  }
+  showEthEndpoints=true;$('show-eth-endpoints').checked=true;select(-1);updateCounts();updateCommunitySummary();
+  const controls=document.querySelector('.controls');controls.scrollTop=0;
+  frameEthIndices(roots.map(root=>root.index));
+  announcement(ETH_GOAL.label+'. '+roots.map(root=>root.route).join(', ')+' independently prove this conclusion.');
+}
+function annotationHit(x,y){return typeof proofGuideHit==='function'?proofGuideHit(x,y):-1;}
+function drawEthEndpoints(){
+  ethEndpointLabelBoxes=[];if(!ethGoalActive())return;
+  const occupied=ethPanelBoxes(),x=ETH_GOAL.x*scale+tx,y=ETH_GOAL.y*scale+ty;if(!onScreen(x,y,0))return;
+  const color=ETH_GOAL.color,text=ETH_GOAL.label;
+  hc.save();hc.font='600 11px system-ui';hc.textAlign='left';hc.textBaseline='middle';
+  const w=Math.ceil(hc.measureText(text).width)+22,h=28,candidates=[];
+  for(const distance of [18,50,82,114,150,190,240,300]){
+    candidates.push({x:x+18,y:y-distance-h/2,w,h},{x:x-w-18,y:y-distance-h/2,w,h},
+      {x:x+18,y:y+distance-h/2,w,h},{x:x-w-18,y:y+distance-h/2,w,h},
+      {x:x-w/2,y:y-distance-h,w,h},{x:x-w/2,y:y+distance,w,h});
+  }
+  const fits=b=>b.x>=8&&b.y>=8&&b.x+b.w<=width-8&&b.y+b.h<=height-12&&!occupied.some(p=>ethOverlap(b,p,7));
+  let box=candidates.find(fits);
+  if(!box){
+    const fallback=[];
+    for(let by=12;by+h<=height-12;by+=h+10)for(let bx=12;bx+w<=width-12;bx+=Math.max(28,w/2)){
+      const candidate={x:bx,y:by,w,h};if(fits(candidate))fallback.push(candidate);
+    }
+    fallback.sort((a,b)=>Math.hypot(a.x+a.w/2-x,a.y+a.h/2-y)-Math.hypot(b.x+b.w/2-x,b.y+b.h/2-y));box=fallback[0];
+  }
+  hc.beginPath();hc.arc(x,y,9,0,Math.PI*2);hc.fillStyle=BG;hc.fill();hc.lineWidth=2.5;hc.strokeStyle=color;hc.stroke();
+  hc.beginPath();hc.arc(x,y,4,0,Math.PI*2);hc.fillStyle=color;hc.fill();
+  if(box){
+    const endX=Math.max(box.x,Math.min(box.x+box.w,x)),endY=Math.max(box.y,Math.min(box.y+box.h,y));
+    hc.beginPath();hc.moveTo(x,y);hc.lineTo(endX,endY);hc.lineWidth=1.2;hc.strokeStyle=color;hc.setLineDash([3,3]);hc.stroke();hc.setLineDash([]);
+    hc.fillStyle='#fffcf6fa';hc.fillRect(box.x,box.y,box.w,box.h);hc.strokeStyle=color;hc.lineWidth=1.5;hc.strokeRect(box.x,box.y,box.w,box.h);
+    hc.fillStyle='#171717';hc.fillText(text,box.x+11,box.y+14);
+    ethEndpointLabelBoxes.push({...box,id:ETH_GOAL.id,kind:ETH_GOAL.kind,label:ETH_GOAL.label,names:[...ETH_GOAL.names],rootIndices:[...ETH_GOAL.rootIndices]});
+  }
+  hc.restore();
+}
+$('find-eth').addEventListener('click',findEthEndpoints);
+$('show-eth-endpoints').addEventListener('change',event=>{showEthEndpoints=event.target.checked;if(!showEthEndpoints&&ethGoalSelected)select(-1);requestDraw();});
+for(const root of ETH_ROOTS){
+  for(const target of ['eth-endpoint-buttons','eth-goal-proof-buttons']){
+    const button=document.createElement('button'),dot=document.createElement('span'),name=document.createElement('span');
+    button.type='button';button.className='eth-route-button';button.dataset.ethNode=root.name;button.title=root.name;
+    dot.className='dot';dot.style.background=COLORS[N[root.index].group];name.textContent=root.route;button.append(dot,name);
+    button.addEventListener('click',()=>{showEthEndpoints=true;$('show-eth-endpoints').checked=true;select(root.index);frameEthIndices([root.index]);});
+    $(target).append(button);
+  }
+}
+
 for(const c of [...COMMUNITIES].sort((a,b)=>b.size-a.size||a.id-b.id)){
   const option=document.createElement('option');option.value=String(c.id);
   option.textContent=c.short_label+' · '+fmt(c.size);$('community-focus').append(option);
@@ -276,8 +520,10 @@ $('line-density').addEventListener('input',event=>{
 updateCommunitySummary();
 
  new ResizeObserver(resize).observe(stage);$('loading').style.display='none';resize();
- // Small read-only status surface for offline diagnostics, never used to supply graph data.
- window.dependencyExplorer=Object.freeze({get state(){return{nodes:N.length,edges:E.length,selected,hover,scale,fitScale,visible:{...visible},routeFocus,communityFocus,showClusterNames,lineFraction,edgeDisplay:{...edgeDisplay},edgeComplete};}});
+ const requestedStep=new URLSearchParams(location.search).get('guide');if(requestedStep)showProofGuide(requestedStep,false);
+ if(new URLSearchParams(location.search).get('eth')==='1')findEthEndpoints();
+ // Status and bounded UI hooks for offline diagnostics; no graph mutation hooks.
+ window.dependencyExplorer=Object.freeze({get state(){return{nodes:N.length,edges:E.length,selected,hover,scale,fitScale,visible:{...visible},routeFocus,communityFocus,showClusterNames,lineFraction,edgeDisplay:{...edgeDisplay},edgeComplete,ethEndpoints:{showLabels:showEthEndpoints,mode:'shared-conclusion',goal:{...ETH_GOAL,selected:ethGoalSelected,visible:ethGoalActive(),screenX:ETH_GOAL.x*scale+tx,screenY:ETH_GOAL.y*scale+ty},roots:ETH_ROOTS.map(r=>({...r,displayX:displayX(r.index),displayY:displayY(r.index),screenX:screenX(r.index),screenY:screenY(r.index)})),visibleLabels:ethEndpointLabelBoxes.map(b=>({...b}))},proofGuide:{stage:guideStage?.id||null,showLabels:showGuideLabels,anchorNames:guideStage?.anchors.map(a=>a.name)||[],visibleLabels:guideLabelBoxes.map(b=>({...b}))}};},findEth:()=>findEthEndpoints(),inspectEthGoal:()=>showEthGoal(),selectProofGuide:id=>showProofGuide(id),frameProofGuide:()=>{if(guideStage)frameGuide(guideStage.anchors.map(a=>a.index));}});
 })()
 </script>
 </body>

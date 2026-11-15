@@ -36,6 +36,10 @@ The [graph package](graphs/README.md) rebuilds both interactive pages from saved
 Lean 4.35 compiled-reference snapshots, using Python without running Lean.
 It includes zoom, declaration search, cluster selection, line controls, a
 **Show cluster names** switch, and PNG export.
+Both views unify the final proof declarations into one displayed **¬ETH**
+conclusion and offer **Find ETH**. Each route's proof remains inspectable.
+The reduced view also has a source-linked **Compare proof steps** guide showing
+our constructions, Anthropic counterparts, and exact reuse points.
 
 | Setup | Declarations | Direct references | Clusters |
 | --- | ---: | ---: | ---: |
@@ -50,7 +54,7 @@ Clusters follow dependency structure. Screen distance is presentation geometry,
 not a mathematical similarity measure. A graph rebuild renders the saved
 snapshot; it is not a new Lean verification or dependency extraction.
 
-[Temporary public graph pages and slide assets](https://somerset-button-messenger-road.trycloudflare.com/)
+[Temporary public graph pages and slide assets](https://sms-model-pond-landscapes.trycloudflare.com/)
 are served from this computer. The link requires the computer and tunnel to stay
 online. Portable build, hosting and slide-download instructions are in
 [graphs/README.md](graphs/README.md).

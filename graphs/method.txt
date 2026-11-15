@@ -32,13 +32,35 @@ Counts include imported and generated declarations; graph size alone does
 not establish conceptual simplicity or proof optimality.
 
 READING AND REUSING THE VIEWS
+The final proof declarations are displayed as one shared not-ETH conclusion.
+Each route independently proves exactly the same proposition. Find ETH frames
+the shared conclusion; click it to choose and inspect an individual proof.
+While this grouping is enabled, root points and their direct reference endpoints
+use the centroid of all saved root positions. This position does not change
+with route filters. The graph JSON, source positions, declaration counts and
+sharing statistics remain unchanged. The grouped goal is not a new Lean
+declaration, and combining the view does not mean the independent proofs need
+one another. Selecting a route shows its own proof dependencies.
+The shared-conclusion toggle is separate from cluster names and proof-guide
+labels, and PNG exports preserve its setting. The definition of ETH remains
+a different declaration from the proofs of not-ETH.
 Show cluster names toggles graph labels, including in Save view PNG exports.
 It starts enabled; circles, nodes, edges and clustering remain unchanged.
 Overview lines use a deterministic 10% sample at 3.5% opacity by default.
 Selection shows all connections of the selected node within active filters.
 Every displayed edge is retained in the full per-view graph JSON download.
-The exported PNGs show the default overview and its sampling/opacity legend.
-Both interactive pages preserve the verified data, renderer code and layout;
-only their static navigation/document links are rebased for public hosting.
+The exported overview PNGs hide automatic cluster names and retain the
+sampling/opacity legend and the single shared ETH conclusion. This is separate from
+the optional curated guide labels.
+Both interactive pages preserve the verified graph data and saved layout;
+only the displayed final roots are grouped at their centroid when enabled.
+The reduced page also has a curated proof guide with source-linked callouts.
+The labels compare roles; they do not assert equivalence of different lemmas.
+Shared anchors identify identical Lean declarations used by both endpoints.
+Guide callout leader lines are annotations, not added dependency edges.
+Choose a step in Compare proof steps, then use Fit comparison or its node buttons.
+Show guide labels is independent of Show cluster names; PNG exports include
+the visible callouts. /proof-guide.txt and /proof-guide.json are included
+in the slide ZIP. Green means endpoint usage, not newly authored code.
 No raw compiler logs, credentials, server configuration or private evidence
 records are included. The summary carries public counts and evidence hashes.

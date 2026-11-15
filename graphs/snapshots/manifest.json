@@ -9,36 +9,36 @@
       "sha256": "07ec1085bf63536a0bd31a4a17a9b6238ee871501bc236bced5e07e4a7e95c09"
     },
     "templates/all.html": {
-      "bytes": 45345,
-      "sha256": "52d038f82456828a7f87590de323f087cb6af1f02c0143c2fe6e533b977501dd"
+      "bytes": 57023,
+      "sha256": "841853df769ec9d4e696777d13f2623f084bc15cbe5cdc9dc1398b7d4d6f6413"
     },
     "previews/all.png": {
-      "bytes": 257817,
-      "sha256": "8a96d4f6f50ec28820d84db1f0bf681511064557b11b3fed3110fc4210796f54"
+      "bytes": 241410,
+      "sha256": "5d616f5269ca8781293447f9ecad03da7ac37c241e9b3cc22946cacd718a5d59"
     },
     "snapshots/without-openai.graph.json.gz": {
       "bytes": 901919,
       "sha256": "709714e780233a20f41532774a901a263d98d8d188e0dab4b2d22e8c84b1779b"
     },
     "templates/without-openai.html": {
-      "bytes": 43856,
-      "sha256": "ee679981397446ee84febfd158345e5639f06c61d238e9ddc7ff9a2ff7e57837"
+      "bytes": 67459,
+      "sha256": "42b7ccd3b0f7d4722a48d876bcd1c16d689d3b21bdefdafcce40b0870a22645d"
     },
     "previews/without-openai.png": {
-      "bytes": 400629,
-      "sha256": "6c63abc0f0907fe1aaf4f89724f9d0b741353dd7e35d601816be45e74d74a6bf"
+      "bytes": 384392,
+      "sha256": "a8955f5dbe5182827beca60eb1a1e119c035559c80b0407330d8fcb4febdc93c"
     },
     "templates/index.html": {
-      "bytes": 5671,
-      "sha256": "74838bd7ae6aeeb59042e5f921358ed51d9de85cfcdf74151fea2bb425780231"
+      "bytes": 6059,
+      "sha256": "67019760d65324b2f29d26b5151cdedbf44459e2633f4fb739ebdd695de7bbf3"
     },
     "snapshots/graph-summary.json": {
-      "bytes": 6529,
-      "sha256": "30cfd788ba8d176143e54d5666e05f13e8252e2b5be23a9d5fa7da6ebe929d0d"
+      "bytes": 9826,
+      "sha256": "5b6bf6dee0a45fc6c1da5130dcc8fc7fbf655eb08dec27d17c55dfa2b0bf68f8"
     },
     "method.txt": {
-      "bytes": 2868,
-      "sha256": "51b2d700af1737b7c090c7593a64f45daaa84642c580685763e46046bff839bd"
+      "bytes": 4467,
+      "sha256": "eeb454a65481f2b8167b8463a8deb2be0d297a23ff539d40d180122dc0bb6133"
     },
     "robots.txt": {
       "bytes": 23,
@@ -51,6 +51,10 @@
     "layout/versions.json": {
       "bytes": 451,
       "sha256": "36bb35f936c3fe0f293fa6be701249a126b6699ec7548f1963892a47a0c7139a"
+    },
+    "annotations/anthropic-ours.json": {
+      "bytes": 26683,
+      "sha256": "c7a341694edd33e02e5ca8a909e3c3f3c33acd0534a2d81c6e8bab8af4944ea3"
     }
   },
   "original_public_assets": {
@@ -121,5 +125,55 @@
       "slide_image_sha256": "6c63abc0f0907fe1aaf4f89724f9d0b741353dd7e35d601816be45e74d74a6bf"
     }
   },
-  "note": "Historical evidence hashes identify the source snapshot. Snapshot rendering checks these saved bytes, not a fresh compiler run."
+  "note": "Historical evidence hashes identify the original source snapshot. Original publication hashes are preserved; presentation_assets separately pins the shared-conclusion and curated-guide revision. Snapshot rendering is not a fresh compiler run.",
+  "presentation_assets": {
+    "index.html": {
+      "bytes": 6059,
+      "sha256": "67019760d65324b2f29d26b5151cdedbf44459e2633f4fb739ebdd695de7bbf3"
+    },
+    "without-openai/index.html": {
+      "bytes": 6968744,
+      "sha256": "4c4c7028088ce74ad30499909a05f92c52f4c28711080aa8cae5c284c7869a08"
+    },
+    "method.txt": {
+      "bytes": 4467,
+      "sha256": "eeb454a65481f2b8167b8463a8deb2be0d297a23ff539d40d180122dc0bb6133"
+    },
+    "proof-guide.json": {
+      "bytes": 26683,
+      "sha256": "c7a341694edd33e02e5ca8a909e3c3f3c33acd0534a2d81c6e8bab8af4944ea3"
+    },
+    "proof-guide.txt": {
+      "bytes": 12901,
+      "sha256": "66465528e105b922dffaa18b47f441443d4d9e1ad774718069c022915896b948"
+    },
+    "all/preview.png": {
+      "bytes": 241410,
+      "sha256": "5d616f5269ca8781293447f9ecad03da7ac37c241e9b3cc22946cacd718a5d59"
+    },
+    "without-openai/preview.png": {
+      "bytes": 384392,
+      "sha256": "a8955f5dbe5182827beca60eb1a1e119c035559c80b0407330d8fcb4febdc93c"
+    },
+    "graph-summary.json": {
+      "bytes": 9826,
+      "sha256": "5b6bf6dee0a45fc6c1da5130dcc8fc7fbf655eb08dec27d17c55dfa2b0bf68f8"
+    },
+    "all/index.html": {
+      "bytes": 32560310,
+      "sha256": "7230127c84fbac80b92adb7e5512685d044a40c20b0bbf757dcad3b2d45ce2d4"
+    }
+  },
+  "presentation_revision": {
+    "id": "eth-negation-label-v1",
+    "description": "One displayed shared ETH conclusion with independently inspectable proofs on both views, plus nine source-linked comparisons. Graph snapshots, membership, source coordinates and edges unchanged; root screen positions use their common centroid.",
+    "guide_stages": 9,
+    "guide_anchors": 25,
+    "source_commit": "83b2f2390e71fa63038e2dfd3c0534a77659cf6e",
+    "guide_is_formal_equivalence_proof": false,
+    "slide_preview_cluster_names": false,
+    "eth_endpoint_labels": true,
+    "eth_endpoint_mode": "shared-conclusion",
+    "new_lean_verification": false
+  }
 }

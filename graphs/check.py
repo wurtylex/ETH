@@ -6,10 +6,11 @@ import http.client
 import io
 import json
 import re
+import struct
 import threading
 import zipfile
 
-from build import ASSETS, HERE, build, digest, require
+from build import ASSETS, HERE, build, check_guide, digest, expected_assets, require
 from serve import make_server
 
 
@@ -20,17 +21,61 @@ def main():
     bundle = HERE / 'dist'
     manifest = json.loads((bundle / 'export-manifest.json').read_text()) if args.skip_build else build(bundle)
     snapshot = json.loads((HERE / 'snapshots/manifest.json').read_text())
+    summary = json.loads((bundle / 'site/graph-summary.json').read_text())
     graphs = {}
     for key in ('all', 'without-openai'):
         raw = (bundle / 'site' / key / 'graph.json').read_bytes()
         graphs[key] = json.loads(raw)
+        graph = graphs[key]
+        expected_roots = {'EthBridge.AnthropicChain.not_eth', 'EthBridge.Elementary.ReusedRecursion.not_eth'}
+        if key == 'all':
+            expected_roots.add('EthBridge.OpenAIChain.not_eth')
+        roots = graph['meta']['root_indices']
+        require({graph['nodes'][i]['name'] for i in roots} == expected_roots and
+                all(graph['nodes'][i]['kind'] == 'theorem' for i in roots),
+                'Shared ETH conclusion must retain the exact final proof declarations')
+        goal = summary['presentation']['eth_endpoint_labels']['views'][key]
+        require(goal['id'] == 'eth-shared-conclusion' and goal['kind'] == 'shared-conclusion' and
+                {proof['name'] for proof in goal['proof_declarations']} == expected_roots,
+                'Shared conclusion provenance differs from the original proof roots')
+        for axis in ('x', 'y'):
+            require(abs(goal['position'][axis] - sum(graph['nodes'][i][axis] for i in roots) / len(roots)) < 1e-12,
+                    'Shared conclusion position must use all roots, independent of filters')
         page = (bundle / 'site' / key / 'index.html').read_text()
         match = re.search(r'<script id="graph-data" type="application/json">(.*?)</script>', page, re.S)
         require(match is not None and json.loads(match[1]) == graphs[key], 'Embedded graph differs')
-        require(digest(page.encode()) == snapshot['original_public_assets'][key + '/index.html']['sha256'],
-                'Renderer/scripts/styles differ from the checked public snapshot')
-        for control in ('line-density', 'opacity', 'show-cluster-names', 'export', 'route-focus', 'community-focus'):
+        require(digest(page.encode()) == expected_assets(snapshot)[key + '/index.html']['sha256'],
+                'Renderer/scripts/styles differ from the pinned presentation')
+        for control in ('line-density', 'opacity', 'show-cluster-names', 'show-eth-endpoints',
+                        'find-eth', 'export', 'route-focus', 'community-focus'):
             require(f'id="{control}"' in page, 'Missing preserved control: ' + control)
+        preview = (bundle / 'site' / key / 'preview.png').read_bytes()
+        record = summary['presentation']['slide_previews'][key]
+        require(preview.startswith(b'\x89PNG\r\n\x1a\n') and digest(preview) == record['sha256'],
+                'Slide preview differs from presentation record')
+        require(struct.unpack('>II', preview[16:24]) == (record['width'], record['height']) and
+                record['cluster_names'] is False and record['guide_stage'] is None and
+                record['eth_endpoint_labels'] is True and record['eth_endpoint_count'] == 1 and
+                record['eth_proof_declaration_count'] == len(expected_roots) and
+                record['eth_endpoint_mode'] == 'shared-conclusion',
+                'Unexpected overview export settings/dimensions')
+        if key == 'without-openai':
+            guide_match = re.search(r'<script id="proof-guide-data" type="application/json">(.*?)</script>', page, re.S)
+            require(guide_match is not None, 'Missing embedded reading guide')
+            guide = json.loads((bundle / 'site/proof-guide.json').read_bytes())
+            require(json.loads(guide_match[1]) == guide, 'Embedded reading guide differs')
+            check_guide(guide, graphs[key], raw)
+            for stage in guide['stages']:
+                sources = [anchor['source'] for anchor in stage['anchors']] + stage.get('supporting_sources', [])
+                for source in sources:
+                    path = HERE.parent / source['path']
+                    # A standalone graph package needs no Lean checkout. When
+                    # sources are present, check the exact reviewed file/line.
+                    if (HERE.parent / 'lean').is_dir():
+                        require(path.is_file() and digest(path.read_bytes()) == source['sha256'],
+                                'Guide source changed: ' + source['path'])
+                        require(path.read_text().splitlines()[source['line'] - 1] == source['line_text'],
+                                'Guide source line changed: ' + source['path'])
     full, reduced = graphs['all'], graphs['without-openai']
     kept = [i for i, node in enumerate(full['nodes']) if node['membership'] != 1]
     remap = {old: new for new, old in enumerate(kept)}
@@ -49,7 +94,8 @@ def main():
         require(graph['meta']['lean_version'] == '4.35.0' and not graph['meta']['exact_manuscript_algorithm_verified'],
                 'Proof scope changed')
     with zipfile.ZipFile(io.BytesIO((bundle / 'site/slide-assets.zip').read_bytes())) as archive:
-        expected = {'all/preview.png', 'without-openai/preview.png', 'method.txt', 'graph-summary.json'}
+        expected = {'all/preview.png', 'without-openai/preview.png', 'method.txt', 'graph-summary.json',
+                    'proof-guide.json', 'proof-guide.txt'}
         require(set(archive.namelist()) == expected, 'Unexpected slide archive member')
         for name in expected:
             require(archive.read(name) == (bundle / 'site' / name).read_bytes(), 'Slide archive content differs')
@@ -86,7 +132,8 @@ def main():
         server.server_close()
         thread.join(timeout=5)
     print(json.dumps({'status': 'passed', 'assets': len(ASSETS), 'public_routes': len(ASSETS) + 3,
-                      'html_json_snapshot_bytes_preserved': True, 'subset_nodes_edges_flags_preserved': True,
+                      'graph_json_snapshot_bytes_preserved': True, 'pinned_presentation_checked': True,
+                      'curated_guide_anchors_and_source_links_checked': True, 'subset_nodes_edges_flags_preserved': True,
                       'isolated_http_allowlist_and_gzip_checked': True, 'lean_executed': False,
                       'live_publication_touched': False}, indent=2))
 

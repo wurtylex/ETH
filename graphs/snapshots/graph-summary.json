@@ -186,5 +186,95 @@
         "slide_image_sha256": "6c63abc0f0907fe1aaf4f89724f9d0b741353dd7e35d601816be45e74d74a6bf"
       }
     }
+  },
+  "presentation": {
+    "revision": "eth-negation-label-v1",
+    "guide_url": "/proof-guide.txt",
+    "guide_json_url": "/proof-guide.json",
+    "guide_steps": 9,
+    "guide_anchors": 25,
+    "slide_previews": {
+      "all": {
+        "url": "/all/preview.png",
+        "sha256": "5d616f5269ca8781293447f9ecad03da7ac37c241e9b3cc22946cacd718a5d59",
+        "bytes": 241410,
+        "width": 1500,
+        "height": 1000,
+        "cluster_names": false,
+        "guide_stage": null,
+        "eth_endpoint_labels": true,
+        "eth_endpoint_count": 1,
+        "eth_proof_declaration_count": 3,
+        "eth_endpoint_mode": "shared-conclusion"
+      },
+      "without-openai": {
+        "url": "/without-openai/preview.png",
+        "sha256": "a8955f5dbe5182827beca60eb1a1e119c035559c80b0407330d8fcb4febdc93c",
+        "bytes": 384392,
+        "width": 1500,
+        "height": 1000,
+        "cluster_names": false,
+        "guide_stage": null,
+        "eth_endpoint_labels": true,
+        "eth_endpoint_count": 1,
+        "eth_proof_declaration_count": 2,
+        "eth_endpoint_mode": "shared-conclusion"
+      }
+    },
+    "note": "The evidence fields in each view preserve historical snapshot hashes. This presentation record describes current slide PNGs, one grouped ETH conclusion and the curated guide. Graph JSON and saved source coordinates are unchanged; final proof declarations are projected to their centroid in the viewer.",
+    "eth_endpoint_labels": {
+      "mode": "shared-conclusion",
+      "default_visible": true,
+      "independent_of_cluster_names": true,
+      "common_conclusion": "\u00ac ComplexityAbstracts.SubexponentialSATAbstract.ETH",
+      "counts_are_raw_declarations": true,
+      "graph_json_unchanged": true,
+      "views": {
+        "all": {
+          "id": "eth-shared-conclusion",
+          "label": "\u00acETH",
+          "kind": "shared-conclusion",
+          "proof_declarations": [
+            {
+              "name": "EthBridge.OpenAIChain.not_eth",
+              "route": "OpenAI"
+            },
+            {
+              "name": "EthBridge.AnthropicChain.not_eth",
+              "route": "Anthropic"
+            },
+            {
+              "name": "EthBridge.Elementary.ReusedRecursion.not_eth",
+              "route": "Elementary two-piece / reused recursion (implementation variant)"
+            }
+          ],
+          "position": {
+            "method": "centroid of all saved root positions, independent of active filters",
+            "x": 583.5229937611774,
+            "y": 783.580596599751
+          }
+        },
+        "without-openai": {
+          "id": "eth-shared-conclusion",
+          "label": "\u00acETH",
+          "kind": "shared-conclusion",
+          "proof_declarations": [
+            {
+              "name": "EthBridge.AnthropicChain.not_eth",
+              "route": "Anthropic"
+            },
+            {
+              "name": "EthBridge.Elementary.ReusedRecursion.not_eth",
+              "route": "Elementary two-piece / reused recursion (implementation variant)"
+            }
+          ],
+          "position": {
+            "method": "centroid of all saved root positions, independent of active filters",
+            "x": 248.07519393319006,
+            "y": 181.07394187317374
+          }
+        }
+      }
+    }
   }
 }

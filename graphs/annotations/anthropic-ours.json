@@ -1,0 +1,439 @@
+{
+  "schema_version": 1,
+  "title": "Anthropic and our route: a proof guide",
+  "intro": "Choose a step to see what each route does. Labels compare mathematical roles; purple anchors mark exact shared declarations. Green means used only by our selected endpoint, and can include borrowed Anthropic code.",
+  "scope_note": "These are curated explanations of the existing Lean 4.35 declarations, not new equivalence theorems. The graph, dependencies and positions are unchanged. Our route is the verified implementation variant; the manuscript’s exact algorithm remains separate.",
+  "source_commit": "83b2f2390e71fa63038e2dfd3c0534a77659cf6e",
+  "graph_json_sha256": "8a657ed1cc7f67adc220ad5dc7095fc39b11028cd73e74ac58fb887fd4c0c529",
+  "stages": [
+    {
+      "id": "two-pieces",
+      "title": "1. Build the piece family",
+      "relation": "Same interface · different constructions",
+      "summary": "Our construction makes exactly two pieces. Anthropic’s construction makes a parameterized family using partition and operator tables. Both implement the same PiecesF interface.",
+      "comparison": "Concrete simplification: our piece count is 2 and multiplier is 1; for its chosen partition size h, Anthropic’s count is 4h + 1 and multiplier is h!. This compares the constructions, not their running times.",
+      "anchors": [
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.Pieces.family",
+          "label": "Our two-piece family",
+          "description": "The family fixes cnt = 2, d = 1 and m = 1, and gives explicit bounds for its two program branches.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/Pieces.lean",
+            "line": 241,
+            "sha256": "3e373f9ac331d325a10358414e25833c7bf9bd51194fba414d56daa53b9aca74",
+            "line_text": "def family : PiecesF where",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/Pieces.lean#L241"
+          }
+        },
+        {
+          "route": "anthropic",
+          "name": "ClauseBound.Inst.Half.halfF",
+          "label": "Anthropic’s indexed family",
+          "description": "The halfF family uses cnt = 4*hF + 1, d = factN(hF), and parameterized partition/operator programs.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/ClauseBound/Inst/Half.lean",
+            "line": 70,
+            "sha256": "90e262afc5f223fece6ea499bdbcf9778e63cd4441238fd31676f7e91fe14db1",
+            "line_text": "def halfF (c₀ c : ℕ) : PiecesF where",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/ClauseBound/Inst/Half.lean#L70"
+          }
+        },
+        {
+          "route": "shared",
+          "name": "ClauseBound.Alg.PiecesF",
+          "label": "Shared piece interface",
+          "description": "PiecesF describes the programs, piece count, multiplier and size bounds. These two definitions inhabit this exact same interface.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/ClauseBound/Alg/Data.lean",
+            "line": 29,
+            "sha256": "2289f61529b49c3f78594ea94bb91fa156f569ef4323158e85629195947e7292",
+            "line_text": "structure PiecesF where",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/ClauseBound/Alg/Data.lean#L29"
+          }
+        }
+      ]
+    },
+    {
+      "id": "reconstruct",
+      "title": "2. Reconstruct the crossing",
+      "relation": "Same role · different identities",
+      "summary": "Our proof groups an existing indexed expansion into low and high parts, then proves that the two collected pieces add back to the crossing. Anthropic’s pieceFacts packages an operator-indexed reconstruction.",
+      "comparison": "Our identity is A + B = crossing. Anthropic’s sum of indexed pieces reconstructs h! times the crossing. These are different families, not equal corresponding pieces.",
+      "anchors": [
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.Crossing.pieceA_add_pieceB",
+          "label": "A + B = crossing",
+          "description": "pieceA_add_pieceB collects complementary index sets and proves the reconstruction directly.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/Crossing.lean",
+            "line": 48,
+            "sha256": "7586bbb4df8cf04380ae068c65e969c06f28b7f24e1e6fe131e039f0bf582401",
+            "line_text": "theorem pieceA_add_pieceB (b : ℕ) (x y u v : Bits b) :",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/Crossing.lean#L48"
+          }
+        },
+        {
+          "route": "anthropic",
+          "name": "AppHalfPieces.pieceFacts",
+          "label": "Indexed reconstruction",
+          "description": "The sum field of pieceFacts reconstructs the factorial-scaled crossing as a sum of operator pieces.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/GeneralPieces/Main.lean",
+            "line": 75,
+            "sha256": "6e3bc1a617e2a74445d280ddc4374d13d2c4fe5d9f396b812111ed08c586376c",
+            "line_text": "theorem pieceFacts : PieceFacts :=",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/GeneralPieces/Main.lean#L75"
+          }
+        },
+        {
+          "route": "ours",
+          "name": "Groundwork.sum_A",
+          "label": "Borrowed indexed expansion",
+          "description": "Groundwork.sum_A comes from the Anthropic source tree and is invoked in our proof. It is green because only our selected endpoint uses it.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/networks/Groundwork/Cross/Bit.lean",
+            "line": 40,
+            "sha256": "fde5353adc057ad2e02ccaaa0cefa6cfbfdb1327433e4d5266daa20e81ed44f9",
+            "line_text": "theorem sum_A {n : ℕ} (x y u v : Bits n) : ∑ i ∈ range (n + 1), A n i x y u v = cross x y u v := by",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/networks/Groundwork/Cross/Bit.lean#L40"
+          }
+        }
+      ]
+    },
+    {
+      "id": "correctness",
+      "title": "3. Meet the same correctness contract",
+      "relation": "Same specification · different proofs",
+      "summary": "Both families must reconstruct the crossing and supply row/column factorizations with the required bounds. Their correctness proofs target the same PiecesF.Spec interface.",
+      "comparison": "Our family_spec handles the two cases directly. Anthropic’s stSpec packages its PieceFacts and certified constants for the parameterized family. This is a common contract, not a theorem equating the programs.",
+      "anchors": [
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.PiecesSpec.family_spec",
+          "label": "Correctness of two cases",
+          "description": "family_spec proves the specification for our family; its factorization branches split over the two possible piece indices.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/PiecesSpec.lean",
+            "line": 25,
+            "sha256": "a466d0e9e271ca06cd00c2c2e024498986723583ef2ec08ba03ac8eaf5cf1c31",
+            "line_text": "theorem family_spec (h n : ℕ) (hn : 1 ≤ n) : family.Spec h n := by",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/PiecesSpec.lean#L25"
+          }
+        },
+        {
+          "route": "anthropic",
+          "name": "GeneralPieces.stSpec",
+          "label": "Correctness of indexed pieces",
+          "description": "stSpec proves the specification of halfF under the construction’s PieceFacts and constant bounds.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/GeneralPieces/Half/Spec.lean",
+            "line": 98,
+            "sha256": "96496ffb7015ab406a59f3927a077c78ea23a51d226007000a97bd0050bcc7c4",
+            "line_text": "theorem stSpec (hPF : AppHalfPieces.PieceFacts) : StSpec := by",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/GeneralPieces/Half/Spec.lean#L98"
+          }
+        },
+        {
+          "route": "shared",
+          "name": "ClauseBound.Alg.PiecesF.Spec",
+          "label": "Shared correctness contract",
+          "description": "PiecesF.Spec records reconstruction, both cut factorizations and the magnitude/capacity requirements.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/ClauseBound/Alg/Data.lean",
+            "line": 48,
+            "sha256": "2289f61529b49c3f78594ea94bb91fa156f569ef4323158e85629195947e7292",
+            "line_text": "structure PiecesF.Spec (P : PiecesF) (h lam : ℕ) : Prop where",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/ClauseBound/Alg/Data.lean#L48"
+          }
+        }
+      ]
+    },
+    {
+      "id": "contraction",
+      "title": "4. Certify enough contraction",
+      "relation": "Same contract · different strengths",
+      "summary": "Both constructions provide the Par certificate needed by the recursion machinery. Our explicit bounds give ρ = 23/24 and c = 2. Anthropic’s partition estimates give ρ = 1/√2 with suitable constants.",
+      "comparison": "Our contraction certificate is weaker: 23/24 is larger than 1/√2. It is still below 1 and sufficient for this endpoint. The simpler construction does not establish a faster algorithm.",
+      "anchors": [
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.PiecesSpec.family_par",
+          "label": "Our bound: 23/24",
+          "description": "family_par packages our explicit sparse-cut and full-cut estimates into the common parameter contract.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/PiecesSpec.lean",
+            "line": 68,
+            "sha256": "a466d0e9e271ca06cd00c2c2e024498986723583ef2ec08ba03ac8eaf5cf1c31",
+            "line_text": "theorem family_par : ClauseBound.Gen.Par family (23/24) 2 := by",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/PiecesSpec.lean#L68"
+          }
+        },
+        {
+          "route": "anthropic",
+          "name": "ClauseBound.Inst.Half.Par.par_of_cst",
+          "label": "Anthropic’s bound: 1/√2",
+          "description": "par_of_cst uses certified bounds for the partition-based row and column ranks.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/ClauseBound/Inst/HalfPar.lean",
+            "line": 56,
+            "sha256": "512e0dfce287accb6a5367d88a1cc4523675e2d27a47644b518441d8f2b04fd3",
+            "line_text": "theorem par_of_cst (hS : StSpec) {c₀ c : ℕ} (hC : ∀ lam : ℕ, 1 ≤ lam → Cst c₀ c lam) : ClauseBound.Gen.Par (halfF c₀ c) (1 / Real.sqrt 2) c where",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/ClauseBound/Inst/HalfPar.lean#L56"
+          }
+        },
+        {
+          "route": "shared",
+          "name": "ClauseBound.Gen.Par",
+          "label": "Shared parameter contract",
+          "description": "ClauseBound.Gen.Par is literally used by both routes; its parameters and family argument differ.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/ClauseBound/Gen/Defs.lean",
+            "line": 29,
+            "sha256": "46ac0a6b1ab18b21e8ae78e6f4784eda4f9e512a1493126814f740ba3c891097",
+            "line_text": "structure Par (P : PiecesF) (ρ : ℝ) (c : ℕ) : Prop where",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/ClauseBound/Gen/Defs.lean#L29"
+          }
+        }
+      ]
+    },
+    {
+      "id": "counting",
+      "title": "5. Obtain a counting algorithm",
+      "relation": "Same role · different guarantees",
+      "summary": "Anthropic’s selected route proves an all-k counting theorem with a minimum of clause-count and variable-count bounds. Our route plugs its family into Anthropic’s existing generic recursion and instantiates k = 3.",
+      "comparison": "For the ETH goal, we need only the fixed-width counting guarantee. GeneralPieces.partC_n is borrowed Anthropic code but green here: it is reached by our endpoint, not the selected Anthropic endpoint.",
+      "anchors": [
+        {
+          "route": "anthropic",
+          "name": "CountedRoute.mainTheoremHolds",
+          "label": "Anthropic’s full counting result",
+          "description": "CountedRoute.mainTheoremHolds supplies the uniform counting theorem used in Anthropic’s route.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/maintheorem/CountedRoute/Main.lean",
+            "line": 92,
+            "sha256": "4a4f9a52f2600edf45827572f2d3a1a393f28e6072d49936fe23001bb7caf71a",
+            "line_text": "theorem mainTheoremHolds : MainTheoremHolds := (closedStatementsFrom onTheCountedRecursion).1",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/maintheorem/CountedRoute/Main.lean#L92"
+          }
+        },
+        {
+          "route": "ours",
+          "name": "GeneralPieces.partC_n",
+          "label": "Borrowed generic recursion",
+          "description": "GeneralPieces.partC_n accepts a certified piece family and yields a fixed-width variable-count bound.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/rates/GeneralPieces/ThmRunningTime.lean",
+            "line": 127,
+            "sha256": "a8110b911f978e6de3db4e2711de6856443345ca57ce6109defa6b116b71748d",
+            "line_text": "theorem partC_n {P : PiecesF} {ρ : ℝ} {c x₀ : ℕ} (hρ : 1 / 2 ≤ ρ) (hρ1 : ρ < 1) (hP : Par P ρ c) (hm : P.m = 1) (hKeeps : P.Keeps) (hx : 18 ≤ x₀)",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/rates/GeneralPieces/ThmRunningTime.lean#L127"
+          }
+        },
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.DecisionBridge.not_eth_of_pieces",
+          "label": "Our family → counting bound",
+          "description": "not_eth_of_pieces supplies the certified family to that generic result at k = 3, then applies the terminal decision conversion.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/DecisionBridge.lean",
+            "line": 164,
+            "sha256": "f67eaebfd7737eb9bb69de3721913498066427875f76ee99c5076b0759f04564",
+            "line_text": "theorem not_eth_of_pieces {P : ClauseBound.Alg.PiecesF} {ρ : ℝ} {c : ℕ}",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/DecisionBridge.lean#L164"
+          }
+        }
+      ],
+      "supporting_sources": [
+        {
+          "path": "lean/AnthropicEth/proof/statements/MainTheoremFormsStatement.lean",
+          "line": 121,
+          "sha256": "b3ee1c5f620e35db7db2a83c7ff798d153caada60f0b7be786d5327f3dcc8647",
+          "line_text": "def MainTheoremAllOccur : Prop :=",
+          "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/statements/MainTheoremFormsStatement.lean#L121"
+        },
+        {
+          "path": "lean/AnthropicEth/proof/statements/FixedWidthVariableBoundStatement.lean",
+          "line": 44,
+          "sha256": "005e2786b8443b3a4a7beba9ad6471db8c9c71da3d20221a8ec852f928a6fe1c",
+          "line_text": "def CountInRateN (k : ℕ) (r : ℕ → ℝ) : Prop :=",
+          "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/statements/FixedWidthVariableBoundStatement.lean#L44"
+        },
+        {
+          "path": "lean/EthBridge/Elementary/DecisionBridge.lean",
+          "line": 170,
+          "sha256": "f67eaebfd7737eb9bb69de3721913498066427875f76ee99c5076b0759f04564",
+          "line_text": "  exact not_eth_of_countInRateN hα (GeneralPieces.partC_n hρ hρ1 hP hm hKeeps",
+          "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/DecisionBridge.lean#L170"
+        }
+      ]
+    },
+    {
+      "id": "overhead",
+      "title": "6. Absorb the machine overhead",
+      "relation": "Same role · exact shared arithmetic",
+      "summary": "Both routes show that the wrapper overhead fits below any positive exponential rate. Anthropic handles its concrete minimum bound and front-end overhead. Our adapter accepts any counting rate r(n) that tends to zero.",
+      "comparison": "Both invoke the same poly_below lemma. The surrounding lemmas have different hypotheses and bounds; we are comparing their jobs, not claiming they are equivalent.",
+      "anchors": [
+        {
+          "route": "anthropic",
+          "name": "Wrap.wrapped_time_le",
+          "label": "Anthropic’s overhead bound",
+          "description": "wrapped_time_le handles the counter’s minimum expression, compact inputs and padding overhead.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/machines/Wrap/Arith.lean",
+            "line": 206,
+            "sha256": "4b28a1a7c77e96807701b5fd50565bdb6f5c55d380915b0bfe58d2c02f8c2ce6",
+            "line_text": "theorem wrapped_time_le (q C₁ C₂ a d : ℕ) {δ : ℝ} (hδ : 0 < δ) :",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/machines/Wrap/Arith.lean#L206"
+          }
+        },
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.DecisionBridge.wrapped_time_below",
+          "label": "Our vanishing-rate bound",
+          "description": "wrapped_time_below absorbs fixed polynomial overhead around any supplied CountInRateN rate tending to zero.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/DecisionBridge.lean",
+            "line": 91,
+            "sha256": "f67eaebfd7737eb9bb69de3721913498066427875f76ee99c5076b0759f04564",
+            "line_text": "theorem wrapped_time_below {r : ℕ → ℝ} (hr : Tendsto r atTop (𝓝 0))",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/DecisionBridge.lean#L91"
+          }
+        },
+        {
+          "route": "shared",
+          "name": "Wrap.Arith.poly_below",
+          "label": "Shared polynomial bound",
+          "description": "Wrap.Arith.poly_below proves that any fixed polynomial fits below a constant times 2^(ε*n), for ε > 0.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/machines/Wrap/Arith.lean",
+            "line": 156,
+            "sha256": "4b28a1a7c77e96807701b5fd50565bdb6f5c55d380915b0bfe58d2c02f8c2ce6",
+            "line_text": "theorem poly_below (D : ℕ) {ε : ℝ} (hε : 0 < ε) : ∃ c : ℕ, ∀ n : ℕ, ((n : ℝ) + 2) ^ D ≤ (c : ℝ) * (2 : ℝ) ^ (ε * n) := by",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/machines/Wrap/Arith.lean#L156"
+          }
+        }
+      ]
+    },
+    {
+      "id": "decision",
+      "title": "7. Turn counting into decision",
+      "relation": "Different adapters · exact shared wrapper",
+      "summary": "Both routes wrap an actual counting machine and test whether its count is nonzero. Our adapter needs a subexponential 3-SAT counter; Anthropic’s adapter consumes its compact all-k counting theorem.",
+      "comparison": "The wrapper theorem is exactly shared. Our proof uses an identity front end for its input format, while Anthropic uses its compact-code/padding front end.",
+      "anchors": [
+        {
+          "route": "anthropic",
+          "name": "Wrap.countingBoundImpliesFailureOfETH",
+          "label": "Anthropic’s decision adapter",
+          "description": "countingBoundImpliesFailureOfETH consumes Anthropic’s counting guarantee and reaches ETH failure.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/machines/Wrap/Main.lean",
+            "line": 115,
+            "sha256": "1a34163b57d5b4d41a938e8405af8333c5087f35c6b56c91ab7430aaaef30459",
+            "line_text": "theorem countingBoundImpliesFailureOfETH : CountingBoundImpliesFailureOfETH := fun ⟨M, C, hfin, hM⟩ =>",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/machines/Wrap/Main.lean#L115"
+          }
+        },
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.DecisionBridge.subexp_of_count_rate",
+          "label": "Our decision adapter",
+          "description": "subexp_of_count_rate turns a supplied 3-SAT counter at any rate r(n) → 0 into a subexponential decision machine.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/DecisionBridge.lean",
+            "line": 133,
+            "sha256": "f67eaebfd7737eb9bb69de3721913498066427875f76ee99c5076b0759f04564",
+            "line_text": "theorem subexp_of_count_rate {r : ℕ → ℝ} (hr : Tendsto r atTop (𝓝 0))",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/DecisionBridge.lean#L133"
+          }
+        },
+        {
+          "route": "shared",
+          "name": "Wrap.everyMachineCanBeWrapped",
+          "label": "The same machine wrapper",
+          "description": "Wrap.everyMachineCanBeWrapped is the identical Lean theorem reused by both proofs.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/machines/Wrap/Main.lean",
+            "line": 39,
+            "sha256": "1a34163b57d5b4d41a938e8405af8333c5087f35c6b56c91ab7430aaaef30459",
+            "line_text": "theorem everyMachineCanBeWrapped : EveryMachineCanBeWrapped := everyMachineCanBeWrapped_of coding_exists",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/machines/Wrap/Main.lean#L39"
+          }
+        }
+      ]
+    },
+    {
+      "id": "shared-finish",
+      "title": "8. Reuse the common ETH finish",
+      "relation": "Exact reuse",
+      "summary": "Both routes derive ETH failure from a subexponential 3-SAT machine, then translate to the common multitape-machine statement. The two marked declarations are literally shared.",
+      "comparison": "Our route supplies its own counting/decision construction to these conditional bridges. It does not call Anthropic’s old unconditional ETH conclusion.",
+      "anchors": [
+        {
+          "route": "shared",
+          "name": "WidthThree.ethFails_of_subexpTM",
+          "label": "Shared 3-SAT → ETH step",
+          "description": "WidthThree.ethFails_of_subexpTM turns a supplied subexponential 3-SAT decision machine into failure of Sat3.ETH_TM.",
+          "source": {
+            "path": "lean/AnthropicEth/proof/maintheorem/WidthThree/Rates.lean",
+            "line": 52,
+            "sha256": "f3265c6026f509998a77fb76e4da6c1f298540f54c4df172577a445b7e48905f",
+            "line_text": "theorem ethFails_of_subexpTM (h : Sat3.SubexpTM) : ¬ Sat3.ETH_TM := h.not_ETH_TM",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/AnthropicEth/proof/maintheorem/WidthThree/Rates.lean#L52"
+          }
+        },
+        {
+          "route": "shared",
+          "name": "EthBridge.Anthropic.not_eth_of_ethIsFalse",
+          "label": "Shared machine-model bridge",
+          "description": "EthBridge.Anthropic.not_eth_of_ethIsFalse translates supplied ETH failure into the common complexitylib ETH statement.",
+          "source": {
+            "path": "lean/EthBridge/Anthropic.lean",
+            "line": 29,
+            "sha256": "e174d5f78c9e703a5aa80e1423912acf97fb5ad7d2b8c5bd146306506849712c",
+            "line_text": "theorem not_eth_of_ethIsFalse (h : MainResults.ETHIsFalse) :",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Anthropic.lean#L29"
+          }
+        }
+      ]
+    },
+    {
+      "id": "same-goal",
+      "title": "9. Reach exactly the same statement",
+      "relation": "Same proposition · different proof terms",
+      "summary": "Both final declarations prove ¬ ComplexityAbstracts.SubexponentialSATAbstract.ETH. The proof terms arrive through different constructions and meet at the same conditional machine-model bridge.",
+      "comparison": "Our endpoint is the verified two-piece implementation variant with reused recursion. These guide labels do not certify the manuscript’s exact unequal-rectangle algorithm.",
+      "anchors": [
+        {
+          "route": "anthropic",
+          "name": "EthBridge.AnthropicChain.not_eth",
+          "label": "Anthropic endpoint",
+          "description": "AnthropicChain.not_eth feeds Anthropic’s complete ETH result into the common bridge.",
+          "source": {
+            "path": "lean/EthBridge/AnthropicChain.lean",
+            "line": 23,
+            "sha256": "f5b9c3d12d5dbf99cab1adeeb9eb1f7b16d8b850b00a34cb0ab13e7af9195f87",
+            "line_text": "theorem not_eth : ¬ ComplexityAbstracts.SubexponentialSATAbstract.ETH :=",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/AnthropicChain.lean#L23"
+          }
+        },
+        {
+          "route": "ours",
+          "name": "EthBridge.Elementary.ReusedRecursion.not_eth",
+          "label": "Our endpoint",
+          "description": "ReusedRecursion.not_eth feeds its own not_eth_tm, built from the two-piece family and generic recursion, into that bridge.",
+          "source": {
+            "path": "lean/EthBridge/Elementary/ReusedRecursion.lean",
+            "line": 25,
+            "sha256": "c6185ecb9544f1254a563932b1dd34c4aea10cd845e71ccdbdb6feeee37c539e",
+            "line_text": "theorem not_eth : ¬ ComplexityAbstracts.SubexponentialSATAbstract.ETH :=",
+            "url": "https://github.com/wurtylex/ETH/blob/83b2f2390e71fa63038e2dfd3c0534a77659cf6e/lean/EthBridge/Elementary/ReusedRecursion.lean#L25"
+          }
+        }
+      ]
+    }
+  ]
+}
