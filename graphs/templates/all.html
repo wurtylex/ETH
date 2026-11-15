@@ -1,0 +1,292 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="color-scheme" content="light">
+<title>ETH · Proof dependencies</title>
+<style>
+:root{--paper:#f7f5f0;--ink:#171717;--orange:#e58a20;--purple:#7b3fb4;--muted:#716e66;--line:#dcd8cf;--panel:#fffcf6;--shadow:0 8px 28px #2620150a;font-family:Inter,ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;color:var(--ink);background:var(--paper);font-synthesis:none}
+*{box-sizing:border-box}body{margin:0}button,input{font:inherit}button{cursor:pointer}button:disabled{cursor:default;opacity:.45}button:focus-visible,input:focus-visible,summary:focus-visible,canvas:focus-visible{outline:2px solid var(--purple);outline-offset:3px}button{color:inherit}header{height:90px;display:flex;align-items:center;justify-content:space-between;padding:17px 28px 17px 30px;border-bottom:1px solid var(--line);gap:20px;background:var(--paper)}.eyebrow{font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted);margin-bottom:5px}h1{font-size:22px;font-weight:550;letter-spacing:-.035em;margin:0;line-height:1.2}.subtitle{font-size:12px;color:var(--muted);margin:5px 0 0}.head-actions{display:flex;gap:8px;flex-shrink:0}.button{border:1px solid var(--line);background:transparent;border-radius:7px;padding:8px 12px;font-size:12px;line-height:1.2;white-space:nowrap}.button:hover{background:#ece8df}.button.primary{background:var(--ink);color:var(--paper);border-color:var(--ink)}.button.primary:hover{background:#38352f}.stage{height:calc(100dvh - 90px);min-height:440px;position:relative;overflow:hidden;touch-action:none}.layer{position:absolute;inset:0;width:100%;height:100%;display:block}.layer:not(#interaction){pointer-events:none}#interaction{cursor:grab;touch-action:none}#interaction.dragging{cursor:grabbing}.panel{position:absolute;z-index:2;box-shadow:var(--shadow);background:var(--panel);border:1px solid var(--line);border-radius:10px}.controls{top:20px;left:20px;width:280px;padding:16px;touch-action:auto}.search-wrap{position:relative}.search-label{display:block;font-size:11px;font-weight:550;margin-bottom:7px}.search-row{display:flex;align-items:center;border:1px solid #cfc9bd;border-radius:6px;background:#fffdf9}.search-row svg{width:15px;height:15px;flex-shrink:0;margin-left:10px;stroke:var(--muted)}#search{border:0;padding:9px 7px;background:transparent;min-width:0;width:100%;font-size:12px;color:var(--ink);outline-offset:1px}#clear-search{display:none;border:0;background:transparent;padding:5px 9px;color:var(--muted);font-size:17px}#matches{position:absolute;left:-1px;right:-1px;top:100%;max-height:300px;overflow:auto;background:#fffdf9;border:1px solid var(--line);border-radius:0 0 7px 7px;box-shadow:var(--shadow);z-index:10;display:none}.match{width:100%;padding:10px;text-align:left;border:0;border-bottom:1px solid #eee9df;background:transparent;font-size:11px}.match:last-child{border-bottom:0}.match:hover,.match.active{background:#eee9df}.match-name{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;display:block}.match-group{font-size:10px;color:var(--muted);display:block;margin-top:4px}.match-summary{padding:9px 10px;font-size:10px;color:var(--muted);border-bottom:1px solid var(--line)}.groups{display:grid;gap:11px;margin-top:18px}.group-toggle{display:flex;align-items:center;gap:8px;font-size:12px;cursor:pointer;user-select:none}.group-toggle input{width:13px;height:13px;margin:0;accent-color:var(--ink)}.group-toggle[data-group="anthropic"] input{accent-color:var(--orange)}.group-toggle[data-group="shared"] input{accent-color:var(--purple)}.dot{display:inline-block;width:8px;height:8px;border-radius:50%;flex-shrink:0}.count{margin-left:auto;color:var(--muted);font-variant-numeric:tabular-nums;font-size:11px}.control-rule{height:1px;background:var(--line);margin:16px 0 13px}.range-label{display:flex;justify-content:space-between;font-size:11px;align-items:center}.range-label output{color:var(--muted);font-variant-numeric:tabular-nums}input[type="range"]{width:100%;margin:10px 0 1px;accent-color:#8e8270;height:16px}.hint{font-size:10px;line-height:1.55;color:var(--muted);margin:11px 0 0}.controls details{margin-top:12px;font-size:10px;line-height:1.6;color:var(--muted)}.controls summary{cursor:pointer;color:#48453d;font-size:11px}.controls details p{margin:8px 0}.root-list{overflow-wrap:anywhere;font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:9px}.tiny-link{border:0;padding:0;background:transparent;text-decoration:underline;text-underline-offset:2px;font-size:10px;color:inherit}.inspector{right:20px;top:20px;width:330px;padding:17px;max-height:calc(100% - 75px);overflow:auto;display:none;touch-action:auto}.inspector-top{display:flex;justify-content:space-between;align-items:center;gap:8px}.tag{display:flex;align-items:center;gap:6px;font-size:10px;color:var(--muted)}.icon-button{background:transparent;border:0;font-size:20px;line-height:1;color:var(--muted);padding:0 2px}.declaration{font-size:14px;font-weight:550;line-height:1.5;overflow-wrap:anywhere;margin:12px 0 14px;letter-spacing:-.015em}.field-label{font-size:9px;text-transform:uppercase;letter-spacing:.11em;color:var(--muted);margin:12px 0 4px}.field-value{font-family:ui-monospace,SFMono-Regular,Consolas,monospace;font-size:10px;line-height:1.6;overflow-wrap:anywhere;margin:0}.degree-row{display:flex;gap:20px;margin-top:16px}.degree-row strong{font-size:19px;font-weight:500;display:block;font-variant-numeric:tabular-nums}.degree-row span{font-size:10px;color:var(--muted)}.inspector .button{margin-top:15px}.neighbor-list{display:none;margin-top:12px;border-top:1px solid var(--line);padding-top:9px}.neighbor-list h3{font-size:10px;color:var(--muted);font-weight:500;margin:4px 0 8px}.neighbor{display:flex;align-items:center;gap:6px;border:0;background:transparent;text-align:left;font-size:10px;padding:5px 0;width:100%}.neighbor span:last-child{overflow:hidden;text-overflow:ellipsis;white-space:nowrap}.neighbor:hover span:last-child{text-decoration:underline}.tooltip{position:absolute;z-index:5;pointer-events:none;background:#fffcf6ed;border:1px solid var(--line);border-radius:5px;padding:7px 9px;max-width:390px;display:none;font-size:10px;line-height:1.45;box-shadow:var(--shadow);overflow-wrap:anywhere}.tooltip b{font-weight:550}.tooltip small{font-size:9px;color:var(--muted);display:block;margin-top:3px}.statusbar{position:absolute;bottom:18px;left:22px;right:22px;z-index:2;display:flex;gap:14px;justify-content:space-between;align-items:end;font-size:10px;color:var(--muted);pointer-events:none}.statusbox{background:#f7f5f0e8;padding:6px 8px;border-radius:4px;max-width:75%;line-height:1.55}.zoom-box{display:flex;gap:5px;align-items:center;pointer-events:auto;background:var(--paper);border:1px solid var(--line);border-radius:7px;padding:3px}.zoom-box button{border:0;background:transparent;font-size:18px;padding:1px 7px;color:#514c43}.zoom-box span{font-variant-numeric:tabular-nums;min-width:40px;text-align:center;font-size:10px}#loading{position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:13px;color:var(--muted);background:var(--paper);z-index:7}.sr-only{position:absolute;width:1px;height:1px;padding:0;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}@media(max-width:760px){header{height:80px;padding:14px 15px}.stage{height:calc(100dvh - 80px)}h1{font-size:18px}.subtitle{font-size:10px}.eyebrow{font-size:9px}.head-actions{gap:5px}.head-actions .button{font-size:10px;padding:7px 8px}.controls{width:220px;top:12px;left:12px;padding:12px}.groups{gap:8px;margin-top:13px}.controls .hint,.controls details{display:none}.inspector{width:calc(100% - 24px);right:12px;top:auto;bottom:56px;max-height:45%}.statusbar{left:12px;right:12px;bottom:12px}.statusbox{max-width:70%}.control-rule{margin:12px 0 10px}.declaration{margin:8px 0;font-size:12px}.degree-row{margin-top:8px}.field-label{margin-top:8px}}@media(prefers-reduced-motion:no-preference){.button{transition:background .12s}}
+.group-toggle[data-group="elementary"] input{accent-color:#008c95}@media(max-width:760px){header{height:115px;align-items:flex-start}.stage{height:calc(100dvh - 115px)}.head-actions{padding-top:10px}.controls{max-height:57%;overflow:auto}}
+.controls{max-height:calc(100% - 90px);overflow-y:auto}.legend-label{min-width:0;flex:1}.membership-note{font-size:10px;line-height:1.5;color:#716e66;margin:12px 0 0}@media(max-width:760px){.controls{max-height:57%}.group-toggle{gap:6px;font-size:11px}}
+.setup-nav{display:grid;gap:5px}.setup-nav .search-label{margin:0 0 2px}.setup-nav a{display:block;padding:7px 9px;border:1px solid var(--line);border-radius:5px;font-size:11px;color:var(--ink);text-decoration:none}.setup-nav a:hover{background:#ece8df}.setup-nav a[aria-current="page"]{background:var(--ink);color:var(--paper)}.setup-nav a:focus-visible{outline:2px solid var(--purple);outline-offset:2px}.setup-note{font-size:10px;line-height:1.45;color:var(--muted);margin:8px 0 14px}.cluster-names-toggle{display:flex;align-items:center;gap:8px;margin-top:10px;font-size:11px;cursor:pointer}.cluster-names-toggle input{width:13px;height:13px;margin:0;accent-color:var(--ink)}</style>
+</head>
+<body>
+<header>
+ <div><div class="eyebrow">ETH / proof dependencies</div><h1 id="title">Where the proofs meet</h1><p class="subtitle" id="subtitle">Two proof routes. One connected landscape.</p></div>
+ <div class="head-actions"><button class="button" id="fit">Fit graph</button><button class="button primary" id="export" disabled>Save view</button></div>
+</header>
+<main class="stage" id="stage">
+ <canvas class="layer" id="edges" aria-hidden="true"></canvas><canvas class="layer" id="nodes" aria-hidden="true"></canvas><canvas class="layer" id="interaction" tabindex="0" role="img" aria-label="Interactive proof dependency graph. Drag to pan, scroll to zoom, or search for a declaration."></canvas>
+ <section class="panel controls" aria-label="Graph controls"><nav class="setup-nav" aria-label="Clustering setup"><span class="search-label">Clustering setup</span><a href="/">Graphs &amp; slide assets</a><a data-setup="all" href="/all/" aria-current="page">All three proofs</a><a data-setup="reduced" href="/without-openai/">Anthropic + our route</a></nav><p class="setup-note">All declarations from the three proof routes.</p>
+  <div class="search-wrap"><label class="search-label" for="search">Find a declaration</label><div class="search-row"><svg viewBox="0 0 24 24" fill="none" stroke-width="1.8" aria-hidden="true"><circle cx="10" cy="10" r="6.5"/><path d="M15 15L21 21"/></svg><input id="search" placeholder="Name or module…" autocomplete="off" spellcheck="false" role="combobox" aria-expanded="false" aria-controls="matches"><button id="clear-search" aria-label="Clear search">×</button></div><div id="matches" role="listbox"></div></div>
+  <p class="hint" style="display:block;color:#006d75">Verified ETH endpoint using the new two-piece core and the existing recursion. The exact manuscript algorithm remains separate.</p><label class="search-label" for="route-focus">Show ancestry</label><select id="route-focus" style="width:100%;padding:7px;background:#fffdf9;border:1px solid #cfc9bd;border-radius:6px"><option value="0">All three ETH endpoints</option><option value="4">Our route and its reuse</option><option value="1">OpenAI endpoint</option><option value="2">Anthropic endpoint</option></select><label class="search-label" for="community-focus" style="margin-top:12px">Explore a dependency cluster</label><select id="community-focus" style="width:100%;padding:7px;background:#fffdf9;border:1px solid var(--line);border-radius:6px"><option value="-1">All clusters</option></select><p id="community-summary" class="membership-note"></p><label class="cluster-names-toggle"><input id="show-cluster-names" type="checkbox" checked><span>Show cluster names</span></label><div class="groups" aria-label="Exact proof memberships">
+<label class="group-toggle" data-group="openai"><input type="checkbox" checked style="accent-color:#101010"><span class="dot" style="background:#101010"></span><span class="legend-label">OpenAI only</span><span class="count" id="count-openai"></span></label>
+<label class="group-toggle" data-group="anthropic"><input type="checkbox" checked style="accent-color:#e87500"><span class="dot" style="background:#e87500"></span><span class="legend-label">Anthropic only</span><span class="count" id="count-anthropic"></span></label>
+<label class="group-toggle" data-group="elementary"><input type="checkbox" checked style="accent-color:#00852b"><span class="dot" style="background:#00852b"></span><span class="legend-label">Our route only</span><span class="count" id="count-elementary"></span></label>
+<label class="group-toggle" data-group="openai_anthropic"><input type="checkbox" checked style="accent-color:#e51c46"><span class="dot" style="background:#e51c46"></span><span class="legend-label">OpenAI + Anthropic</span><span class="count" id="count-openai_anthropic"></span></label>
+<label class="group-toggle" data-group="openai_elementary"><input type="checkbox" checked style="accent-color:#174bff"><span class="dot" style="background:#174bff"></span><span class="legend-label">OpenAI + our route</span><span class="count" id="count-openai_elementary"></span></label>
+<label class="group-toggle" data-group="anthropic_elementary"><input type="checkbox" checked style="accent-color:#0099c2"><span class="dot" style="background:#0099c2"></span><span class="legend-label">Anthropic + our route</span><span class="count" id="count-anthropic_elementary"></span></label>
+<label class="group-toggle" data-group="all_three"><input type="checkbox" checked style="accent-color:#a500cf"><span class="dot" style="background:#a500cf"></span><span class="legend-label">All three</span><span class="count" id="count-all_three"></span></label>
+</div><p class="membership-note">Pair colors mean exactly those two proofs. Purple means all three.</p><p class="membership-note">Clusters follow dependency connections. Colors show proof reuse. Spacing is for readability.</p>
+  <div class="control-rule"></div><label class="range-label" for="line-density"><span>Lines shown</span><output id="line-density-value">10%</output></label><input id="line-density" type="range" min="0" max="100" step="1" value="10" aria-describedby="line-density-note" title="Fixed percentage of all graph connections; current filters apply afterward."><p class="membership-note" id="line-density-note" style="margin:6px 0 12px">Selecting a node shows all its connections within the current filters.</p><label class="range-label" for="opacity"><span>Line opacity</span><output id="opacity-value">3.5%</output></label><input id="opacity" type="range" min="0" max="80" step="0.5" value="3.5">
+  <p class="hint">Drag to move · scroll to zoom<br>Click a point to trace its connections.</p>
+  <p style="font-size:11px;margin:12px 0 0"><a href="/method.txt">Proof scope and manuscript work →</a><br><br></p>
+  <details><summary>How to read this graph</summary><p>Each color names an exact combination of proofs. Our route is the two-piece implementation variant. A zero count means that exact combination has no nodes; pairwise sharing may still occur in the purple all-three group.</p><p>Leiden community detection groups densely connected declarations. The clustering ignores colors, names of modules and previous coordinates. Names and edges are sorted and the algorithm uses a fixed seed. Communities are packed using their connections; each cluster has a fresh internal dependency layout. Cluster labels summarize module families after grouping. Neither screen distance nor a community boundary establishes mathematical equivalence.</p><p>References can occur in theorem statements, proof or definition bodies, and constructor or recursor structure. Shared reachability can represent common machinery as well as shared mathematical arguments.</p><p><a href="/method.txt">Clustering method and checks →</a><br><a href="/graph-summary.json">Graph summary and evidence →</a><br><a href="/graph-summary.json">Graph summary and evidence →</a></p><p id="foundation-note"></p><p id="edge-note"></p><div id="roots" class="root-list"></div><p id="source-note"></p><button class="tiny-link" id="download-data">Download graph data</button></details>
+ </section>
+ <aside class="panel inspector" id="inspector" aria-label="Selected declaration">
+  <div class="inspector-top"><span class="tag"><span class="dot" id="selected-dot"></span><span id="selected-group"></span></span><button class="icon-button" id="close-inspector" aria-label="Clear selected declaration">×</button></div>
+  <h2 class="declaration" id="selected-name"></h2><p class="field-label">Module</p><p class="field-value" id="selected-module"></p><p class="field-label" id="selected-id-label">Declaration ID</p><p class="field-value" id="selected-id"></p>
+  <p class="field-label">Dependency community</p><p class="field-value" id="selected-community"></p><button class="tiny-link" id="focus-community">Focus this cluster</button><div class="degree-row"><div><strong id="selected-out"></strong><span id="out-label">Uses</span></div><div><strong id="selected-in"></strong><span id="in-label">Used by</span></div></div>
+  <button class="button" id="show-neighbors">Browse connections</button><div class="neighbor-list" id="neighbor-list"></div>
+ </aside>
+ <div class="tooltip" id="tooltip"></div><div class="statusbar"><div class="statusbox"><span id="counts"></span><br><span id="render-status"></span></div><div class="zoom-box"><button id="zoom-out" aria-label="Zoom out">−</button><span id="zoom-value">100%</span><button id="zoom-in" aria-label="Zoom in">+</button></div></div>
+ <div id="loading">Preparing the proof landscape…</div><div id="announcement" class="sr-only" aria-live="polite"></div>
+</main>
+<script id="graph-data" type="application/json">@@GRAPH_DATA@@</script>
+<script>
+'use strict';
+(()=>{
+ const G=JSON.parse(document.getElementById('graph-data').textContent),N=G.nodes,E=G.edges,meta=G.meta||{};
+ const COLORS={"openai": "#101010", "anthropic": "#e87500", "elementary": "#00852b", "openai_anthropic": "#e51c46", "openai_elementary": "#174bff", "anthropic_elementary": "#0099c2", "all_three": "#a500cf"},LABELS={"openai": "OpenAI only", "anthropic": "Anthropic only", "elementary": "Our route only", "openai_anthropic": "OpenAI + Anthropic", "openai_elementary": "OpenAI + our route", "anthropic_elementary": "Anthropic + our route", "all_three": "All three"},KEYS=["openai", "anthropic", "elementary", "openai_anthropic", "openai_elementary", "anthropic_elementary", "all_three"],BG='#f7f5f0';
+ const membershipLabel=n=>[[1,'OpenAI'],[2,'Anthropic'],[4,'Our route (two-piece)']].filter(([b])=>n.membership&b).map(([,s])=>s).join(' + ');
+ let routeFocus=0,communityFocus=-1,communityExport=false,showClusterNames=true;const COMMUNITIES=meta.communities;
+ const $=id=>document.getElementById(id),fmt=n=>n.toLocaleString(),stage=$('stage'),canvases=[$('edges'),$('nodes'),$('interaction')],contexts=canvases.map(c=>c.getContext('2d'));
+ const [ec,nc,hc]=contexts,visible=Object.fromEntries(KEYS.map(k=>[k,true])),counts=Object.fromEntries(KEYS.map(k=>[k,0]));
+ let width=1,height=1,dpr=1,scale=1,fitScale=1,tx=0,ty=0,opacity=.035,selected=-1,hover=-1,dragging=false,dirty=false,edgeToken=0,edgeComplete=false;
+ let searchTimer,searchMatches=[],searchActive=-1,selectedSet=null,selectedEdges=[],selectedTargets=[],selectedSources=[];
+ const X=new Float64Array(N.length),Y=new Float64Array(N.length),radius=new Float32Array(N.length),groupIndex=new Uint8Array(N.length),grid=new Map(),GRID=160;
+ let minX=Infinity,maxX=-Infinity,minY=Infinity,maxY=-Infinity;
+ for(const n of N){minX=Math.min(minX,n.x);maxX=Math.max(maxX,n.x);minY=Math.min(minY,n.y);maxY=Math.max(maxY,n.y);counts[n.group]++;}
+ const span=Math.max(maxX-minX,maxY-minY,1e-12),worldWidth=(maxX-minX)/span,worldHeight=(maxY-minY)/span;
+ for(let i=0;i<N.length;i++){X[i]=(N[i].x-minX)/span;Y[i]=(N[i].y-minY)/span;radius[i]=.75+Math.min(1.7,Math.log2((N[i].degree||0)+1)*.13);groupIndex[i]=KEYS.indexOf(N[i].group);const key=Math.floor(X[i]*GRID)+Math.floor(Y[i]*GRID)*(GRID+1);let bucket=grid.get(key);if(!bucket)grid.set(key,bucket=[]);bucket.push(i);}
+ const outCount=new Uint32Array(N.length),inCount=new Uint32Array(N.length),offsets=new Uint32Array(N.length+1);
+ for(const [a,b] of E){outCount[a]++;inCount[b]++;offsets[a+1]++;offsets[b+1]++;}
+ for(let i=1;i<offsets.length;i++)offsets[i]+=offsets[i-1];
+ const adjacency=new Uint32Array(offsets[N.length]),cursor=offsets.slice(0,-1);
+ for(let i=0;i<E.length;i++){const [a,b]=E[i];adjacency[cursor[a]++]=i;adjacency[cursor[b]++]=i;}
+ function updateCounts(){const shown=Object.fromEntries(KEYS.map(k=>[k,0]));for(const n of N)if((!routeFocus||(n.membership&routeFocus))&&(communityFocus<0||n.community===communityFocus))shown[n.group]++;for(const k of KEYS)$('count-'+k).textContent=fmt(shown[k]);}updateCounts();
+ $('title').textContent=meta.title||'Where the proofs meet';document.title=$('title').textContent+' · ETH';
+ $('subtitle').textContent=meta.subtitle||'Two proof routes. One connected landscape.';
+ $('foundation-note').textContent=meta.foundation_note||'The source graph determines which general foundations are collapsed or omitted. See the downloaded graph metadata for its exact scope.';
+ $('edge-note').textContent=meta.edge_semantics||'Connections follow declaration references. The source graph records its dependency and filtering rules.';
+ $('source-note').textContent='Lean '+meta.lean_version+' · verified '+meta.verified_at;
+ for(const group of meta.root_groups||[]){const p=document.createElement('p');p.textContent=group.label+': '+group.roots.length+' checked root declaration(s)';$('roots').append(p);}
+ if(meta.edge_direction==='dependency_to_declaration'){$('out-label').textContent='Used by';$('in-label').textContent='Uses';}
+ const announcement=text=>{$('announcement').textContent=text;};
+ const active=i=>visible[N[i].group]&&(!routeFocus||(N[i].membership&routeFocus))&&(communityFocus<0||N[i].community===communityFocus);
+ const screenX=i=>X[i]*scale+tx,screenY=i=>Y[i]*scale+ty;
+ const onScreen=(x,y,pad=8)=>x>=-pad&&x<=width+pad&&y>=-pad&&y<=height+pad;
+ function clear(ctx){ctx.setTransform(dpr,0,0,dpr,0,0);ctx.clearRect(0,0,width,height);}
+ function requestDraw(){if(dirty)return;dirty=true;requestAnimationFrame(()=>{dirty=false;draw();});}
+ function resize(){const r=stage.getBoundingClientRect(),oldW=width,oldH=height;width=r.width;height=r.height;dpr=Math.min(devicePixelRatio||1,2);for(const c of canvases){c.width=Math.round(width*dpr);c.height=Math.round(height*dpr);}if(oldW===1)fit();else{tx+=(width-oldW)/2;ty+=(height-oldH)/2;requestDraw();}}
+ function fit(){
+  let x0=Infinity,x1=-Infinity,y0=Infinity,y1=-Infinity;
+  for(let i=0;i<N.length;i++)if(active(i)){x0=Math.min(x0,X[i]);x1=Math.max(x1,X[i]);y0=Math.min(y0,Y[i]);y1=Math.max(y1,Y[i]);}
+  if(!Number.isFinite(x0))return;
+  const left=width>800?320:25,right=25,available=Math.max(width-left-right,160),ww=x1-x0,hh=y1-y0;
+  fitScale=Math.min(available/Math.max(ww,.07),(height-120)/Math.max(hh,.07))*.92;
+  scale=fitScale;tx=left+(available-ww*scale)/2-x0*scale;ty=(height-hh*scale)/2-y0*scale;requestDraw();
+ }
+ $('route-focus').addEventListener('change',()=>{routeFocus=Number($('route-focus').value);updateCounts();select(-1);fit();});
+ function zoom(factor,cx=width/2,cy=height/2){const next=Math.max(fitScale*.08,Math.min(fitScale*160,scale*factor)),ratio=next/scale;tx=cx-(cx-tx)*ratio;ty=cy-(cy-ty)*ratio;scale=next;requestDraw();}
+ function drawNodes(){clear(nc);const zoomRadius=Math.max(.7,Math.min(2.5,Math.sqrt(scale/fitScale)));let shown=0;
+  // Individual point fills avoid the pathological winding cost of one enormous overlapping path.
+  for(let j=0;j<KEYS.length;j++){if(!visible[KEYS[j]])continue;nc.fillStyle=COLORS[KEYS[j]];for(let i=0;i<N.length;i++){if(groupIndex[i]!==j||!active(i))continue;const x=screenX(i),y=screenY(i);if(!onScreen(x,y))continue;shown++;const r=radius[i]*zoomRadius;nc.globalAlpha=selectedSet&&!selectedSet.has(i) ? .15 : .9;nc.fillRect(x-r,y-r,r*2,r*2);}}nc.globalAlpha=1;
+  $('counts').textContent=fmt(shown)+' visible / '+fmt(N.length)+' declarations · '+fmt(E.length)+' connections';$('zoom-value').textContent=Math.round(scale/fitScale*100)+'%';
+ }
+// Fixed, nested samples of directed references. Never modifies the proof graph.
+function makeEdgeSample(nodes,edges){
+  const mix=value=>{value=Math.imul(value^(value>>>16),0x85ebca6b);value=Math.imul(value^(value>>>13),0xc2b2ae35);return (value^(value>>>16))>>>0;};
+  const nodeHashes=nodes.map(node=>{
+    let hash=0x811c9dc5;for(let i=0;i<node.name.length;i++)hash=Math.imul(hash^node.name.charCodeAt(i),0x01000193);
+    return mix(hash);
+  });
+  const hashes=Uint32Array.from(edges,([a,b])=>mix(nodeHashes[a]^Math.imul(nodeHashes[b],0x9e3779b1)^0x455448));
+  const compareNames=(a,b)=>a<b?-1:a>b?1:0;
+  return Uint32Array.from(edges,(_,i)=>i).sort((a,b)=>hashes[a]-hashes[b]||
+    compareNames(nodes[edges[a][0]].name,nodes[edges[b][0]].name)||
+    compareNames(nodes[edges[a][1]].name,nodes[edges[b][1]].name)||a-b);
+}
+if(typeof module==='object'&&module.exports)module.exports={makeEdgeSample};
+
+// Rasterize references first, then apply opacity once to the whole edge layer.
+// This bounds dense overlaps by the slider value and also works in PNG exports.
+const edgeInk=document.createElement('canvas'),edgeInkContext=edgeInk.getContext('2d');
+const edgeOrder=makeEdgeSample(N,E);
+let lineFraction=.1,edgeDisplay={sampleSize:Math.floor(E.length*.1),drawn:0,selectedConnections:0};
+function paintEdgeInk(backgroundOnly=false){
+  clear(ec);ec.globalAlpha=opacity*(backgroundOnly&&selectedSet ? .18 : 1);
+  ec.drawImage(edgeInk,0,0,width,height);ec.globalAlpha=1;
+}
+function addSelectedEdgeInk(){
+  if(selected<0||!active(selected))return 0;
+  // Dim the finished background once, independently of async batch boundaries.
+  edgeInkContext.save();edgeInkContext.globalCompositeOperation='destination-in';
+  edgeInkContext.globalAlpha=.18;edgeInkContext.fillStyle='#000';
+  edgeInkContext.fillRect(0,0,width,height);edgeInkContext.restore();
+  const paths=KEYS.map(()=>new Path2D()),projected=new Path2D();let drawn=0;
+  for(const i of selectedEdges){
+    const [a,b]=E[i];if(!active(a)||!active(b))continue;
+    drawn++;
+    const p=G.edgeKinds&&G.edgeKinds[i]==='projected'?projected:paths[groupIndex[a]];
+    p.moveTo(screenX(a),screenY(a));p.lineTo(screenX(b),screenY(b));
+  }
+  edgeInkContext.lineWidth=.5;edgeInkContext.globalAlpha=1;
+  for(let j=0;j<KEYS.length;j++){edgeInkContext.strokeStyle=COLORS[KEYS[j]];edgeInkContext.stroke(paths[j]);}
+  edgeInkContext.strokeStyle='#8b8174';edgeInkContext.setLineDash([3,4]);
+  edgeInkContext.stroke(projected);edgeInkContext.setLineDash([]);
+  return drawn;
+}
+function drawEdges(){
+  const token=++edgeToken;clear(ec);edgeComplete=false;$('export').disabled=true;
+  const sampleSize=Math.floor(E.length*lineFraction),drawLimit=dragging?Math.min(sampleSize,30000):sampleSize;
+  edgeDisplay={sampleSize,drawn:0,selectedConnections:0};
+  if(edgeInk.width!==canvases[0].width||edgeInk.height!==canvases[0].height){
+    edgeInk.width=canvases[0].width;edgeInk.height=canvases[0].height;
+  }
+  clear(edgeInkContext);
+  if(opacity===0||E.length===0){
+    edgeComplete=true;$('export').disabled=false;
+    $('render-status').textContent=opacity===0?'Connections hidden':'No displayed connections';return;
+  }
+  let at=0,drawn=0;
+  const chunk=()=>{
+    if(token!==edgeToken)return;
+    const start=performance.now(),paths=KEYS.map(()=>new Path2D()),projected=new Path2D();let examined=0;
+    while(at<drawLimit&&examined<18000&&performance.now()-start<11){
+      const i=edgeOrder[at++];examined++;const [a,b]=E[i];if(!active(a)||!active(b))continue;
+      const ax=screenX(a),ay=screenY(a),bx=screenX(b),by=screenY(b);
+      if((ax<0&&bx<0)||(ax>width&&bx>width)||(ay<0&&by<0)||(ay>height&&by>height))continue;
+      const p=G.edgeKinds&&G.edgeKinds[i]==='projected'?projected:paths[groupIndex[a]];
+      p.moveTo(ax,ay);p.lineTo(bx,by);drawn++;
+    }
+    edgeInkContext.lineWidth=.35;edgeInkContext.globalAlpha=1;edgeInkContext.setLineDash([]);
+    for(let j=0;j<KEYS.length;j++){edgeInkContext.strokeStyle=COLORS[KEYS[j]];edgeInkContext.stroke(paths[j]);}
+    edgeInkContext.globalAlpha=.5;edgeInkContext.strokeStyle='#8b8174';edgeInkContext.setLineDash([2,4]);
+    edgeInkContext.stroke(projected);edgeInkContext.setLineDash([]);edgeInkContext.globalAlpha=1;
+    if(at<drawLimit){
+      paintEdgeInk(true);$('render-status').textContent='Drawing connections · '+Math.round(at/drawLimit*100)+'%';
+      requestAnimationFrame(chunk);
+    }else{
+      edgeDisplay={sampleSize,drawn,selectedConnections:addSelectedEdgeInk()};paintEdgeInk();
+      edgeComplete=!dragging;$('export').disabled=!edgeComplete;
+      $('render-status').textContent=dragging&&drawLimit<sampleSize?'Moving · line detail returns when released':
+        selected>=0?fmt(edgeDisplay.selectedConnections)+' selected connections · '+fmt(drawn)+' background lines':
+        lineFraction===0?'Overview lines hidden · select a point to see its connections':
+        fmt(drawn)+(lineFraction<1?' sampled connections':' connections')+' in view · click a point to explore';
+    }
+  };
+  requestAnimationFrame(chunk);
+}
+
+ function drawOverlay(){clear(hc);drawCommunityGuides();if(selected>=0&&active(selected)){
+   const x=screenX(selected),y=screenY(selected);hc.beginPath();hc.arc(x,y,7,0,Math.PI*2);hc.fillStyle=BG;hc.fill();hc.lineWidth=1.6;hc.strokeStyle=COLORS[N[selected].group];hc.stroke();hc.beginPath();hc.arc(x,y,3,0,Math.PI*2);hc.fillStyle=COLORS[N[selected].group];hc.fill();
+  }if(hover>=0&&hover!==selected&&active(hover)){hc.beginPath();hc.arc(screenX(hover),screenY(hover),5,0,Math.PI*2);hc.strokeStyle=COLORS[N[hover].group];hc.lineWidth=1.2;hc.stroke();}
+ }
+ function draw(){drawNodes();drawEdges();drawOverlay();}
+ function nearest(sx,sy){const wx=(sx-tx)/scale,wy=(sy-ty)/scale,reach=9/scale;const x0=Math.max(0,Math.floor((wx-reach)*GRID)),x1=Math.min(GRID,Math.floor((wx+reach)*GRID)),y0=Math.max(0,Math.floor((wy-reach)*GRID)),y1=Math.min(GRID,Math.floor((wy+reach)*GRID));let best=-1,distance=81;
+  for(let gy=y0;gy<=y1;gy++)for(let gx=x0;gx<=x1;gx++){const bucket=grid.get(gx+gy*(GRID+1));if(!bucket)continue;for(const i of bucket){if(!active(i))continue;const dx=screenX(i)-sx,dy=screenY(i)-sy,d=dx*dx+dy*dy;if(d<distance){distance=d;best=i;}}}return best;
+ }
+ function setHover(i,x,y){if(hover!==i){hover=i;drawOverlay();}const tooltip=$('tooltip');if(i<0||dragging){tooltip.style.display='none';return;}tooltip.replaceChildren();const b=document.createElement('b'),s=document.createElement('small');b.textContent=N[i].name;s.textContent=membershipLabel(N[i])+' · '+N[i].module;tooltip.append(b,s);tooltip.style.display='block';tooltip.style.left=Math.max(8,Math.min(x+14,width-tooltip.offsetWidth-12))+'px';tooltip.style.top=Math.max(8,Math.min(y+14,height-tooltip.offsetHeight-10))+'px';}
+ function select(i,focus=false){if(i>=0&&communityFocus>=0&&N[i].community!==communityFocus){communityFocus=-1;$('community-focus').value='-1';updateCounts();updateCommunitySummary();}if(i>=0&&routeFocus&&!(N[i].membership&routeFocus)){routeFocus=0;$('route-focus').value='0';updateCounts();}selected=i;selectedSet=null;selectedEdges=[];selectedTargets=[];selectedSources=[];setHover(-1,0,0);if(i<0){$('inspector').style.display='none';requestDraw();return;}visible[N[i].group]=true;document.querySelector('.group-toggle[data-group="'+N[i].group+'"] input').checked=true;selectedSet=new Set([i]);const seenEdges=new Set();
+  for(let j=offsets[i];j<offsets[i+1];j++){const ei=adjacency[j];if(seenEdges.has(ei))continue;seenEdges.add(ei);selectedEdges.push(ei);const [a,b]=E[ei];selectedSet.add(a);selectedSet.add(b);if(a===i)selectedTargets.push(b);if(b===i)selectedSources.push(a);}
+  const n=N[i];$('selected-name').textContent=n.name;$('selected-community').textContent=COMMUNITIES[n.community].short_label+' · '+fmt(COMMUNITIES[n.community].size)+' declarations';$('selected-module').textContent=n.module||'Not recorded';$('selected-id').textContent=n.id;$('selected-id-label').style.display=n.id===n.name?'none':'block';$('selected-id').style.display=n.id===n.name?'none':'block';$('selected-group').textContent=membershipLabel(n);$('selected-dot').style.background=COLORS[n.group];$('selected-out').textContent=fmt(outCount[i]);$('selected-in').textContent=fmt(inCount[i]);$('inspector').style.display='block';$('neighbor-list').style.display='none';$('show-neighbors').textContent='Browse connections';
+  if(focus){scale=Math.max(scale,fitScale*3);const left=width>800?320:20,right=width>1000?370:20;tx=left+(width-left-right)/2-X[i]*scale;ty=height*.48-Y[i]*scale;}
+  announcement(n.name+', '+LABELS[n.group]);requestDraw();
+ }
+ function browse(){const box=$('neighbor-list');if(box.style.display==='block'){box.style.display='none';$('show-neighbors').textContent='Browse connections';return;}box.replaceChildren();for(const [title,indices] of [[$('out-label').textContent,selectedTargets],[$('in-label').textContent,selectedSources]]){const unique=[...new Set(indices)].sort((a,b)=>(N[b].degree||0)-(N[a].degree||0));const h=document.createElement('h3');h.textContent=title+' · '+fmt(unique.length);box.append(h);for(const i of unique.slice(0,60)){const btn=document.createElement('button');btn.className='neighbor';const dot=document.createElement('span');dot.className='dot';dot.style.background=COLORS[N[i].group];const label=document.createElement('span');label.textContent=N[i].name;btn.title=N[i].name;btn.append(dot,label);btn.addEventListener('click',()=>select(i,true));box.append(btn);}if(unique.length>60){const p=document.createElement('p');p.className='hint';p.textContent='Showing the 60 most connected. All are retained in the graph data.';box.append(p);}}box.style.display='block';$('show-neighbors').textContent='Hide connections';}
+ function search(){const query=$('search').value.trim().toLowerCase();$('clear-search').style.display=query?'block':'none';searchMatches=[];searchActive=-1;const box=$('matches');box.replaceChildren();if(!query){hideMatches();return;}let total=0;const starts=[],includes=[];for(let i=0;i<N.length;i++){const name=N[i].name.toLowerCase(),module=N[i].module.toLowerCase();if(name.includes(query)||module.includes(query)){total++;if(name.startsWith(query)||name.split('.').pop().startsWith(query)){if(starts.length<20)starts.push(i);}else if(includes.length<20)includes.push(i);}}searchMatches=starts.concat(includes).slice(0,20);const info=document.createElement('div');info.className='match-summary';info.textContent=total?fmt(total)+' matches'+(total>20?' · first 20 shown':''):'No matching declarations';box.append(info);searchMatches.forEach((i,j)=>{const btn=document.createElement('button');btn.className='match';btn.setAttribute('role','option');btn.id='match-'+j;const name=document.createElement('span'),group=document.createElement('span');name.className='match-name';group.className='match-group';name.textContent=N[i].name;group.textContent=membershipLabel(N[i]);btn.append(name,group);btn.addEventListener('click',()=>{select(i,true);hideMatches();$('search').blur();});box.append(btn);});box.style.display='block';$('search').setAttribute('aria-expanded','true');}
+ function hideMatches(){$('matches').style.display='none';$('search').setAttribute('aria-expanded','false');$('search').removeAttribute('aria-activedescendant');}
+ const pointers=new Map();let startPoint=null,lastPoint=null,moved=false,pinchDistance=0;
+ function eventPoint(e){const r=stage.getBoundingClientRect();return{x:e.clientX-r.left,y:e.clientY-r.top};}
+ $('interaction').addEventListener('pointerdown',e=>{if(e.button!==0)return;const p=eventPoint(e);pointers.set(e.pointerId,p);$('interaction').setPointerCapture(e.pointerId);startPoint=lastPoint=p;moved=false;dragging=true;$('interaction').classList.add('dragging');setHover(-1,0,0);if(pointers.size===2){const [a,b]=[...pointers.values()];pinchDistance=Math.hypot(a.x-b.x,a.y-b.y);}});
+ $('interaction').addEventListener('pointermove',e=>{const p=eventPoint(e);if(pointers.has(e.pointerId)){pointers.set(e.pointerId,p);if(pointers.size===2){const [a,b]=[...pointers.values()],distance=Math.hypot(a.x-b.x,a.y-b.y);if(pinchDistance>0)zoom(distance/pinchDistance,(a.x+b.x)/2,(a.y+b.y)/2);pinchDistance=distance;moved=true;}else{const dx=p.x-lastPoint.x,dy=p.y-lastPoint.y;tx+=dx;ty+=dy;lastPoint=p;if(Math.hypot(p.x-startPoint.x,p.y-startPoint.y)>3)moved=true;requestDraw();}}else setHover(nearest(p.x,p.y),p.x,p.y);});
+ function pointerEnd(e){if(!pointers.has(e.pointerId))return;const p=eventPoint(e);pointers.delete(e.pointerId);if(pointers.size){lastPoint=[...pointers.values()][0];startPoint=lastPoint;moved=true;return;}dragging=false;pinchDistance=0;$('interaction').classList.remove('dragging');if(!moved&&e.type==='pointerup')select(nearest(p.x,p.y));requestDraw();}
+ $('interaction').addEventListener('pointerup',pointerEnd);$('interaction').addEventListener('pointercancel',pointerEnd);$('interaction').addEventListener('pointerleave',()=>{if(!dragging)setHover(-1,0,0);});
+ $('interaction').addEventListener('wheel',e=>{e.preventDefault();const p=eventPoint(e);zoom(Math.exp(-Math.max(-200,Math.min(200,e.deltaY))*.003),p.x,p.y);setHover(-1,0,0);},{passive:false});
+ $('interaction').addEventListener('keydown',e=>{if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight','+','=','-','f','F'].includes(e.key))e.preventDefault();if(e.key==='ArrowUp')ty+=45;if(e.key==='ArrowDown')ty-=45;if(e.key==='ArrowLeft')tx+=45;if(e.key==='ArrowRight')tx-=45;if(e.key==='+'||e.key==='=')zoom(1.3);if(e.key==='-')zoom(1/1.3);if(e.key.toLowerCase()==='f')fit();requestDraw();});
+ $('fit').addEventListener('click',fit);$('zoom-in').addEventListener('click',()=>zoom(1.4));$('zoom-out').addEventListener('click',()=>zoom(1/1.4));$('close-inspector').addEventListener('click',()=>select(-1));$('show-neighbors').addEventListener('click',browse);
+ for(const label of document.querySelectorAll('.group-toggle'))label.querySelector('input').addEventListener('change',e=>{visible[label.dataset.group]=e.target.checked;if(selected>=0&&!active(selected))select(-1);requestDraw();});
+ $('opacity').addEventListener('input',e=>{opacity=Number(e.target.value)/100;$('opacity-value').textContent=e.target.value+'%';requestDraw();});
+ $('search').addEventListener('input',()=>{clearTimeout(searchTimer);searchTimer=setTimeout(search,120);});$('search').addEventListener('focus',()=>{if($('search').value.trim())search();});$('clear-search').addEventListener('click',()=>{$('search').value='';search();$('search').focus();});
+ $('search').addEventListener('keydown',e=>{if(e.key==='ArrowDown'||e.key==='ArrowUp'){e.preventDefault();if(!searchMatches.length)return;searchActive=(searchActive+(e.key==='ArrowDown'?1:-1)+searchMatches.length)%searchMatches.length;document.querySelectorAll('.match').forEach((el,i)=>{el.classList.toggle('active',i===searchActive);el.setAttribute('aria-selected',String(i===searchActive));});$('search').setAttribute('aria-activedescendant','match-'+searchActive);$('match-'+searchActive).scrollIntoView({block:'nearest'});}if(e.key==='Enter'&&searchMatches.length){e.preventDefault();select(searchMatches[Math.max(searchActive,0)],true);hideMatches();$('search').blur();}if(e.key==='Escape'){hideMatches();$('search').blur();}});
+ document.addEventListener('pointerdown',e=>{if(!e.target.closest('.search-wrap'))hideMatches();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&document.activeElement!==$('search'))select(-1);});
+ function download(blob,name){const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download=name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);}
+ $('download-data').addEventListener('click',()=>download(new Blob([JSON.stringify(G)],{type:'application/json'}),'eth-dependency-graph.json'));
+ function exportLegend(ctx){
+  ctx.font='11px system-ui';const entries=[];let x=22,y=46;
+  for(const key of KEYS){if(!visible[key])continue;const size=ctx.measureText(LABELS[key]).width+32;
+   if(x>22&&x+size>width-18){x=22;y+=20;}entries.push({key,x,y});x+=size;}
+  return {entries,bar:y+44,noteY:y+23};
+ }
+ $('export').addEventListener('click',()=>{
+  if(!edgeComplete)return;const c=document.createElement('canvas'),ctx=c.getContext('2d'),legend=exportLegend(ctx),bar=legend.bar;
+  c.width=Math.round(width*dpr);c.height=Math.round((height+bar)*dpr);ctx.scale(dpr,dpr);
+  ctx.fillStyle=BG;ctx.fillRect(0,0,width,height+bar);ctx.fillStyle=COLORS.openai;ctx.font='500 17px system-ui';ctx.fillText($('title').textContent,22,27);ctx.font='11px system-ui';
+  for(const {key,x,y} of legend.entries){ctx.fillStyle=COLORS[key];ctx.beginPath();ctx.arc(x+4,y,3,0,Math.PI*2);ctx.fill();ctx.fillStyle='#716e66';ctx.fillText(LABELS[key],x+13,y+4);}
+  ctx.fillStyle='#716e66';ctx.font='10px system-ui';ctx.fillText('Lean '+meta.lean_version+' · lines '+Math.round(lineFraction*100)+'% · opacity '+$('opacity').value+'%'+' · names '+(showClusterNames?'on':'off')+(selected>=0?' · all selected connections':''),22,legend.noteY);
+  ctx.drawImage(canvases[0],0,bar,width,height);ctx.drawImage(canvases[1],0,bar,width,height);
+  const old=hover;hover=-1;communityExport=true;drawOverlay();ctx.drawImage(canvases[2],0,bar,width,height);communityExport=false;hover=old;drawOverlay();
+  c.toBlob(blob=>{if(blob)download(blob,'eth-dependency-view.png');},'image/png');
+ });
+// Embedded in the offline viewer after its common interaction functions.
+function communityVisible(c){
+  return (communityFocus<0||communityFocus===c.id)&&meta.membership_palette.some(p=>
+    visible[p.key]&&(!routeFocus||(p.mask&routeFocus))&&(c.membership_counts[p.mask]||0)>0);
+}
+function updateCommunitySummary(){
+  const c=COMMUNITIES.find(c=>c.id===communityFocus);
+  $('community-summary').textContent=c
+    ? fmt(c.size)+' total declarations · '+c.top_families.slice(0,2).map(([name,count])=>name+' '+Math.round(100*count/c.size)+'%').join(' · ')
+    : COMMUNITIES.length+' dependency communities. Names summarize their contents.';
+}
+function focusCommunity(id){
+  communityFocus=id;$('community-focus').value=String(id);select(-1);updateCounts();updateCommunitySummary();fit();
+}
+function drawCommunityGuides(){
+  hc.save();hc.lineWidth=.8;hc.strokeStyle='#b7afa080';hc.setLineDash([3,5]);
+  const labels=[];
+  for(const c of COMMUNITIES){
+    if(!communityVisible(c))continue;
+    const x=(c.x-minX)/span*scale+tx,y=(c.y-minY)/span*scale+ty,r=c.radius/span*scale;
+    if(x+r<0||x-r>width||y+r<0||y-r>height)continue;
+    hc.beginPath();hc.arc(x,y,r,0,Math.PI*2);hc.stroke();
+    if(showClusterNames&&((r>=23&&c.size>=80)||communityFocus===c.id))labels.push({c,x,y:y-r-7});
+  }
+  hc.setLineDash([]);hc.font='500 11px system-ui';hc.textAlign='center';
+  const occupied=[],stageBox=stage.getBoundingClientRect();
+  for(const selector of (communityExport?[]:['.controls','#inspector'])){
+    const el=document.querySelector(selector);if(!el||getComputedStyle(el).display==='none')continue;
+    const b=el.getBoundingClientRect();occupied.push({x:b.left-stageBox.left,y:b.top-stageBox.top,w:b.width,h:b.height});
+  }
+  for(const {c,x,y} of labels.sort((a,b)=>b.c.size-a.c.size||a.c.id-b.c.id)){
+    const label=c.short_label.length>36?c.short_label.slice(0,35)+'…':c.short_label;
+    const w=hc.measureText(label).width+10,box={x:x-w/2,y:y-11,w,h:17};
+    if(box.x<8||box.x+w>width-8||box.y<8||box.y+17>height-50)continue;
+    if(occupied.some(b=>box.x<b.x+b.w+4&&box.x+w>b.x-4&&box.y<b.y+b.h+3&&box.y+17>b.y-3))continue;
+    occupied.push(box);hc.fillStyle='#f7f5f0ee';hc.fillRect(box.x,box.y,box.w,box.h);
+    hc.fillStyle='#514c43';hc.fillText(label,x,y+1);
+  }
+  hc.restore();
+}
+for(const c of [...COMMUNITIES].sort((a,b)=>b.size-a.size||a.id-b.id)){
+  const option=document.createElement('option');option.value=String(c.id);
+  option.textContent=c.short_label+' · '+fmt(c.size);$('community-focus').append(option);
+}
+$('community-focus').addEventListener('change',()=>focusCommunity(Number($('community-focus').value)));
+$('show-cluster-names').addEventListener('change',event=>{showClusterNames=event.target.checked;drawOverlay();});
+$('focus-community').addEventListener('click',()=>{if(selected>=0)focusCommunity(N[selected].community);});
+$('line-density').addEventListener('input',event=>{
+  lineFraction=Number(event.target.value)/100;$('line-density-value').textContent=event.target.value+'%';requestDraw();
+});
+updateCommunitySummary();
+
+ new ResizeObserver(resize).observe(stage);$('loading').style.display='none';resize();
+ // Small read-only status surface for offline diagnostics, never used to supply graph data.
+ window.dependencyExplorer=Object.freeze({get state(){return{nodes:N.length,edges:E.length,selected,hover,scale,fitScale,visible:{...visible},routeFocus,communityFocus,showClusterNames,lineFraction,edgeDisplay:{...edgeDisplay},edgeComplete};}});
+})()
+</script>
+</body>
+</html>

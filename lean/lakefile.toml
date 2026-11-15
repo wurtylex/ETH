@@ -1,0 +1,130 @@
+# Canonical Lean 4.35.0 project: three ETH routes and the WordRAM bridge.
+# Dependency revisions are fixed by lake-manifest.json; adapted libraries are vendored.
+name = "ethbridge"
+version = "0.1.0"
+defaultTargets = ["EthBridge.OpenAIChain", "EthBridge.AnthropicChain", "EthBridge.Elementary.ReusedRecursion", "EthBridge.WordRAM"]
+
+[leanOptions]
+autoImplicit = false
+
+[[require]]
+name = "complexitylib"
+path = "vendor/complexitylib"
+
+[[lean_lib]]
+name = "EthBridge"
+
+# Deliberately invalid negative fixtures. Not part of the default build or any verified proof.
+[[lean_lib]]
+name = "Planted"
+globs = ["Planted.+"]
+
+# AnthropicEth: anthropics/formal-math eth/ at 16a5ce41 (Apache-2.0), the import closure of its Solution.lean, ported
+# from Lean v4.33.1 / Mathlib 0df444a3 to this project's Lean and Mathlib; every change is listed in AnthropicEth/PORT.md.
+# Solution.lean proves MainResults.ethIsFalse against the vendored EthBridge/Anthropic/MainResults.lean (no second copy).
+# The folders and module names are Anthropic's; each [[lean_lib]] below is one of its libraries, with its srcDir under
+# AnthropicEth/ and its leanOptions. `lake build AnthropicEth` builds Solution and exactly what it imports.
+[[lean_lib]]
+name = "AnthropicEth"
+srcDir = "AnthropicEth"
+roots = ["Solution"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthStatements"
+srcDir = "AnthropicEth/proof/statements"
+globs = ["AppHalfPiecesStatement", "AppRunningTimeStatement", "AppVariablesStatement", "CircuitLowerBoundStatement",
+  "ClauseBoundStatement", "CliqueLevelsStatement", "CountKSatStatement", "CountedInstanceStatement",
+  "EightSquareStatement", "FixedWidthVariableBoundStatement", "KSatStatement", "LevelsStatement",
+  "MainTheoremFormsStatement", "NetworkStatements", "PaperSentencesStatement", "ParityChecksStatement",
+  "PartitionStatement", "PiecesCountedStatement", "PiecesFromEightSquaresStatement", "PiecesStatement",
+  "PrintedStatement", "StepMachineStatements", "ThmEveryDeltaStatement", "ThreeSatRateStatement",
+  "ThreeSatStatement", "UniformInKStatement"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthMachines"
+srcDir = "AnthropicEth/proof/machines"
+globs = ["QueryMachines.*", "StepMachines.*", "ToTuring.*", "Tower.*", "TwoMachines.*", "Wrap.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthNetworks"
+srcDir = "AnthropicEth/proof/networks"
+globs = ["Eight.*", "Groundwork.*", "Paper.*", "SingleBitPieces.*", "Value.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthThreesat"
+srcDir = "AnthropicEth/proof/threesat"
+globs = ["Enumerate.*", "Exits.*", "Printed.*", "Suffices.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthConsequences"
+srcDir = "AnthropicEth/proof/consequences"
+globs = ["CircuitLowerBound.*", "CountKSat.*", "CountKSatRate.*", "WidthK.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthSparsification"
+srcDir = "AnthropicEth/proof/sparsification"
+globs = ["SparsificationLemma.*", "SparsifyWidthK.*", "StepSparsify.*", "UniformInK.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthRates"
+srcDir = "AnthropicEth/proof/rates"
+globs = ["ClauseBound.*", "CountedRecursion.*", "CountedToPadded.*", "ExplicitCost.*", "GeneralPieces.*",
+  "PaddedDescent.*", "PiecesCounted.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthVariables"
+srcDir = "AnthropicEth/proof/variables"
+globs = ["CountedInstance.*", "PairsToBound.*", "RecursionToBound.*", "RecursionWithPieces.*", "SparsifyThenCount.*",
+  "ThmVariables.*", "VariableBound.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+[[lean_lib]]
+name = "AnthropicEthMainTheorem"
+srcDir = "AnthropicEth/proof/maintheorem"
+globs = ["CountedRoute.*", "MainRoute.*", "MinOfBounds.*", "NamesInOrder.*", "WidthThree.*"]
+leanOptions = { autoImplicit = false, relaxedAutoImplicit = false, pp.unicode.fun = true, exponentiation.threshold = 2048 }
+
+# OpenAIEth: the OpenAI chain — openai/math at 7ef5c0cc (Apache-2.0; OpenAI's family-378 proof `exact_count_and_sat` /
+# `original_sat_main` and its ParityLifts) and Daniel Hawkley's two bridge theorems (thinkthoughts/math at d6b79b7d,
+# Apache-2.0; OAI.Bridges.ETH.not_positiveRateETH and OAI.Bridges.AnthropicETH.not_positiveRateETH_implies_ethIsFalse),
+# the import closure of the two bridge files (3,210 modules), ported from Lean v4.34.1 / Mathlib d13f23b7 to this
+# project's Lean and Mathlib; every change is listed in OpenAIEth/PORT.md. Hawkley's bridge proves MainResults.ETHIsFalse
+# against the vendored EthBridge/Anthropic/MainResults.lean (his Vendor/ copy is not copied). The folders and module
+# names are upstream's (OAI.*); each [[lean_lib]] below is one upstream library, with srcDir OpenAIEth/ and upstream's
+# package-level leanOptions (autoImplicit = false; upstream's lakefile.lean sets nothing else for them).
+[[lean_lib]]
+name = "OpenAIEthSubexponentialSAT"
+srcDir = "OpenAIEth"
+globs = ["OAI.Algorithms.SubexponentialSAT.+"]
+leanOptions = { autoImplicit = false }
+
+[[lean_lib]]
+name = "OpenAIEthParityLifts"
+srcDir = "OpenAIEth"
+globs = ["OAI.Combinatorics.ParityLifts.+"]
+leanOptions = { autoImplicit = false }
+
+[[lean_lib]]
+name = "OpenAIEthBridgesETH"
+srcDir = "OpenAIEth"
+globs = ["OAI.Bridges.ETH.+"]
+leanOptions = { autoImplicit = false }
+
+[[lean_lib]]
+name = "OpenAIEthBridgesAnthropicETH"
+srcDir = "OpenAIEth"
+globs = ["OAI.Bridges.AnthropicETH.+"]
+leanOptions = { autoImplicit = false }
+
+[[require]]
+name = "mathlib"
+git = "https://github.com/leanprover-community/mathlib4"
+rev = "v4.35.0"

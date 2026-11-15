@@ -1,69 +1,72 @@
-# ETH formalization work
+# ETH formalizations
 
-This repository contains the Lean sources, pinned definitions, verification
-reports, source provenance and portable source archives from the **here are two
-papers** work session. No unpublished dependency or compiled cache is included
-in the repository.
+Lean formalizations of the OpenAI and Anthropic ETH arguments, shared lemmas,
+and an elementary two-piece route using Anthropic's generic recursion.
+The active Lean workspace uses **Lean 4.35.0** and Mathlib **v4.35.0**.
 
-## Start here
+| Directory | Contents |
+| --- | --- |
+| [lean/](lean/README.md) | Formal sources, pinned dependencies, licenses and remote verification tools |
+| [lean/audit/](lean/audit/) | Source provenance, axiom/type checks and verification evidence |
+| [graphs/](graphs/README.md) | Interactive graph builders, compressed snapshots, slide images and hosting tools |
 
-- [Verification scope and provenance](results/EthBridgeVerification.md)
-- [Download and local setup](results/DOWNLOADING.md)
-- [Reproduce the current bridge checks](results/verify_eth_bridges.sh)
-- [Complete source-and-results archive](results/Downloads/eth-work-source-and-results.zip)
+## Formal statements and scope
 
-## Current checked results
+The three endpoints prove the same project statement,
+`¬ ComplexityAbstracts.SubexponentialSATAbstract.ETH`:
 
-The current Lean **4.36.0-rc2** aggregate build includes both bridges. The exact
-checked results and axiom reports are in the verification files:
+| Route | Declaration |
+| --- | --- |
+| OpenAI | `EthBridge.OpenAIChain.not_eth` |
+| Anthropic | `EthBridge.AnthropicChain.not_eth` |
+| Elementary two-piece route | `EthBridge.Elementary.ReusedRecursion.not_eth` |
 
-1. **C1** — `EthBridge.WordRAM.not_eth_ram` proves `¬ ETH_RAM` for the stated
-   fixed additive word-RAM model, including its specified logarithmic-width and
-   input-fit contract. This is not an unqualified claim about every informal
-   notion of an “ordinary algorithm.”
-2. **C2** — `EthBridge.Anthropic.not_eth_of_ethIsFalse` proves
-   `MainResults.ETHIsFalse → ¬ ComplexityAbstracts.SubexponentialSATAbstract.ETH`.
-   **The premise remains a premise.** The checked transport is not a new
-   unconditional proof of Anthropic's hypothesis.
-3. Complexitylib's existing `not_eth` independently checks with only the usual
-   foundational axioms: `propext`, `Classical.choice` and `Quot.sound`.
+The third route is an **implementation variant** using the new two-piece core
+with existing recursion. Formalizing the manuscript's exact algorithm remains
+separate work. The WordRAM bridge is also a default build target. Intentionally
+invalid `Planted/` fixtures are separate from the verified proof targets.
 
-See [the exact verification output](results/EthBridgeVerification.txt). Cert-
-machine acceptance has not been run for the current bridges. A successful local
-Lean build is not by itself a paper-level model review.
+See [the Lean project](lean/README.md) for exact targets, dependency pins,
+verification results and reproducible commands. Run Lean, Lake and elan on an
+authorized remote machine; no Lean compilation is performed on this workstation.
 
-## Repository layout
+## Dependency graphs
 
-- `results/ClaimboxC2Build/`: editable Lean package for the C1/C2 bridges,
-  exact pinned dependency manifest, and focused Lean check files.
-- `results/Vendor/ClaimboxC2/`: vendored source snapshot, pin manifest and
-  upstream MIT license.
-- `results/WordRAM/`: other pinned machine sources, authored transport code and
-  historical verification records. These are **not all ordinary word-RAM proofs
-  of ETH**; read the individual READMEs and scope notes.
-- `results/Downloads/`: source archives. The complete archive includes the
-  original `formal-math-main` snapshot, with its ETH paper, full Lean 4.33.1
-  proof tree and Apache license/notice.
-- Build and verification logs: evidence of the particular commands run, with
-  retained warnings and failures. They are not blanket certification.
+The [graph package](graphs/README.md) rebuilds both interactive pages from saved
+Lean 4.35 compiled-reference snapshots, using Python without running Lean.
+It includes zoom, declaration search, cluster selection, line controls, a
+**Show cluster names** switch, and PNG export.
 
-`results/verify_eth_bridges.sh` is the intended portable post-setup check for
-the current bridges. **Other older scripts are records, not automatic setup
-recipes:** some refer to VM-local `.ultramath/` or `.scratch/` exploratory
-workspaces, which are excluded here. Some intermediate verification programs
-and environments are therefore not available after cloning; their retained
-logs are not promises of reproduction from this repository. The complete
-source archive does include the original `formal-math-main` ETH project as
-described in the download guide. Committing new dependencies or updating
-toolchain pins should be an explicit, reviewed change.
+| Setup | Declarations | Direct references | Clusters |
+| --- | ---: | ---: | ---: |
+| All three routes | 61,514 | 453,353 | 72 |
+| Anthropic + our route | 15,111 | 95,461 | 37 |
 
-## What's deliberately not tracked
+The reduced view removes OpenAI-only declarations. Its purple category combines
+all **5,358 declarations shared by Anthropic and our route**, including those also
+used by OpenAI. The full view retains seven exact membership colors.
 
-`.lake/`, `.scratch/`, `.ultramath/`, `.skill/`, `.olean` files and other build/
-tool caches remain ignored. The VM's dependency cache is about 16 GB and should
-not be pushed. Do not run `lake update` during initial setup; dependencies are
-pinned by the manifests.
+Clusters follow dependency structure. Screen distance is presentation geometry,
+not a mathematical similarity measure. A graph rebuild renders the saved
+snapshot; it is not a new Lean verification or dependency extraction.
 
-Third-party code has different licenses. The relevant MIT and Apache license
-files/notices are retained with the vendor and archived source material. No
-extra license is asserted here for new material.
+[Temporary public graph pages and slide assets](https://somerset-button-messenger-road.trycloudflare.com/)
+are served from this computer. The link requires the computer and tunnel to stay
+online. Portable build, hosting and slide-download instructions are in
+[graphs/README.md](graphs/README.md).
+
+## Historical material and licenses
+
+Earlier workspaces, audit runs, experimental WordRAM compiler/transport projects,
+and generated artifacts are retained in an ignored local archive. They are not
+part of the active 4.35 workspace. The initial committed sources remain available
+in Git history at `58736fc`; the standalone historical WordRAM experiments are
+not represented as verified 4.35 code.
+
+Upstream port notes may mention older toolchain versions as historical provenance;
+the active workspace and all retained toolchain files are pinned to 4.35.0.
+
+Upstream licenses and notices remain beside their sources, including the original
+Claimbox MIT license in [lean/LICENSE](lean/LICENSE) and the OpenAI, Anthropic,
+complexitylib and cslib license/notice files. Provenance distinguishes original
+sources, compatibility changes and shared refactorings.

@@ -1,0 +1,57 @@
+{
+  "status": "passed",
+  "files": {
+    "axioms.json": {
+      "sha256": "53823c79512ef7b9cfe0b668d55851da62181f0f2ae125ba7278e91a810c2fa1",
+      "bytes": 22105
+    },
+    "logs/axioms.log": {
+      "sha256": "bca5d137296b5bd37b14ebc692df1fade1db963462312cc3f71bc7ce8d76c120",
+      "bytes": 20227
+    },
+    "logs/compiled-types.log": {
+      "sha256": "dd46804efe8cd5933cc7a17688b1dab2df4033aba545ff13db631d5126ccc1c4",
+      "bytes": 8614
+    },
+    "logs/compiler-version.log": {
+      "sha256": "eb22144228dd41cd51a0c84af4f976cd0cef473102dcf99b60be756b11f2b95a",
+      "bytes": 106
+    },
+    "logs/default-build.log": {
+      "sha256": "a8062a6d5a636a729a7b8e348da67ccdf1cb6684f77ee878263bc091f1b95846",
+      "bytes": 344517
+    },
+    "logs/endpoint-applications.log": {
+      "sha256": "358ac7151f420b377ce3c57aa82ffaf50fac12d21250e6b4ad5f965b7bbca06a",
+      "bytes": 382
+    },
+    "logs/private-axioms.log": {
+      "sha256": "a9b340616f95a1e6c48d8e40e24b77cce1913a23245ee7b511aca8d6e2e14c33",
+      "bytes": 908
+    },
+    "logs/wordram-application.log": {
+      "sha256": "55e823f0457828426df4ea1e66a05455f46e64ee74df81614a80f430629fba24",
+      "bytes": 575
+    },
+    "source-after.json": {
+      "sha256": "43a8ee387216aac5ecb0fd30b38a5d955acad26932041f334da6ec65f5ec8363",
+      "bytes": 1551929
+    },
+    "source-before.json": {
+      "sha256": "43a8ee387216aac5ecb0fd30b38a5d955acad26932041f334da6ec65f5ec8363",
+      "bytes": 1551929
+    },
+    "type-comparison.json": {
+      "sha256": "a94e37287429575703b2778a2e5779cce23452883ed457517d0d5bd88708b4d9",
+      "bytes": 277
+    },
+    "types-current.json": {
+      "sha256": "539e4364bad4265b68b64d532961711779cdc5de3c0f92fb998d8c827775d79d",
+      "bytes": 680677
+    },
+    "verification.json": {
+      "sha256": "b3c85ceb6eb19be07d452bdcd3322e4ea32dc8e8830dd41750ca10047e00740f",
+      "bytes": 9239
+    }
+  }
+}

@@ -1,0 +1,11 @@
+.lake/
+__pycache__/
+/.worktrees
+.DS_Store
+.claude
+
+# Formal abstract PDFs and generated TeX are built by CI.
+/abstracts/build/
+
+# Intentional comparator challenge placeholders and configurations, generated before checking.
+/comparator/ComplexityComparatorChallenges/

@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "source_snapshot": "results/Lean435/eth-bridge",
+  "destination": "lean",
+  "source_verification_sha256": "35b236918e389ef8eee314b8f4d5da7fa2cf1abdf0ae60ead6a654f8ef496cd8",
+  "source_inventory_sha256": "c07c3f3be4bfda894d2ee892e72377fcd31faef42c1e86b34b183c6c43343f08",
+  "intentional_existing_file_changes": [
+    "README.md",
+    "lakefile.toml"
+  ],
+  "added_license_source": "results/ClaimboxC2Build/LICENSE",
+  "mathematical_source_bytes_preserved": true,
+  "historical_results_unchanged": true,
+  "scope": "Three ETH endpoint routes and WordRAM; exact third manuscript algorithm remains separate.",
+  "copied_file_count": 10370,
+  "unchanged_lean_file_count": 10153,
+  "source_inventory_file": "source-inventory.json",
+  "copied_inventory_sha256": "529ffbd63c915b9af6960bcf173f47b40c7a0a9b7fe2716d87310ebf5ab017f7",
+  "excluded_paths": [
+    {
+      "path": "vendor/complexitylib/docbuild",
+      "reason": "Optional documentation project pins Lean4.36-era doc-gen4/Verso; not used by ETH endpoints",
+      "files": {
+        "vendor/complexitylib/docbuild/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+        "vendor/complexitylib/docbuild/lake-manifest.json": "aace564a4faf21da6049202562fc22d49876a403fff25cfc72b1ed4c290b7231",
+        "vendor/complexitylib/docbuild/lakefile.toml": "160eb918d87bfb013de7c123fa0d67397f30ff6deee00818b677dedc52bd67b5"
+      }
+    },
+    {
+      "path": "vendor/complexitylib/guide",
+      "reason": "Optional documentation project pins Lean4.36-era doc-gen4/Verso; not used by ETH endpoints",
+      "files": {
+        "vendor/complexitylib/guide/lean-toolchain": "ca5f1f601d34c49079e38d7e7041eb0f2a9c227fbc1df0f404820069a052330c",
+        "vendor/complexitylib/guide/ComplexityGuide.lean": "5b0fca0fed5103814a8fccdfdf8724e1c66dc447ce89c8c18e69df7ce839ec28",
+        "vendor/complexitylib/guide/ComplexityGuideMain.lean": "b442b02f80eab77cfbaeb2d9884355482b35bf9808c030c624ce8f0d605dcdae",
+        "vendor/complexitylib/guide/lake-manifest.json": "d4eefd35b0a31c9ac2a0e256282874d1a108724036ad232de55f37bd8d0518bf",
+        "vendor/complexitylib/guide/lakefile.toml": "4d7ec75985baec1c523c338bc17a8b651dc9a295533a4579074d344d89abfc9c",
+        "vendor/complexitylib/guide/ComplexityGuide/Streaming.lean": "aacf7608b2aeafd5e29f54bba3d7c2c0131d564775870959d5be41ef96f2b965",
+        "vendor/complexitylib/guide/ComplexityGuide/ApiDocs.lean": "fc1d8c9a88c8425c9852ac69f7a4f5cd1479c24be3848f5c3bc202d3ddc77567",
+        "vendor/complexitylib/guide/ComplexityGuide/FirstSteps.lean": "f9a5940ce77974cd7aaa8054a14a48d91979b52f4acb03b93fbef3f165a7f9e1",
+        "vendor/complexitylib/guide/ComplexityGuide/NPCompleteness.lean": "48658de13408ad7acfed81e447ed98319919ae90f6977d79c8ddf74ad6497f67",
+        "vendor/complexitylib/guide/ComplexityGuide/FirstOrderOperators.lean": "ee3a55138f15e496412aa39ae6065feb0efdecac5f2aa75359fb0dd1a8fd0a51"
+      }
+    },
+    {
+      "path": "vendor/complexitylib/.github",
+      "reason": "Upstream CI/editor/agent metadata; not part of the ETH build",
+      "files": {
+        "vendor/complexitylib/.github/pull_request_template.md": "30536acb29a1dcfa859d0cf5f15805dc1b998d496c4bca7bf299912c00621243",
+        "vendor/complexitylib/.github/ISSUE_TEMPLATE/development.md": "fa4687fd395599d0d51289848aab648ab1b937f61c4308ab7c2afea023f5b1da",
+        "vendor/complexitylib/.github/workflows/lean_action_ci.yml": "ede9543322d8655dd70acc1c9a6245a9ef0b99a91777649f8f813f25d8df7274",
+        "vendor/complexitylib/.github/workflows/abstracts.yml": "d95ea4bcfbf24cde4f181b000a277a565738bb4624daca47ca218d15e082f401",
+        "vendor/complexitylib/.github/workflows/pr-title.yml": "c7d2d54f163718b8ce9bdbd2a1df63ec9cf4d12c25dd707646b2b3b49320dac5",
+        "vendor/complexitylib/.github/workflows/guide.yml": "3f2b5ab7f1669f1bca560426af0c3abcb190da36bf186762f7f888c7dc10a730",
+        "vendor/complexitylib/.github/workflows/docs.yml": "228f6aee00dac18568a88e1e6b7e3152396cc9312673c648364325b4a84e2eb4",
+        "vendor/complexitylib/.github/workflows/comparator.yml": "a1af54eef8dff9bf2786b1d5e254843b461fa79552107bca03be165c5d32f478",
+        "vendor/complexitylib/.github/actions/install-lean/install.sh": "78dc882d746cf7246024c3f91b92c903bdc5f7302a98d4a53bcf7219ca781f6d",
+        "vendor/complexitylib/.github/actions/install-lean/action.yml": "cd743d84575996d6364dd5c57cccfb5a82f17403d7342936362ad7efd327456c"
+      }
+    },
+    {
+      "path": "vendor/complexitylib/.agents",
+      "reason": "Upstream CI/editor/agent metadata; not part of the ETH build",
+      "files": {
+        "vendor/complexitylib/.agents/skills/lean-abstract/SKILL.md": "587b2de99b2d5a7c7e428e9496ee81117246aa221413d0ee551239a0dc2a8249"
+      }
+    },
+    {
+      "path": "vendor/cslib/.github",
+      "reason": "Upstream CI/editor/agent metadata; not part of the ETH build",
+      "files": {
+        "vendor/cslib/.github/dependabot.yml": "6d31b7d9fcd6ed5bc7a6914573617c66d11a9a1552216a6c7f77d4f442a1b01d",
+        "vendor/cslib/.github/CODEOWNERS": "15e4a5915dd6a6f85040344780e8c5119166e36e935f73ad3b3fec851ecdf9ee",
+        "vendor/cslib/.github/requirements.txt": "0b38d9165cc1164f0de715df3ebed8f60ce9a9b57e13e3a62c40ea0e68acc466",
+        "vendor/cslib/.github/todo-to-issue-lean.json": "7c8d21593e7440f00321648f9af43493ca1dc4bf9dc0d726d9e022ff591f7244",
+        "vendor/cslib/.github/workflows/release.yml": "b15c2db96ff31dd29b134463994b5e24ede1d77759f59254656c7229fc192b86",
+        "vendor/cslib/.github/workflows/lean_action_ci.yml": "9d70a9bd0552e8d093604ac6f7d1a092b83444acb6b459a24efe7b0e6db05c90",
+        "vendor/cslib/.github/workflows/bump_toolchain_nightly-testing.yml": "f99ee708db9f7e6dfd7bfedb1d3de209fc95afbfec65aa337725f2ffbb6e5c78",
+        "vendor/cslib/.github/workflows/todo-issue.yml": "fe16264cb6d8bbc7463cfc6dcfd0d4856451ed6161ef7b0bc0ea3f4abaf91b6f",
+        "vendor/cslib/.github/workflows/lake-update.yml": "ac31d0f5c45ec3db7f24cc2d60c88c691ad8f4eb100a9bdd7a1e044ab5757c57",
+        "vendor/cslib/.github/workflows/merge_main_into_nightly-testing.yml": "eab836c7b3e083119d18be687cab0c9efcfe22755d8e8743a22d0d5bf6095404",
+        "vendor/cslib/.github/workflows/report_failures_nightly-testing.yml": "321f0fcd3cdc03a1a79cabb19f448235c2101b23f497b1a613a4ca33c42182e6",
+        "vendor/cslib/.github/workflows/pr-title.yml": "6f0d8dcd6158ea719200dbc45bd8dadc4d09c15518a317daf60716619151efc6",
+        "vendor/cslib/.github/workflows/actionlint.yml": "37078cde1b868bfbaa2f9259b9f74e0aa61ae4d3a439ccda854d80dc20b6bd77",
+        "vendor/cslib/.github/workflows/docs.yml": "b13660766f4ce3eec8ce7e7b8a0e8837f42dffce130b30e47800116fad224cef",
+        "vendor/cslib/.github/workflows/weekly-lints.yml": "90eceac8589eb90c157e9f198e6fa9e4c230a4d3713f472d547fb4cc1e0caa9c",
+        "vendor/cslib/.github/workflows/shellcheck.yml": "a6168765ddd1a09d63a50cad9718e1c112cd2403a032516eed27b027f30812e3"
+      }
+    },
+    {
+      "path": "vendor/cslib/.vscode",
+      "reason": "Upstream CI/editor/agent metadata; not part of the ETH build",
+      "files": {
+        "vendor/cslib/.vscode/settings.json": "5eb47336b40a207ab573da4f6bce80a3163aaece72aeacfdb74cd442f54a9fc7"
+      }
+    },
+    {
+      "path": "vendor/cslib/.devcontainer",
+      "reason": "Upstream CI/editor/agent metadata; not part of the ETH build",
+      "files": {
+        "vendor/cslib/.devcontainer/devcontainer-lock.json": "19ee2334e35467803112aa49e9c3b9bef781bd93de432082a683e0d972eaa267",
+        "vendor/cslib/.devcontainer/Dockerfile": "58e6d1a85b113c538381cd52d78cb800bcfd6fa10bfd8c41602d7bc2d4193295",
+        "vendor/cslib/.devcontainer/devcontainer.json": "9bf1422099f73cf81e35d66006e5c2cc493576ee312a030beaaed8e125999cef"
+      }
+    }
+  ],
+  "new_audit_files_are_separate_from_copied_mathematical_sources": true
+}

@@ -1,0 +1,4 @@
+'EthBridge.OpenAIChain.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.AnthropicChain.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.ReusedRecursion.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.WordRAM.not_eth_ram' depends on axioms: [propext, Classical.choice, Quot.sound]

@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "remote_execution_exit_code": 0,
+  "local_lean_execution": false,
+  "all_retrieved_hashes_validated": true,
+  "local_and_uploaded_inputs_equal": true,
+  "local_inputs_unchanged": true,
+  "source_file_count": 10382,
+  "remote_verification_sha256": "b3c85ceb6eb19be07d452bdcd3322e4ea32dc8e8830dd41750ca10047e00740f",
+  "manifest_sha256": "0f3833466cf6a257d45cfd7a46ae4bbaa0221c32a44bca96e659293991b6bd02",
+  "transfer_sha256": "fc893a709f754e1ffcd115d7da19abb6a759b8834b710ca4d69cfe237ac1b092"
+}

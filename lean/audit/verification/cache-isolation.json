@@ -1,0 +1,46 @@
+{
+  "status": "passed",
+  "cache_scan_roots": [
+    {
+      "relative_root": ".lake/packages",
+      "directory_symlink_count": 0,
+      "symlinks": [
+        {
+          "relative_path": "batteries/docs/README.md",
+          "link_target": "../README.md",
+          "source_resolves_within_copy": true,
+          "destination_resolves_within_copy": true,
+          "source_resolved_relative_path": ".lake/packages/batteries/README.md",
+          "destination_resolved_relative_path": ".lake/packages/batteries/README.md",
+          "source_absolute_identity_sha256": "ac446037e287e1c573b6a3bf9040cc868a4a5ca5f6a945a3f1f2388d2fbc21b6",
+          "destination_absolute_identity_sha256": "b32d8b09f79a88d3fc81490f65f1970be778f6ebf0759bd18e453260738fb04b"
+        }
+      ]
+    },
+    {
+      "relative_root": ".lake/build",
+      "directory_symlink_count": 0,
+      "symlinks": []
+    },
+    {
+      "relative_root": "vendor/complexitylib/.lake/build",
+      "directory_symlink_count": 0,
+      "symlinks": []
+    },
+    {
+      "relative_root": "vendor/cslib/.lake/build",
+      "directory_symlink_count": 0,
+      "symlinks": []
+    }
+  ],
+  "distinct_file_inodes_checked": 188676,
+  "all_links_resolve_inside_own_copy": true,
+  "historical_source_inputs_unchanged": 10182,
+  "historical_verification_sha256": "35b236918e389ef8eee314b8f4d5da7fa2cf1abdf0ae60ead6a654f8ef496cd8",
+  "source_workspace_identity_sha256": "73aec1827d4df2163a59d9e2ef2d510676ccfb70d6e6275a2832c2524392ff53",
+  "destination_workspace_identity_sha256": "cfbea9fce473a4a8c7cf12f0d1a69e33876df81b968e1cefc28dfe7da5f4f512",
+  "scope": "Independent after-run audit of this cache input; arbitrary future cache symlinks require equivalent validation.",
+  "verification_sha256": "b3c85ceb6eb19be07d452bdcd3322e4ea32dc8e8830dd41750ca10047e00740f",
+  "retrieval_sha256": "80808a796baefc6b351ade5812fcc10f3016a3fde0ba75486119847fe2dd4c7b",
+  "audit_script_sha256": "ab44681e1673a0d0df1ac1695d8896fef9409fcce82e981d20e1e03d305eef71"
+}

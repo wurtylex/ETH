@@ -1,0 +1,266 @@
+'ClauseBound.Group.Sample.avg_exp_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClauseBound.Group.card_sample_tail_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ClauseBound.Rec.Tail.two_point_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'ComplexityAbstracts.SubexponentialSATAbstract.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cslib.PolynomiallyBounded.add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cslib.PolynomiallyBounded.comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cslib.PolynomiallyBounded.mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Cslib.PolynomiallyBounded.pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Eight.ViaGrouping.Table.sum_map_le' depends on axioms: [propext, Quot.sound]
+'EthBridge.Anthropic.not_eth_of_ethIsFalse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.AnthropicChain.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.capW_half_add_six_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.capW_half_le_nameWidth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.capW_half_le_two_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.card_sparseLab_half_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.colCoeff_high_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.collect_cols' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.collect_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.indexed_cols' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.indexed_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.mem_highIndices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.mem_lowIndices' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.nameWidth_le_two_mul' depends on axioms: [propext, Quot.sound]
+'EthBridge.Elementary.Crossing.pieceA_add_pieceB' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.pieceA_cols' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.pieceA_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.pieceA_rows_words' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.pieceB_cols' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.pieceB_cols_words' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.pieceB_rows' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.rowCoeff_low_eq_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Crossing.size_three_pow_add_three_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.count_bound_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.exponential_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.not_eth_of_countInRateN' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.not_eth_of_pieces' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.rate_tendsto_zero' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.subexp_of_countInRateN' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.subexp_of_count_rate' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.DecisionBridge.wrapped_time_below' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.abs_colCoeff_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.abs_pieceA_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.abs_pieceB_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.abs_rowCoeff_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.abs_sum_le_double_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.favorable_cap_sum_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.favorable_cap_sum_le_log' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.highIndices_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.lowIndices_card_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PieceBounds.par_of_two_piece_data' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.bitsOf_ofFn' depends on axioms: [propext, Quot.sound]
+'EthBridge.Elementary.Pieces.botF_common' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.collectBot_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.collectBot_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.collectBot_polyT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.family_keeps' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.pieceA_cols_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.pieceA_rows_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.pieceB_cols_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.pieceB_rows_program' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.sparseBot_polyT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.sparseTop_eq' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.sparseTop_polyT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.sparseValue_eq_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.sparseValue_polyT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.value_high' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.value_low' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.value_polyT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.wideBot_polyT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.Pieces.wideTop_polyT' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.collectBot_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.family_bounds' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.ofFn_bitsOf' depends on axioms: [propext, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.sparseBot_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.sparseTop_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.value_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.wideBot_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesBounds.wideTop_bound' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesSpec.family_par' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.PiecesSpec.family_spec' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.ReusedRecursion.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.ReusedRecursion.not_eth_tm' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Elementary.WideCut.full_input_identity' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.OpenAIChain.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.BernoulliMGF.bernoulli_mgf_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.BinaryWords.log2_value_append_true' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.BinaryWords.value_append' depends on axioms: [propext]
+'EthBridge.Shared.BinaryWords.value_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.BinaryWords.value_eq_foldr' depends on axioms: [propext]
+'EthBridge.Shared.BinaryWords.value_lt_pow_length' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.BoundedMGF.weighted_exp_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.BoundedMGF.weighted_mgf_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteConcentration.exp_mul_abs_le' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteConcentration.sum_indicator_le_of_abs_mgf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EthBridge.Shared.FiniteConcentration.sum_indicator_le_of_mgf' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EthBridge.Shared.FiniteConcentration.sum_indicator_mul_exp_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EthBridge.Shared.FiniteMoments.square_sum_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteMoments.sum_affine_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteMoments.sum_centered_square' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteMoments.sum_square_indicator' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteProduct.sum_defaultFilled_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteProduct.sum_piFinset_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteProduct.sum_prod_eq_prod_sum' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteSampling.average_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteSampling.card_restrict_mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteSampling.exists_avoiding_of_budget' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteSampling.sum_restrict' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.FiniteSampling.sum_restrict_mul_card' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.TensorContraction.tensor_inverse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'EthBridge.Shared.WeightedOverlap.sum_kernel_le_of_dependency_sets' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EthBridge.Shared.WeightedOverlap.sum_kernel_le_of_weighted_overlap' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'EthBridge.WordRAM.not_eth_ram' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Fintype.card_product_filter_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.Colouring.exists_colouring_fintype' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.Grid.prod_eq_factorised' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.PB.add' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.PB.bound_comp' depends on axioms: [propext]
+'Groundwork.PB.bound_le' depends on axioms: [propext]
+'Groundwork.PB.comp' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.PB.const' depends on axioms: [propext]
+'Groundwork.PB.id'' depends on axioms: [propext]
+'Groundwork.PB.mono_bound' depends on axioms: [propext]
+'Groundwork.PB.mul' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.PB.pow' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.PolyT.bval_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.PolyT.bval_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.Prog.NetE.le_foldr_max' depends on axioms: [propext, Quot.sound]
+'Groundwork.card_pairs' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.ofWord_eq_binaryWords' depends on axioms: [propext]
+'Groundwork.ofWord_lt' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.prod_factorised' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Groundwork.sum_tuples_prod' depends on axioms: [propext, Classical.choice, Quot.sound]
+'List.sum_le_sum' depends on axioms: [propext, Quot.sound]
+'MainResults.ethIsFalse' depends on axioms: [propext, Classical.choice, Quot.sound]
+'Multiset.le_sup' depends on axioms: [propext, Quot.sound]
+'Multiset.sup_le' depends on axioms: [propext, Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.ArithmeticExpressionSupport.bits_value' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.BinaryArithmetic.toNat_eq_binaryWords' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.CounterPrograms.value_eq_binaryWords' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.CounterPrograms.value_eq_toNat' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.ExecCNFTupleOdometer.value_lt_power_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.ModularArithmetic.toNat_lt_pow_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_add' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_const' depends on axioms: [propext,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_id' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_mul' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_pow' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.LocalCode.exists_avoiding_of_budget' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.Packing.mean_energy_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.Spectral.bernoulli_mgf_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.Spectral.binomial_tail_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.exists_samples' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.sum_exp_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.sum_exp_samples_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.sum_potential_le' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.log2_value_append_true' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.value_append' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.value_eq_toNat' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.value_lt_two_pow_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.CanonicalWordProgram.ofDigits_eq_value' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.CanonicalWordProgram.value_append' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.exact_count_and_sat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.original_sat_main' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.Subexp.TensorSpectrum.productKernel_inverse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpFactorProgram.toNat_append' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.SubexpFactorProgram.toNat_lt_pow_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.log2_value_append_true' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.value_append' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.value_eq_toNat' depends on axioms: [propext]
+'OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.value_lt_two_pow_length' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpSeparation.sum_prod_eq_prod_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_negative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_negative_eq_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_positive_eq_sum' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.two_mul_card_negative' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.two_mul_card_positive' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.TypeDistribution.mean_restrict' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.TypeDistribution.squared_deviation_eq_collisions' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Algorithms.SubexponentialSAT.TypeDistribution.sum_fiberCount_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Bridges.AnthropicETH.not_positiveRateETH_implies_ethIsFalse' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'OAI.Bridges.ETH.foldr_max_le' depends on axioms: [propext, Quot.sound]
+'OAI.Bridges.ETH.le_foldr_max' depends on axioms: [propext, Quot.sound]
+'OAI.Bridges.ETH.not_positiveRateETH' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.ParityWL.Complexity.decodeBits_bits' depends on axioms: [propext, Classical.choice, Quot.sound]
+'OAI.ParityWL.Complexity.list_sum_map_le' depends on axioms: [propext, Quot.sound]
+'RecursionToBound.foldr_max_zero_le' depends on axioms: [propext, Quot.sound]

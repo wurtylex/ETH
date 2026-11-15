@@ -1,0 +1,44 @@
+ETH proof dependency graphs — Lean 4.35.0
+
+PROOF SCOPE
+The three Lean-checked ETH endpoints use OpenAI, Anthropic, and an elementary two-piece core with reused recursion. The third route is an implementation variant: verification of the exact manuscript algorithm is separate. These are declaration-dependency graphs, not a proof that visually close declarations are mathematically equivalent.
+
+ALL THREE PROOFS
+61,514 declarations; 453,353 directed references; 72 dependency communities.
+Membership colors: black OpenAI only (46,403), orange Anthropic only (7,499),
+green our route only (2,254), red OpenAI + Anthropic (0), blue OpenAI + our
+route (0), cyan Anthropic + our route (2,925), purple all three (2,433).
+
+ANTHROPIC + OUR ROUTE
+15,111 declarations; 95,461 directed references; 37 dependency communities.
+Only OpenAI-only nodes are removed. This induced graph is clustered afresh.
+Orange: Anthropic only, 7,499. Green: our route only, 2,254.
+Purple: shared by both, 5,358 = 2,925 source-mask-6 + 2,433 source-mask-7.
+Source membership and proof_membership fields remain unchanged in the JSON.
+The purple display group includes declarations also used by OpenAI.
+
+DEPENDENCIES AND LAYOUT
+Edges go from a dependent declaration to a directly referenced dependency.
+Flags record references in types (1), values (2), inductive constructors (4),
+and recursor rule right-hand sides (8); a reference can carry multiple flags.
+Full compiled reachability is computed before the common foundation filter.
+The displayed graph retains exact direct references with no shortcut edges.
+Leiden RBConfiguration community detection uses dependency structure, not
+colors or names; resolution 1, seed 42. Graphviz arranges communities and
+their internal nodes. Names summarize contents after clustering.
+Saved positions are fixed in these pages. Screen distance is a presentation
+choice, not mathematical distance, equivalence, or dependency-step distance.
+Counts include imported and generated declarations; graph size alone does
+not establish conceptual simplicity or proof optimality.
+
+READING AND REUSING THE VIEWS
+Show cluster names toggles graph labels, including in Save view PNG exports.
+It starts enabled; circles, nodes, edges and clustering remain unchanged.
+Overview lines use a deterministic 10% sample at 3.5% opacity by default.
+Selection shows all connections of the selected node within active filters.
+Every displayed edge is retained in the full per-view graph JSON download.
+The exported PNGs show the default overview and its sampling/opacity legend.
+Both interactive pages preserve the verified data, renderer code and layout;
+only their static navigation/document links are rebased for public hosting.
+No raw compiler logs, credentials, server configuration or private evidence
+records are included. The summary carries public counts and evidence hashes.

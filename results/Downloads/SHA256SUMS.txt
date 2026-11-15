@@ -1,2 +1,0 @@
-bc3c8e565fab82a86cab7e61d39c1db7f0372ea59851ec63f118ebccd44a8387  eth-bridge-only.zip
-66280d46a2058c494e1e8942c35535b8e64a7e1c53c0f1aef94640ccb3cabb77  eth-work-source-and-results.zip

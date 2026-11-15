@@ -1,0 +1,922 @@
+{
+  "ClauseBound.Group.Sample.avg_exp_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ClauseBound.Group.card_sample_tail_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ClauseBound.Rec.Tail.two_point_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "ComplexityAbstracts.SubexponentialSATAbstract.not_eth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Cslib.PolynomiallyBounded.add": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Cslib.PolynomiallyBounded.comp": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Cslib.PolynomiallyBounded.mul": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Cslib.PolynomiallyBounded.pow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Eight.ViaGrouping.Table.sum_map_le": [
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Anthropic.not_eth_of_ethIsFalse": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.AnthropicChain.not_eth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.capW_half_add_six_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.capW_half_le_nameWidth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.capW_half_le_two_mul": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.card_sparseLab_half_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.colCoeff_high_eq_zero": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.collect_cols": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.collect_rows": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.indexed_cols": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.indexed_rows": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.mem_highIndices": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.mem_lowIndices": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.nameWidth_le_two_mul": [
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.pieceA_add_pieceB": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.pieceA_cols": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.pieceA_rows": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.pieceA_rows_words": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.pieceB_cols": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.pieceB_cols_words": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.pieceB_rows": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.rowCoeff_low_eq_zero": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Crossing.size_three_pow_add_three_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.count_bound_below": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.exponential_below": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.not_eth_of_countInRateN": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.not_eth_of_pieces": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.rate_tendsto_zero": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.subexp_of_countInRateN": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.subexp_of_count_rate": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.DecisionBridge.wrapped_time_below": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.abs_colCoeff_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.abs_pieceA_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.abs_pieceB_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.abs_rowCoeff_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.abs_sum_le_double_bits": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.favorable_cap_sum_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.favorable_cap_sum_le_log": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.highIndices_card_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.lowIndices_card_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PieceBounds.par_of_two_piece_data": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.bitsOf_ofFn": [
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.botF_common": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.collectBot_high": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.collectBot_low": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.collectBot_polyT": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.family_keeps": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.pieceA_cols_program": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.pieceA_rows_program": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.pieceB_cols_program": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.pieceB_rows_program": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.sparseBot_polyT": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.sparseTop_eq": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.sparseTop_polyT": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.sparseValue_eq_sum": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.sparseValue_polyT": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.value_high": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.value_low": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.value_polyT": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.wideBot_polyT": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.Pieces.wideTop_polyT": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.collectBot_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.family_bounds": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.ofFn_bitsOf": [
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.sparseBot_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.sparseTop_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.value_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.wideBot_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesBounds.wideTop_bound": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesSpec.family_par": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.PiecesSpec.family_spec": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.ReusedRecursion.not_eth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.ReusedRecursion.not_eth_tm": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Elementary.WideCut.full_input_identity": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.OpenAIChain.not_eth": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.BernoulliMGF.bernoulli_mgf_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.BinaryWords.log2_value_append_true": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.BinaryWords.value_append": [
+    "propext"
+  ],
+  "EthBridge.Shared.BinaryWords.value_bits": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.BinaryWords.value_eq_foldr": [
+    "propext"
+  ],
+  "EthBridge.Shared.BinaryWords.value_lt_pow_length": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.BoundedMGF.weighted_exp_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.BoundedMGF.weighted_mgf_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteConcentration.exp_mul_abs_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteConcentration.sum_indicator_le_of_abs_mgf": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteConcentration.sum_indicator_le_of_mgf": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteConcentration.sum_indicator_mul_exp_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteMoments.square_sum_indicator": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteMoments.sum_affine_square": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteMoments.sum_centered_square": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteMoments.sum_square_indicator": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteProduct.sum_defaultFilled_prod": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteProduct.sum_piFinset_prod": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteProduct.sum_prod_eq_prod_sum": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteSampling.average_restrict": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteSampling.card_restrict_mul": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteSampling.exists_avoiding_of_budget": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteSampling.sum_restrict": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.FiniteSampling.sum_restrict_mul_card": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.TensorContraction.tensor_inverse": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.WeightedOverlap.sum_kernel_le_of_dependency_sets": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.Shared.WeightedOverlap.sum_kernel_le_of_weighted_overlap": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "EthBridge.WordRAM.not_eth_ram": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Fintype.card_product_filter_lt": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.Colouring.exists_colouring_fintype": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.Grid.prod_eq_factorised": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.PB.add": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.PB.bound_comp": [
+    "propext"
+  ],
+  "Groundwork.PB.bound_le": [
+    "propext"
+  ],
+  "Groundwork.PB.comp": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.PB.const": [
+    "propext"
+  ],
+  "Groundwork.PB.id'": [
+    "propext"
+  ],
+  "Groundwork.PB.mono_bound": [
+    "propext"
+  ],
+  "Groundwork.PB.mul": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.PB.pow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.PolyT.bval_bits": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.PolyT.bval_lt": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.Prog.NetE.le_foldr_max": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.card_pairs": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.ofWord_eq_binaryWords": [
+    "propext"
+  ],
+  "Groundwork.ofWord_lt": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.prod_factorised": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Groundwork.sum_tuples_prod": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "List.sum_le_sum": [
+    "Quot.sound",
+    "propext"
+  ],
+  "MainResults.ethIsFalse": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "Multiset.le_sup": [
+    "Quot.sound",
+    "propext"
+  ],
+  "Multiset.sup_le": [
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.ArithmeticExpressionSupport.bits_value": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.BinaryArithmetic.toNat_eq_binaryWords": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.CounterPrograms.value_eq_binaryWords": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.CounterPrograms.value_eq_toNat": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.ExecCNFTupleOdometer.value_lt_power_length": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.ModularArithmetic.toNat_lt_pow_length": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_add": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_const": [
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_id": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_mul": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.CostAssembly.Polynomial.ordinary_pow": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.LocalCode.exists_avoiding_of_budget": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.Packing.mean_energy_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.Spectral.bernoulli_mgf_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.Spectral.binomial_tail_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.exists_samples": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.sum_exp_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.sum_exp_samples_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLog.WalshExistence.sum_potential_le": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.log2_value_append_true": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.value_append": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.value_eq_toNat": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.BinaryClogProgram.Floor.value_lt_two_pow_length": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.CanonicalWordProgram.ofDigits_eq_value": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.DisjointReuse.CanonicalWordProgram.value_append": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.exact_count_and_sat": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SqrtLogSpace.original_sat_main": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.Subexp.TensorSpectrum.productKernel_inverse": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpFactorProgram.toNat_append": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpFactorProgram.toNat_lt_pow_length": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.log2_value_append_true": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.value_append": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.value_eq_toNat": [
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpParameterProgram.value_lt_two_pow_length": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpSeparation.sum_prod_eq_prod_sum": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_negative": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_negative_eq_sum": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_positive": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.card_positive_eq_sum": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.two_mul_card_negative": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.SubexpSwapMultiplicity.two_mul_card_positive": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.TypeDistribution.mean_restrict": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.TypeDistribution.squared_deviation_eq_collisions": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Algorithms.SubexponentialSAT.TypeDistribution.sum_fiberCount_sq": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Bridges.AnthropicETH.not_positiveRateETH_implies_ethIsFalse": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Bridges.ETH.foldr_max_le": [
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Bridges.ETH.le_foldr_max": [
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.Bridges.ETH.not_positiveRateETH": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.ParityWL.Complexity.decodeBits_bits": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "OAI.ParityWL.Complexity.list_sum_map_le": [
+    "Quot.sound",
+    "propext"
+  ],
+  "RecursionToBound.foldr_max_zero_le": [
+    "Quot.sound",
+    "propext"
+  ],
+  "_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.card_prescribed": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.cheb_nat": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.exists_colouring_core": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.sum_Ys_sq": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.sum_Zs_sq": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ],
+  "_private.StepMachines.Prog.NetRun.0.Groundwork.Prog.NetE.sum_map_le": [
+    "Quot.sound",
+    "propext"
+  ],
+  "_private.ToTuring.Bound.0.Groundwork.PB.pb_iff_polynomiallyBounded": [
+    "Classical.choice",
+    "Quot.sound",
+    "propext"
+  ]
+}

@@ -1,0 +1,125 @@
+{
+  "schema_version": 1,
+  "kind": "frozen_verified_lean435_graph_snapshot",
+  "lean_version": "4.35.0",
+  "new_lean_verification": false,
+  "inputs": {
+    "snapshots/all.graph.json.gz": {
+      "bytes": 3794901,
+      "sha256": "07ec1085bf63536a0bd31a4a17a9b6238ee871501bc236bced5e07e4a7e95c09"
+    },
+    "templates/all.html": {
+      "bytes": 45345,
+      "sha256": "52d038f82456828a7f87590de323f087cb6af1f02c0143c2fe6e533b977501dd"
+    },
+    "previews/all.png": {
+      "bytes": 257817,
+      "sha256": "8a96d4f6f50ec28820d84db1f0bf681511064557b11b3fed3110fc4210796f54"
+    },
+    "snapshots/without-openai.graph.json.gz": {
+      "bytes": 901919,
+      "sha256": "709714e780233a20f41532774a901a263d98d8d188e0dab4b2d22e8c84b1779b"
+    },
+    "templates/without-openai.html": {
+      "bytes": 43856,
+      "sha256": "ee679981397446ee84febfd158345e5639f06c61d238e9ddc7ff9a2ff7e57837"
+    },
+    "previews/without-openai.png": {
+      "bytes": 400629,
+      "sha256": "6c63abc0f0907fe1aaf4f89724f9d0b741353dd7e35d601816be45e74d74a6bf"
+    },
+    "templates/index.html": {
+      "bytes": 5671,
+      "sha256": "74838bd7ae6aeeb59042e5f921358ed51d9de85cfcdf74151fea2bb425780231"
+    },
+    "snapshots/graph-summary.json": {
+      "bytes": 6529,
+      "sha256": "30cfd788ba8d176143e54d5666e05f13e8252e2b5be23a9d5fa7da6ebe929d0d"
+    },
+    "method.txt": {
+      "bytes": 2868,
+      "sha256": "51b2d700af1737b7c090c7593a64f45daaa84642c580685763e46046bff839bd"
+    },
+    "robots.txt": {
+      "bytes": 23,
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+    },
+    "layout/community_layout.py": {
+      "bytes": 10265,
+      "sha256": "3c2a00807ddb8e8f5f64e2097674ba20971a9868e6067a0b65476e823161e3e1"
+    },
+    "layout/versions.json": {
+      "bytes": 451,
+      "sha256": "36bb35f936c3fe0f293fa6be701249a126b6699ec7548f1963892a47a0c7139a"
+    }
+  },
+  "original_public_assets": {
+    "all/graph.json": {
+      "sha256": "dda6765f77766e81fe01c09f32dc45efcebd05687ac1874525c64e86839aeb88",
+      "bytes": 32503301
+    },
+    "all/index.html": {
+      "sha256": "a7787270c34a1ab51ab5aa3fab50f3bafa8afd4ac35d1fb9deb20dd1df212a79",
+      "bytes": 32548632
+    },
+    "all/preview.png": {
+      "sha256": "8a96d4f6f50ec28820d84db1f0bf681511064557b11b3fed3110fc4210796f54",
+      "bytes": 257817
+    },
+    "graph-summary.json": {
+      "sha256": "30cfd788ba8d176143e54d5666e05f13e8252e2b5be23a9d5fa7da6ebe929d0d",
+      "bytes": 6529
+    },
+    "index.html": {
+      "sha256": "74838bd7ae6aeeb59042e5f921358ed51d9de85cfcdf74151fea2bb425780231",
+      "bytes": 5671
+    },
+    "method.txt": {
+      "sha256": "51b2d700af1737b7c090c7593a64f45daaa84642c580685763e46046bff839bd",
+      "bytes": 2868
+    },
+    "robots.txt": {
+      "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95",
+      "bytes": 23
+    },
+    "slide-assets.zip": {
+      "sha256": "d316611ebca123ecbae15a4940de06f423e7ed42e7ac5c1d466b79045488b156",
+      "bytes": 627128
+    },
+    "without-openai/graph.json": {
+      "sha256": "8a657ed1cc7f67adc220ad5dc7095fc39b11028cd73e74ac58fb887fd4c0c529",
+      "bytes": 6874616
+    },
+    "without-openai/index.html": {
+      "sha256": "1a33eebe9dd21fb7a22013fd7bf467fd8fa7d8344a1ec5e2807022056061009f",
+      "bytes": 6918458
+    },
+    "without-openai/preview.png": {
+      "sha256": "6c63abc0f0907fe1aaf4f89724f9d0b741353dd7e35d601816be45e74d74a6bf",
+      "bytes": 400629
+    }
+  },
+  "proof_scope": "The three Lean-checked ETH endpoints use OpenAI, Anthropic, and an elementary two-piece core with reused recursion. The third route is an implementation variant: verification of the exact manuscript algorithm is separate. These are declaration-dependency graphs, not a proof that visually close declarations are mathematically equivalent.",
+  "candidate_sha256": "74b633c3a6552e721bde22b91b7a2b39ef48a2c544186cdde44aac07dd63c850",
+  "source_evidence": {
+    "all": {
+      "source_graph_sha256": "618411aa8529f5d2d32103aab49e0c36bb27a1d15bdb5ef5d2341a59b5333c0a",
+      "graph_json_sha256": "dda6765f77766e81fe01c09f32dc45efcebd05687ac1874525c64e86839aeb88",
+      "source_html_sha256": "25b6b5805031b27b7deee97cf628e0b140e76c9ddfc4c773219a147647cfa309",
+      "renderer_verification_sha256": "9ae52eee23bdf86666a2acb4fd68a24910668a5fd45f8a42dfdeec11fb9ad9f9",
+      "browser_verification_sha256": "0db975b5276a5f7e472f23c4c2052e3934eb85279edeff2473aa9fc196692cd7",
+      "layout_cache_sha256": "56380a6c26381d3d65f3a15ac5950c82e1843687ef08a9fe0b8343d71a272cfe",
+      "slide_image_sha256": "8a96d4f6f50ec28820d84db1f0bf681511064557b11b3fed3110fc4210796f54"
+    },
+    "without-openai": {
+      "source_graph_sha256": "c8f1e5679884f2fa3c9a9bc7ec50a2c35800654505bce9843f801cbcfb4945a4",
+      "graph_json_sha256": "8a657ed1cc7f67adc220ad5dc7095fc39b11028cd73e74ac58fb887fd4c0c529",
+      "source_html_sha256": "16365afb8e7d6a1a96ed2b5c823b5c4ae0b0e931310cf8f32b3802a44e23fef8",
+      "renderer_verification_sha256": "c12efd9069ca4068d2920d14e2e781c6812bab2856e83848beb4c49c24626352",
+      "browser_verification_sha256": "45bdfd0e76ae99e4a4908e88219fb77d95917a7531699f9a6dd2e90b99ec347f",
+      "layout_cache_sha256": "0ebd6d7a99f8558f9f86611e7a15e98fcaa717fe8aaeca06f4f4120205ef2501",
+      "slide_image_sha256": "6c63abc0f0907fe1aaf4f89724f9d0b741353dd7e35d601816be45e74d74a6bf"
+    }
+  },
+  "note": "Historical evidence hashes identify the source snapshot. Snapshot rendering checks these saved bytes, not a fresh compiler run."
+}

@@ -1,0 +1,19 @@
+'_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.card_prescribed' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.cheb_nat' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.exists_colouring_core' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.sum_Ys_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.Groundwork.Net.Colouring.0.Groundwork.Colouring.sum_Zs_sq' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]
+'_private.StepMachines.Prog.NetRun.0.Groundwork.Prog.NetE.sum_map_le' depends on axioms: [propext, Quot.sound]
+'_private.ToTuring.Bound.0.Groundwork.PB.pb_iff_polynomiallyBounded' depends on axioms: [propext,
+ Classical.choice,
+ Quot.sound]

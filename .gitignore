@@ -3,6 +3,19 @@
 .skill/
 .ultramath/
 .elan/
+.agents/
+.aws/
+.codex/
+
+# Historical workspaces and their local compatibility link
+/results
+
+# Rebuildable graph pages, local hosting state, and Python/JS caches
+/graphs/dist/
+/graphs/.runtime/
+**/__pycache__/
+*.py[cod]
+**/node_modules/
 
 # Lake/Lean dependencies and build products
 **/.lake/
@@ -15,7 +28,13 @@ lake-packages/
 # Generated Lean binaries and editor artifacts
 *.olean
 *.ilean
+*.olean.*
+*.ilean.*
 *.trace
 *.c.tmp
+*.o
+*.a
+*.so
+*.bc
 *.swp
 *~

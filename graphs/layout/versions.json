@@ -1,0 +1,15 @@
+{
+  "tool_versions": {
+    "python": "3.14.10",
+    "igraph": "1.0.0",
+    "igraph_c": "1.0.0",
+    "leidenalg": "0.12.0",
+    "graphviz": "sfdp - graphviz version 16.1.1 (0)",
+    "neato": "neato - graphviz version 16.1.1 (0)"
+  },
+  "algorithm_sha256": "3c2a00807ddb8e8f5f64e2097674ba20971a9868e6067a0b65476e823161e3e1",
+  "algorithm_version": "leiden-rb-neato-sfdp-galaxy-v1",
+  "seed": 42,
+  "resolution": 1,
+  "fresh_geometry_bit_exact": false
+}

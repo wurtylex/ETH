@@ -1,5 +1,0 @@
-EthBridge.Anthropic.not_eth_of_ethIsFalse : MainResults.ETHIsFalse → ¬ComplexityAbstracts.SubexponentialSATAbstract.ETH
-ComplexityAbstracts.SubexponentialSATAbstract.not_eth : ¬ComplexityAbstracts.SubexponentialSATAbstract.ETH
-MainResults.ETHIsFalse : Prop
-'EthBridge.Anthropic.not_eth_of_ethIsFalse' depends on axioms: [propext, Classical.choice, Quot.sound]
-'ComplexityAbstracts.SubexponentialSATAbstract.not_eth' depends on axioms: [propext, Classical.choice, Quot.sound]
