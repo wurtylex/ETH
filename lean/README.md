@@ -74,6 +74,7 @@ proofs, extra axioms, and incorrect statements. They are excluded from the
 default targets and from every verified proof. They must not be presented as
 formal results or imported into an endpoint.
 
-The original project license is [MIT](LICENSE). The imported Anthropic/OpenAI,
+This project is licensed under the [Apache License, Version 2.0](LICENSE).
+The imported Anthropic/OpenAI,
 complexitylib, and cslib trees retain their own Apache-2.0 licenses and notices.
 Those licenses and the source attribution remain applicable to their files.

@@ -70,7 +70,8 @@ not represented as verified 4.35 code.
 Upstream port notes may mention older toolchain versions as historical provenance;
 the active workspace and all retained toolchain files are pinned to 4.35.0.
 
-Upstream licenses and notices remain beside their sources, including the original
-Claimbox MIT license in [lean/LICENSE](lean/LICENSE) and the OpenAI, Anthropic,
-complexitylib and cslib license/notice files. Provenance distinguishes original
-sources, compatibility changes and shared refactorings.
+This project is licensed under the [Apache License, Version 2.0](LICENSE),
+with a copy in [lean/LICENSE](lean/LICENSE). Upstream licenses and notices
+remain beside the OpenAI, Anthropic, complexitylib and cslib sources and remain
+applicable to those files. Provenance distinguishes original sources,
+compatibility changes and shared refactorings.
